@@ -1,0 +1,30 @@
+Name: harbour-sailotp
+Summary: SailOTP
+Version: 0.1
+Release: 1
+Group: Security
+URL: https://github.com/seiichiro0185/sailotp/
+License: "BSD\t"
+Sources:
+- '%{name}-%{version}.tar.bz2'
+Description: |
+  A Sailfish implementation of the Timebased One Time Pad algorithm as used by Google Authenticator and a growing number of Websites.
+Configure: none
+Builder: qtc5
+PkgConfigBR:
+- sailfishapp >= 0.0.10
+- Qt5Core
+- Qt5Qml
+- Qt5Quick
+Requires:
+- sailfishsilica-qt5 >= 0.10.9
+Files:
+- /usr/share/icons/hicolor/86x86/apps
+- /usr/share/applications
+- /usr/share/harbour-sailotp
+- /usr/bin
+- '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
+- '%{_datadir}/applications/%{name}.desktop'
+- '%{_datadir}/%{name}/qml'
+- '%{_bindir}'
+PkgBR: []
