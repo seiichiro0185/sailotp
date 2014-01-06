@@ -30,19 +30,22 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+// Define the Layout of the Active Cover
 CoverBackground {
 
-    Image {
-        id: logo
-        source: "../sailotp.png"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
-        anchors.topMargin: 48
-    }
+	// Show the SailOTP Logo
+  Image {
+    id: logo
+    source: "../sailotp.png"
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: parent.top
+    anchors.topMargin: 48
+  }
 
-    Label {
-        id: label
-        anchors.centerIn: parent
-        text: "SailOTP"
-    }
+	// Show the Application Name
+  Label {
+    id: label
+    anchors.centerIn: parent
+    text: "SailOTP"
+  }
 }

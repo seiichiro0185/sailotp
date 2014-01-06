@@ -30,52 +30,55 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "../lib/storage.js" as DB
+import "../lib/storage.js" as DB // Import the storage library for Config-Access
 
+// Define Layout of the Add OTP Dialog
 Dialog {
-    id: addOTP
+  id: addOTP
 
-    property QtObject parentPage: null
+	// We get the Object of the parent page on call to refresh it after adding a new Entry
+  property QtObject parentPage: null
 
-    SilicaFlickable {
-        id: addOtpList
-        anchors.fill: parent
+  SilicaFlickable {
+    id: addOtpList
+    anchors.fill: parent
 
-        VerticalScrollDecorator {}
+    VerticalScrollDecorator {}
 
-        Column {
-            anchors.fill: parent
-            DialogHeader {
-                acceptText: "Add"
-            }
-
-            TextField {
-                id: otpLabel
-                width: parent.width
-                label: "Title"
-                placeholderText: "Title for the OTP"
-                focus: true
-                horizontalAlignment: TextInput.AlignLeft
-            }
-
-            TextField {
-                id: otpSecret
-                width: parent.width
-                label: "Secret"
-                placeholderText: "Secret OTP Key"
-                focus: true
-                horizontalAlignment: TextInput.AlignLeft
-            }
-        }
+    Column {
+      anchors.fill: parent
+      DialogHeader {
+          acceptText: "Add"
+      }
+      TextField {
+        id: otpLabel
+        width: parent.width
+        label: "Title"
+        placeholderText: "Title for the OTP"
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+      }
+      TextField {
+        id: otpSecret
+        width: parent.width
+        label: "Secret"
+        placeholderText: "Secret OTP Key"
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+      }
     }
+  }
 
-    onDone: {
-        if (otpLabel.text != "" && otpSecret.text != "") {
-            DB.addOTP(otpLabel.text, otpSecret.text);
-            parentPage.refreshOTPList();
-        }
+	// Save if page is Left with Add
+  onDone: {
+		// Some basic Input Check, we need both Values to work
+    if (otpLabel.text != "" && otpSecret.text != "") {
+			// Save the entry to the Config DB
+      DB.addOTP(otpLabel.text, otpSecret.text);
+			// Refresh the main Page
+      parentPage.refreshOTPList();
     }
-
+  }
 }
 
 
