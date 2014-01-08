@@ -39,6 +39,10 @@ Dialog {
 	// We get the Object of the parent page on call to refresh it after adding a new Entry
   property QtObject parentPage: null
 
+  // If we want to edit a Key we get title and key from the calling page
+  property string paramLabel: ""
+  property string paramKey: ""
+
   SilicaFlickable {
     id: addOtpList
     anchors.fill: parent
@@ -48,20 +52,22 @@ Dialog {
     Column {
       anchors.fill: parent
       DialogHeader {
-          acceptText: "Add"
+        acceptText: paramLabel != "" ? "Save" : "Add"
       }
       TextField {
         id: otpLabel
         width: parent.width
         label: "Title"
         placeholderText: "Title for the OTP"
+        text: paramLabel != "" ? paramLabel : ""
         focus: true
         horizontalAlignment: TextInput.AlignLeft
       }
       TextField {
         id: otpSecret
         width: parent.width
-        label: "Secret"
+        label: "Secret (at least 16 characters)"
+        text: paramKey != "" ? paramKey : ""
         placeholderText: "Secret OTP Key"
         focus: true
         horizontalAlignment: TextInput.AlignLeft
@@ -69,12 +75,20 @@ Dialog {
     }
   }
 
-	// Save if page is Left with Add
+  // Check if we can Save
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 ? true : false
+
+  // Save if page is Left with Add
   onDone: {
-		// Some basic Input Check, we need both Values to work
-    if (otpLabel.text != "" && otpSecret.text != "") {
+    if (result == DialogResult.Accepted) {
 			// Save the entry to the Config DB
-      DB.addOTP(otpLabel.text, otpSecret.text);
+      if (paramLabel != "" && paramKey != "") {
+        // Parameters where filled -> Change existing entry
+        DB.changeOTP(otpLabel.text, otpSecret.text, paramLabel, paramKey)
+      } else {
+        // There were no parameters -> Add new entry
+        DB.addOTP(otpLabel.text, otpSecret.text);
+      }
 			// Refresh the main Page
       parentPage.refreshOTPList();
     }
