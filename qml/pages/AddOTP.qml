@@ -30,52 +30,69 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "../lib/storage.js" as DB
+import "../lib/storage.js" as DB // Import the storage library for Config-Access
 
+// Define Layout of the Add OTP Dialog
 Dialog {
-    id: addOTP
+  id: addOTP
 
-    property QtObject parentPage: null
+	// We get the Object of the parent page on call to refresh it after adding a new Entry
+  property QtObject parentPage: null
 
-    SilicaFlickable {
-        id: addOtpList
-        anchors.fill: parent
+  // If we want to edit a Key we get title and key from the calling page
+  property string paramLabel: ""
+  property string paramKey: ""
 
-        VerticalScrollDecorator {}
+  SilicaFlickable {
+    id: addOtpList
+    anchors.fill: parent
 
-        Column {
-            anchors.fill: parent
-            DialogHeader {
-                acceptText: "Add"
-            }
+    VerticalScrollDecorator {}
 
-            TextField {
-                id: otpLabel
-                width: parent.width
-                label: "Title"
-                placeholderText: "Title for the OTP"
-                focus: true
-                horizontalAlignment: TextInput.AlignLeft
-            }
-
-            TextField {
-                id: otpSecret
-                width: parent.width
-                label: "Secret"
-                placeholderText: "Secret OTP Key"
-                focus: true
-                horizontalAlignment: TextInput.AlignLeft
-            }
-        }
+    Column {
+      anchors.fill: parent
+      DialogHeader {
+        acceptText: paramLabel != "" ? "Save" : "Add"
+      }
+      TextField {
+        id: otpLabel
+        width: parent.width
+        label: "Title"
+        placeholderText: "Title for the OTP"
+        text: paramLabel != "" ? paramLabel : ""
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+      }
+      TextField {
+        id: otpSecret
+        width: parent.width
+        label: "Secret (at least 16 characters)"
+        text: paramKey != "" ? paramKey : ""
+        placeholderText: "Secret OTP Key"
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+      }
     }
+  }
 
-    onDone: {
-        if (otpLabel.text != "" && otpSecret.text != "") {
-            DB.addOTP(otpLabel.text, otpSecret.text);
-            parentPage.refreshOTPList();
-        }
+  // Check if we can Save
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 ? true : false
+
+  // Save if page is Left with Add
+  onDone: {
+    if (result == DialogResult.Accepted) {
+			// Save the entry to the Config DB
+      if (paramLabel != "" && paramKey != "") {
+        // Parameters where filled -> Change existing entry
+        DB.changeOTP(otpLabel.text, otpSecret.text, paramLabel, paramKey)
+      } else {
+        // There were no parameters -> Add new entry
+        DB.addOTP(otpLabel.text, otpSecret.text);
+      }
+			// Refresh the main Page
+      parentPage.refreshOTPList();
     }
-
+  }
 }
 
 

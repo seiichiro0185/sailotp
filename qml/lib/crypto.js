@@ -29,49 +29,66 @@
 
 .import "./sha.js" as SHA
 
-// Helper Functions
+// *** Helper Functions *** //
+
+// Decimal to HEX
 function dec2hex(s) { return (s < 15.5 ? '0' : '') + Math.round(s).toString(16); }
 
+// HEX to Decimal
 function hex2dec(s) { return parseInt(s, 16); }
 
-
+// Convert Base32-secret to HEX Value
 function base32tohex(base32) {
-    var base32chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
-    var bits = "";
-    var hex = "";
+  var base32chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+  var bits = "";
+  var hex = "";
 
-    for (var i = 0; i < base32.length; i++) {
-        var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
-        bits += leftpad(val.toString(2), 5, '0');
-    }
+  for (var i = 0; i < base32.length; i++) {
+    var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
+    bits += leftpad(val.toString(2), 5, '0');
+  }
 
-    for (var i = 0; i+4 <= bits.length; i+=4) {
-        var chunk = bits.substr(i, 4);
-        hex = hex + parseInt(chunk, 2).toString(16) ;
-    }
-    return hex;
-
+  for (var i = 0; i+4 <= bits.length; i+=4) {
+    var chunk = bits.substr(i, 4);
+    hex = hex + parseInt(chunk, 2).toString(16) ;
+  }
+  return hex;
 }
 
+// Pad Strings to given length
 function leftpad(str, len, pad) {
-    if (len + 1 >= str.length) {
-        str = Array(len + 1 - str.length).join(pad) + str;
-    }
-    return str;
+  if (len + 1 >= str.length) {
+      str = Array(len + 1 - str.length).join(pad) + str;
+  }
+  return str;
 }
+
+// *** Main Function *** //
 
 // Calculate an OTP-Value from the given secret
+// Parameter is the secret key in Base32-notation
 function calcOTP(secret) {
-    var key = base32tohex(secret);
-    var epoch = Math.round(new Date().getTime() / 1000.0);
-    var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
+  // Convert the key to HEX
+  var key = base32tohex(secret);
+  // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC)
+  var epoch = Math.round(new Date().getTime() / 1000.0);
+  // Get last full 30 / 60 Seconds and convert to HEX
+  var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
 
+  try {
+    // Calculate the SHA-1 HMAC Value from time and key
     var hmacObj = new SHA.jsSHA(time, 'HEX');
     var hmac = hmacObj.getHMAC(key, 'HEX', 'SHA-1', "HEX");
 
+    // Finally convert the HMAC-Value to the corresponding 6-digit token
     var offset = hex2dec(hmac.substring(hmac.length - 1));
 
     var otp = (hex2dec(hmac.substr(offset * 2, 8)) & hex2dec('7fffffff')) + '';
     otp = (otp).substr(otp.length - 6, 6);
-    return otp;
+  } catch (e) {
+    otp = "Invalid Secret!"
+  }
+
+  // return the calculated token
+  return otp;
 }

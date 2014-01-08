@@ -30,56 +30,54 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+// Define the Layout of the About Page
 Page {
-    id: aboutPage
-
-    Image {
-        id: logo
-        source: "../sailotp.png"
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 200
+  id: aboutPage
+  Image {
+    id: logo
+    source: "../sailotp.png"
+    anchors.horizontalCenter: parent.horizontalCenter
+    y: 200
+  }
+  Label {
+    id: name
+    anchors.horizontalCenter: parent.horizontalCenter
+    y: 320
+    font.bold: true
+    text: "SailOTP 0.2"
+  }
+  Text {
+    id: desc
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: name.bottom
+    anchors.topMargin: 20
+    text: "A Simple Sailfish TOTP Generator<br />(RFC 6238 compatible)"
+    color: "white"
+  }
+  Text {
+    id: copyright
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: desc.bottom
+    anchors.topMargin: 20
+    text: "Copyright: Stefan Brand<br />License: BSD (3-clause)"
+    color: "white"
+  }
+  Button {
+    id: homepage
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: copyright.bottom
+    anchors.topMargin: 20
+    text: "<a href=\"https://github.com/seiichiro0185/sailotp\">SailOTP on Github</a>"
+    onClicked: {
+      Qt.openUrlExternally("https://github.com/seiichiro0185/sailotp")
     }
-
-    Label {
-        id: name
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 320
-        font.bold: true
-        text: "SailOTP 0.1"
-    }
-    Text {
-        id: desc
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: name.bottom
-        anchors.topMargin: 20
-        text: "A Simple Sailfish TOTP Generator<br />(RFC 6238 compatible)"
-        color: "white"
-    }
-    Text {
-        id: copyright
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: desc.bottom
-        anchors.topMargin: 20
-        text: "Copyright: Stefan Brand<br />License: BSD (3-clause)"
-        color: "white"
-    }
-    Button {
-        id: homepage
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: copyright.bottom
-        anchors.topMargin: 20
-        text: "<a href=\"https://github.com/seiichiro0185/sailotp\">SailOTP on Github</a>"
-        onClicked: {
-            Qt.openUrlExternally("https://github.com/seiichiro0185/sailotp")
-        }
-    }
-    Text {
-        id: accnowledgement
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: homepage.bottom
-        anchors.topMargin: 20
-        text: "SailOTP uses the SHA-1 Implementation<br />from http://caligatio.github.io/jsSHA/"
-        color: "white"
-    }
-
+  }
+  Text {
+    id: accnowledgement
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: homepage.bottom
+    anchors.topMargin: 20
+    text: "SailOTP uses the SHA-1 Implementation<br />from http://caligatio.github.io/jsSHA/"
+    color: "white"
+  }
 }

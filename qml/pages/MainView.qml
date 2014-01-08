@@ -34,139 +34,153 @@ import "../lib/storage.js" as DB
 import "../lib/crypto.js" as OTP
 
 Page {
-    id: mainPage
+  id: mainPage
 
-    ListModel {
-        id: otpListModel
+  ListModel {
+    id: otpListModel
+  }
+
+	// This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
+  property double lastUpdated: null
+
+  // Add an entry to the list
+  function appendOTP(title, secret) {
+    otpListModel.append({"secret": secret, "title": title, "otp": ""});
+  }
+
+  // Reload the List of OTPs from storage
+  function refreshOTPList() {
+    otpListModel.clear();
+    DB.getOTP();
+    refreshOTPValues();
+  }
+
+  // Calculate new OTPs for every entry
+  function refreshOTPValues() {
+		// get seconds from current Date
+		var curDate = new Date();
+    var seconds = curDate.getSeconds();
+
+		// Iterate over all List entries
+    for (var i=0; i<otpListModel.count; i++) {
+			// Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
+      if (otpListModel.get(i).otp == "" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+        var curOTP = OTP.calcOTP(otpListModel.get(i).secret)
+        otpListModel.setProperty(i, "otp", curOTP);
+        console.log("Updating Value ", i);
+      }
     }
 
-    property double lastUpdated: null
+		// Update the Progressbar
+    updateProgress.value = 29 - (seconds % 30)
+		// Set lastUpdate property
+    lastUpdated = curDate.getTime();
+  }
 
-    // Add an entry to the list
-    function appendOTP(title, secret) {
-        otpListModel.append({"secret": secret, "title": title, "otp": ""});
+  Timer {
+    interval: 1000
+    running: Qt.application.active // Timer only runs when App is active
+    repeat: true
+    onTriggered: refreshOTPValues();
+  }
+
+  SilicaFlickable {
+    anchors.fill: parent
+
+    PullDownMenu {
+      MenuItem {
+        text: "About"
+        onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
+      }
+      MenuItem {
+        text: "Add OTP"
+        onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
+      }
     }
 
-    // Reload the List of OTPs from storage
-    function refreshOTPList() {
-        otpListModel.clear();
-        DB.getOTP();
-        refreshOTPValues();
+    ProgressBar {
+      id: updateProgress
+      width: parent.width
+      maximumValue: 29
+      anchors.top: parent.top
+      anchors.topMargin: 48
     }
 
-    // Calculate new OTPs for every entry
-    function refreshOTPValues() {
-        var curDate = new Date();
-        var seconds = curDate.getSeconds();
+    SilicaListView {
+      id: otpList
+      header: PageHeader {
+        title: "SailOTP"
+      }
+      anchors.fill: parent
+      model: otpListModel
+      width: parent.width
 
-        for (var i=0; i<otpListModel.count; i++) {
-            if (otpListModel.get(i).otp == "" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-                var curOTP = OTP.calcOTP(otpListModel.get(i).secret)
-                otpListModel.setProperty(i, "otp", curOTP);
-                console.log("Updating Value ", i);
-            }
+      ViewPlaceholder {
+        enabled: otpList.count == 0
+        text: "Nothing here"
+        hintText: "Pull down to add a OTP"
+      }
+
+
+
+      delegate: ListItem {
+        id: otpListItem
+        menu: otpContextMenu
+        width: otpList.width
+        contentHeight: Theme.itemSizeMedium
+
+        function remove() {
+					// Show 5s countdown, then delete from DB and List
+          remorseAction("Deleting", function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
         }
 
-        updateProgress.value = 29 - (seconds % 30)
-        lastUpdated = curDate.getTime();
-    }
+        ListView.onRemove: animateRemoval()
+        Rectangle {
+          anchors.horizontalCenter: parent.horizontalCenter
 
-    Timer {
-        interval: 1000
-        running: Qt.application.active
-        repeat: true
+          Label {
+              id: otpLabel
+              text: model.title
+              color: Theme.secondaryColor
+              anchors.horizontalCenter: parent.horizontalCenter
+          }
 
-        onTriggered: refreshOTPValues();
-    }
+          Label {
+              id: otpValue
+              anchors.top: otpLabel.bottom
+              text: model.otp
+              anchors.horizontalCenter: parent.horizontalCenter
+              color: Theme.highlightColor
+              font.pixelSize: Theme.fontSizeLarge
+          }
+        }
 
-    SilicaFlickable {
-        anchors.fill: parent
-
-        PullDownMenu {
+        Component {
+          id: otpContextMenu
+          ContextMenu {
             MenuItem {
-                text: "About"
-                onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
+              text: "Edit"
+              onClicked: {
+                pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret})
+              }
             }
             MenuItem {
-                text: "Add OTP"
-                onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
+              text: "Delete"
+              onClicked: remove()
             }
+          }
         }
+      }
+      VerticalScrollDecorator{}
 
-        ProgressBar {
-            id: updateProgress
-            width: parent.width
-            maximumValue: 29
-            anchors.top: parent.top
-            anchors.topMargin: 48
-        }
-
-        SilicaListView {
-            id: otpList
-            header: PageHeader {
-                title: "SailOTP"
-            }
-            anchors.fill: parent
-            model: otpListModel
-            width: parent.width
-
-            ViewPlaceholder {
-                enabled: otpList.count == 0
-                text: "Nothing here"
-                hintText: "Pull down to add a OTP"
-            }
-
-
-
-            delegate: ListItem {
-                id: otpListItem
-                menu: otpContextMenu
-                width: otpList.width
-                contentHeight: Theme.itemSizeMedium
-
-                function remove() {
-                    remorseAction("Deleting", function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
-                }
-
-                ListView.onRemove: animateRemoval()
-                Rectangle {
-                    anchors.horizontalCenter: parent.horizontalCenter
-
-                    Label {
-                        id: otpLabel
-                        text: model.title
-                        color: Theme.secondaryColor
-                        anchors.horizontalCenter: parent.horizontalCenter
-                    }
-
-                    Label {
-                        id: otpValue
-                        anchors.top: otpLabel.bottom
-                        text: model.otp
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        color: Theme.highlightColor
-                        font.pixelSize: Theme.fontSizeLarge
-                    }
-                }
-
-                Component {
-                    id: otpContextMenu
-                    ContextMenu {
-                        MenuItem {
-                            text: "Delete"
-                            onClicked: remove()
-                        }
-                    }
-                }
-            }
-            VerticalScrollDecorator{}
-
-            Component.onCompleted: {
-                DB.initialize();
-                refreshOTPList();
-            }
-        }
+      Component.onCompleted: {
+				// Initialize DB (create tables etc..)
+        DB.initialize();
+				// Load list of OTP-Entries
+        refreshOTPList();
+      }
     }
+  }
 }
 
 
