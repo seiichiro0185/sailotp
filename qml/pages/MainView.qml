@@ -159,6 +159,12 @@ Page {
           id: otpContextMenu
           ContextMenu {
             MenuItem {
+              text: "Edit"
+              onClicked: {
+                pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret})
+              }
+            }
+            MenuItem {
               text: "Delete"
               onClicked: remove()
             }

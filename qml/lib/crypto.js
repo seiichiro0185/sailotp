@@ -75,15 +75,19 @@ function calcOTP(secret) {
   // Get last full 30 / 60 Seconds and convert to HEX
   var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
 
-  // Calculate the SHA-1 HMAC Value from time and key
-  var hmacObj = new SHA.jsSHA(time, 'HEX');
-  var hmac = hmacObj.getHMAC(key, 'HEX', 'SHA-1', "HEX");
+  try {
+    // Calculate the SHA-1 HMAC Value from time and key
+    var hmacObj = new SHA.jsSHA(time, 'HEX');
+    var hmac = hmacObj.getHMAC(key, 'HEX', 'SHA-1', "HEX");
 
-  // Finally convert the HMAC-Value to the corresponding 6-digit token
-  var offset = hex2dec(hmac.substring(hmac.length - 1));
+    // Finally convert the HMAC-Value to the corresponding 6-digit token
+    var offset = hex2dec(hmac.substring(hmac.length - 1));
 
-  var otp = (hex2dec(hmac.substr(offset * 2, 8)) & hex2dec('7fffffff')) + '';
-  otp = (otp).substr(otp.length - 6, 6);
+    var otp = (hex2dec(hmac.substr(offset * 2, 8)) & hex2dec('7fffffff')) + '';
+    otp = (otp).substr(otp.length - 6, 6);
+  } catch (e) {
+    otp = "Invalid Secret!"
+  }
 
   // return the calculated token
   return otp;

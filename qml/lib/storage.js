@@ -80,3 +80,14 @@ function removeOTP(title, secret) {
     }
   )
 }
+
+// Change an existing OTP
+function changeOTP(title, secret, oldtitle, oldsecret) {
+  var db = getDB();
+
+  db.transaction(
+    function(tx) {
+      tx.executeSql("UPDATE OTPStorage SET title=?, secret=? WHERE title=? and secret=?;", [title, secret, oldtitle, oldsecret]);
+    }
+  )
+}
