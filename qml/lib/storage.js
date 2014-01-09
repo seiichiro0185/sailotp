@@ -29,20 +29,34 @@
 
 .import QtQuick.LocalStorage 2.0 as LS
 
-// Get DB Connection
+// Get DB Connection, Initialize or Upgrade DB
 function getDB() {
-  return LS.LocalStorage.openDatabaseSync("harbour-sailotp", "1.0", "SailOTP Config Storage", 1000000);
-}
+  try {
+    var db = LS.LocalStorage.openDatabaseSync("harbour-sailotp", "", "SailOTP Config Storage", 1000000);
 
-// Initialize Table if not exists
-function initialize() {
-  var db = getDB();
-
-  db.transaction(
-    function(tx) {
-      tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT);");
+    if (db.version == "") {
+      // Initialize an empty DB, Create the Table
+      db.changeVersion("", "2",
+        function(tx) {
+          tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT, type TEXT, counter INTEGER, fav INTEGER);");
+        }
+      );
+    } else if (db.version == "1.0") {
+      // Upgrade DB Schema to Version 2
+      db.changeVersion("1.0", "2",
+        function(tx) {
+          tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN type TEXT DEFAULT 'TOTP';");
+          tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN counter INTEGER DEFAULT 0;");
+          tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN fav INTEGER DEFAULT 0;");
+        }
+      );
     }
-  )
+  } catch (e) {
+    // DB Failed to open
+    console.log("Could not open DB: " + e);
+  }
+
+  return db;
 }
 
 // Get all OTPs into the list model
@@ -65,7 +79,7 @@ function addOTP(title, secret) {
 
   db.transaction(
     function(tx) {
-      tx.executeSql("INSERT INTO OTPStorage VALUES(?, ?);", [title, secret]);
+      tx.executeSql("INSERT INTO OTPStorage VALUES(?, ?, ?, ?, ?);", [title, secret, 'TOTP', 0, 0]);
     }
   )
 }

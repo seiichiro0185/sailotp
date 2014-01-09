@@ -174,8 +174,6 @@ Page {
       VerticalScrollDecorator{}
 
       Component.onCompleted: {
-				// Initialize DB (create tables etc..)
-        DB.initialize();
 				// Load list of OTP-Entries
         refreshOTPList();
       }
