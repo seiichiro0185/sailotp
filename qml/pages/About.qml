@@ -44,7 +44,7 @@ Page {
     anchors.horizontalCenter: parent.horizontalCenter
     y: 320
     font.bold: true
-    text: "SailOTP 0.2"
+    text: "SailOTP 0.3"
   }
   Text {
     id: desc

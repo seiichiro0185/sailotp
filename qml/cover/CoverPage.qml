@@ -29,11 +29,39 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../lib/crypto.js" as OTP
 
 // Define the Layout of the Active Cover
 CoverBackground {
+  id: coverPage
 
-	// Show the SailOTP Logo
+  property double lastUpdated: 0
+
+  Timer {
+    interval: 1000
+    // Timer runs only when cover is visible and favourite is set
+    running: !Qt.application.active && appWin.coverSecret != ""
+    repeat: true
+    onTriggered: {
+      // get seconds from current Date
+      var curDate = new Date();
+
+      if (lOTP.text == "" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+        appWin.coverOTP = OTP.calcOTP(appWin.coverSecret);
+      }
+
+      // Change color of the OTP to red if less than 5 seconds left
+      if (29 - (curDate.getSeconds() % 30) < 5) {
+        lOTP.color = "red"
+      } else {
+        lOTP.color = Theme.highlightColor
+      }
+
+      lastUpdated = curDate.getTime();
+    }
+  }
+
+  // Show the SailOTP Logo
   Image {
     id: logo
     source: "../sailotp.png"
@@ -42,10 +70,22 @@ CoverBackground {
     anchors.topMargin: 48
   }
 
-	// Show the Application Name
-  Label {
-    id: label
-    anchors.centerIn: parent
-    text: "SailOTP"
+  Column {
+    anchors.top: logo.bottom
+    anchors.topMargin: 48
+    anchors.horizontalCenter: parent.horizontalCenter
+
+    Label {
+      text: appWin.coverTitle
+      anchors.horizontalCenter: parent.horizontalCenter
+      color: Theme.secondaryColor
+    }
+    Label {
+      id: lOTP
+      text: appWin.coverOTP
+      anchors.horizontalCenter: parent.horizontalCenter
+      color: Theme.highlightColor
+      font.pixelSize: Theme.fontSizeExtraLarge
+    }
   }
 }

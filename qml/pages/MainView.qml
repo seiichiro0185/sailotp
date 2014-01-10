@@ -41,18 +41,27 @@ Page {
   }
 
 	// This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
-  property double lastUpdated: null
+  property double lastUpdated: 0
 
   // Add an entry to the list
-  function appendOTP(title, secret) {
-    otpListModel.append({"secret": secret, "title": title, "otp": ""});
+  function appendOTP(title, secret, type, counter, fav) {
+    otpListModel.append({"secret": secret, "title": title, "fav": fav, "otp": ""});
+  }
+
+  // Hand favorite over to the cover
+  function setCoverOTP(title, secret) {
+    appWin.coverTitle = title
+    appWin.coverSecret = secret
+    if (secret == "") appWin.coverOTP = ""
   }
 
   // Reload the List of OTPs from storage
   function refreshOTPList() {
+    otpList.visible = false;
     otpListModel.clear();
     DB.getOTP();
     refreshOTPValues();
+    otpList.visible = true;
   }
 
   // Calculate new OTPs for every entry
@@ -67,7 +76,6 @@ Page {
       if (otpListModel.get(i).otp == "" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
         var curOTP = OTP.calcOTP(otpListModel.get(i).secret)
         otpListModel.setProperty(i, "otp", curOTP);
-        console.log("Updating Value ", i);
       }
     }
 
@@ -79,7 +87,8 @@ Page {
 
   Timer {
     interval: 1000
-    running: Qt.application.active // Timer only runs when App is active
+    // Timer only runs when app is acitive and we have entries
+    running: Qt.application.active && otpListModel.count
     repeat: true
     onTriggered: refreshOTPValues();
   }
@@ -104,6 +113,8 @@ Page {
       maximumValue: 29
       anchors.top: parent.top
       anchors.topMargin: 48
+      // Only show when there are enries
+      visible: otpListModel.count
     }
 
     SilicaListView {
@@ -121,37 +132,66 @@ Page {
         hintText: "Pull down to add a OTP"
       }
 
-
-
       delegate: ListItem {
         id: otpListItem
         menu: otpContextMenu
-        width: otpList.width
         contentHeight: Theme.itemSizeMedium
+        width: parent.width
 
         function remove() {
-					// Show 5s countdown, then delete from DB and List
+          // Show 5s countdown, then delete from DB and List
           remorseAction("Deleting", function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
+        }
+
+        onClicked: {
+          Clipboard.text = otp
         }
 
         ListView.onRemove: animateRemoval()
         Rectangle {
+          id: listRow
+          width: parent.width
           anchors.horizontalCenter: parent.horizontalCenter
 
-          Label {
+          IconButton {
+            icon.source: fav == 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+            anchors.left: parent.left
+            onClicked: {
+              if (fav == 0) {
+                DB.setFav(title, secret)
+                setCoverOTP(title, secret)
+                for (var i=0; i<otpListModel.count; i++) {
+                  if (i != index) {
+                    otpListModel.setProperty(i, "fav", 0);
+                  } else {
+                    otpListModel.setProperty(i, "fav", 1);
+                  }
+                }
+              } else {
+                DB.resetFav(title, secret)
+                setCoverOTP("SailOTP", "")
+                otpListModel.setProperty(index, "fav", 0);
+              }
+            }
+          }
+
+          Column {
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Label {
               id: otpLabel
               text: model.title
               color: Theme.secondaryColor
               anchors.horizontalCenter: parent.horizontalCenter
-          }
+            }
 
-          Label {
+            Label {
               id: otpValue
-              anchors.top: otpLabel.bottom
               text: model.otp
-              anchors.horizontalCenter: parent.horizontalCenter
               color: Theme.highlightColor
               font.pixelSize: Theme.fontSizeLarge
+              anchors.horizontalCenter: parent.horizontalCenter
+            }
           }
         }
 
@@ -174,8 +214,6 @@ Page {
       VerticalScrollDecorator{}
 
       Component.onCompleted: {
-				// Initialize DB (create tables etc..)
-        DB.initialize();
 				// Load list of OTP-Entries
         refreshOTPList();
       }
