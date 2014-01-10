@@ -142,18 +142,18 @@ Page {
           width: parent.width
           anchors.horizontalCenter: parent.horizontalCenter
 
-          Switch {
-            checked: model.fav
+          IconButton {
+            icon.source: fav == 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
             anchors.left: parent.left
             onClicked: {
-              if (checked) DB.setFav(title, secret)
-              refreshOTPList();
-              /*model.fav = checked ? 1 : 0;
+              DB.setFav(title, secret)
               for (var i=0; i<otpListModel.count; i++) {
                 if (i != index) {
                   otpListModel.setProperty(i, "fav", 0);
+                } else {
+                  otpListModel.setProperty(i, "fav", 1);
                 }
-              }*/
+              }
             }
           }
 
