@@ -138,9 +138,13 @@ Page {
         contentHeight: Theme.itemSizeMedium
         width: parent.width
 
-       function remove() {
-					// Show 5s countdown, then delete from DB and List
+        function remove() {
+          // Show 5s countdown, then delete from DB and List
           remorseAction("Deleting", function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
+        }
+
+        onClicked: {
+          Clipboard.text = otp
         }
 
         ListView.onRemove: animateRemoval()
