@@ -41,11 +41,18 @@ Page {
   }
 
 	// This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
-  property double lastUpdated: null
+  property double lastUpdated: 0
 
   // Add an entry to the list
   function appendOTP(title, secret, type, counter, fav) {
     otpListModel.append({"secret": secret, "title": title, "fav": fav, "otp": ""});
+  }
+
+  // Hand favorite over to the cover
+  function setCoverOTP(title, secret) {
+    appWin.coverTitle = title
+    appWin.coverSecret = secret
+    if (secret == "") appWin.coverOTP = ""
   }
 
   // Reload the List of OTPs from storage
@@ -146,13 +153,20 @@ Page {
             icon.source: fav == 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
             anchors.left: parent.left
             onClicked: {
-              DB.setFav(title, secret)
-              for (var i=0; i<otpListModel.count; i++) {
-                if (i != index) {
-                  otpListModel.setProperty(i, "fav", 0);
-                } else {
-                  otpListModel.setProperty(i, "fav", 1);
+              if (fav == 0) {
+                DB.setFav(title, secret)
+                setCoverOTP(title, secret)
+                for (var i=0; i<otpListModel.count; i++) {
+                  if (i != index) {
+                    otpListModel.setProperty(i, "fav", 0);
+                  } else {
+                    otpListModel.setProperty(i, "fav", 1);
+                  }
                 }
+              } else {
+                DB.resetFav(title, secret)
+                setCoverOTP("SailOTP", "")
+                otpListModel.setProperty(index, "fav", 0);
               }
             }
           }

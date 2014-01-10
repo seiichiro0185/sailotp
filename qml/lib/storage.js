@@ -68,6 +68,7 @@ function getOTP() {
       var res = tx.executeSql("select * from OTPStorage;");
       for (var i=0; i < res.rows.length; i++) {
         mainPage.appendOTP(res.rows.item(i).title, res.rows.item(i).secret, res.rows.item(i).type, res.rows.item(i).counter, res.rows.item(i).fav);
+        if (res.rows.item(i).fav) mainPage.setCoverOTP(res.rows.item(i).title, res.rows.item(i).secret);
       }
     }
   )
@@ -102,6 +103,16 @@ function setFav(title, secret) {
     function(tx) {
       tx.executeSql("UPDATE OTPStorage set fav = 0");
       tx.executeSql("UPDATE OTPStorage set fav = 1 WHERE title=? and secret=?;", [title, secret]);
+    }
+  )
+}
+
+function resetFav(title, secret) {
+  var db = getDB();
+
+  db.transaction(
+    function(tx) {
+      tx.executeSql("UPDATE OTPStorage set fav = 0");
     }
   )
 }
