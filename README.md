@@ -5,9 +5,16 @@ also known as Timebased One Time Pad (TOPT) as described in RFC 6238. A growing
 number of sites uses this algorithm for two-factor-authentication, including
 Github, Linode and several Google services.
 
-At the moment the App is quite basic. One can add new OTP-entries using the
-pulley-menu. The main view of the app will show a List off all entries and
-their current One-Time-Tokens. The entries will be regenerated every 30 seconds, the remaining time for the current tokens is shown through a progress bar at the top of the app. An entry can be deleted by long-pressing on it.
+One can add new OTP-entries using the pulley-menu. The main view of the app will show a list 
+off all entries and their current One-Time-Tokens. The entries will be regenerated every 30 seconds, 
+the remaining time for the current tokens is shown through a progress bar at the top of the app. 
+An entry can be edited or deleted by long-pressing on it.
+
+One entry can be stared by tapping the star icon on the left. the stared item will be shown
+on the ActiveCover and refreshed every 30 seconds. 5 seconds before the token changes it's
+color will change to red. The Item can be unstared by tapping it again.
+
+From the main view a token can be copied to the clipboard by tapping on it.
 
 ## Known Limitations
 
