@@ -40,19 +40,31 @@ Dialog {
   property QtObject parentPage: null
 
   // If we want to edit a Key we get title and key from the calling page
+  property string paramType: "TOTP"
   property string paramLabel: ""
   property string paramKey: ""
+  property int paramCounter: 0
 
   SilicaFlickable {
     id: addOtpList
     anchors.fill: parent
+    width: parent.width
 
     VerticalScrollDecorator {}
 
     Column {
       anchors.fill: parent
+      width: parent.width
       DialogHeader {
         acceptText: paramLabel != "" ? "Save" : "Add"
+      }
+
+      ComboBox {
+        label: "Type"
+        menu: ContextMenu {
+          MenuItem { text: "Time-based"; onClicked: { paramType = "TOTP" } }
+          MenuItem { text: "Counter-based"; onClicked: { paramType = "HOTP" } }
+        }
       }
       TextField {
         id: otpLabel
@@ -72,6 +84,17 @@ Dialog {
         focus: true
         horizontalAlignment: TextInput.AlignLeft
       }
+      TextField {
+        id: otpCounter
+        width: parent.width
+        visible: paramType == "HOTP" ? true : false
+        label: "Counter Value"
+        text: paramCounter
+        placeholderText: "Initial Value of the Counter"
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+      }
+
     }
   }
 
