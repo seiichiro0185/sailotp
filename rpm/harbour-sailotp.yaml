@@ -1,6 +1,6 @@
 Name: harbour-sailotp
 Summary: SailOTP
-Version: 0.3
+Version: 0.4
 Release: 1
 Group: Security
 URL: https://github.com/seiichiro0185/sailotp/
@@ -8,7 +8,7 @@ License: "BSD\t"
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  A Sailfish implementation of the Timebased One Time Pad algorithm as used by Google Authenticator and a growing number of Websites.
+  A Sailfish implementation of the One Time Pad algorithm as used by Google Authenticator and a growing number of Websites.
 Configure: none
 Builder: qtc5
 PkgConfigBR:

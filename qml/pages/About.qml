@@ -44,14 +44,14 @@ Page {
     anchors.horizontalCenter: parent.horizontalCenter
     y: 320
     font.bold: true
-    text: "SailOTP 0.3"
+    text: "SailOTP 0.4"
   }
   Text {
     id: desc
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: name.bottom
     anchors.topMargin: 20
-    text: "A Simple Sailfish TOTP Generator<br />(RFC 6238 compatible)"
+    text: "A Simple Sailfish OTP Generator<br />(RFC 6238/4226 compatible)"
     color: "white"
   }
   Text {
