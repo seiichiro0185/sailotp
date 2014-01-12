@@ -1,18 +1,24 @@
 # SailOTP
 
-SailOTP is a Sailfish Implementation of the Google-Authenticator algorithm,
-also known as Timebased One Time Pad (TOPT) as described in RFC 6238. A growing
+SailOTP is a Sailfish Implementation of the Google-Authenticator algorithms,
+also known as TOPT (timer based) and HOTP (counter based) as described in RFC 6238 and 4226. A growing
 number of sites uses this algorithm for two-factor-authentication, including
 Github, Linode and several Google services.
 
-One can add new OTP-entries using the pulley-menu. The main view of the app will show a list 
-off all entries and their current One-Time-Tokens. The entries will be regenerated every 30 seconds, 
-the remaining time for the current tokens is shown through a progress bar at the top of the app. 
+One can add new OTP-entries using the pulley-menu. The type of token can be selected. Title and the shared
+secret have to be provided. For counter based HOTP-tokens the counter value for the next update of the
+Token can be set. The default of 1 is the standard value for new HOTP-tokens and should not be changed.
+
+The main view of the app will show a list off all entries and their current One-Time-Tokens. 
+The entries will be regenerated every 30 seconds, the remaining time for the current tokens is shown 
+through a progress bar at the top of the app. HOTP-type tokens are not updated automatically, instead
+a refresh button is shown on the right of the token to calculate the next value and increment the counter
 An entry can be edited or deleted by long-pressing on it.
 
 One entry can be stared by tapping the star icon on the left. the stared item will be shown
-on the ActiveCover and refreshed every 30 seconds. 5 seconds before the token changes it's
-color will change to red. The Item can be unstared by tapping it again.
+on the ActiveCover. If the Token is timer based, it will be refreshed every 30 seconds. 5 seconds before the token changes it's
+color will change to red. For counter based tokens a cover action to calculate the next token is shown instead.
+The item can be unstared by tapping the star icon again on the main view.
 
 From the main view a token can be copied to the clipboard by tapping on it.
 
