@@ -66,18 +66,27 @@ function leftpad(str, len, pad) {
 // *** Main Function *** //
 
 // Calculate an OTP-Value from the given secret
-// Parameter is the secret key in Base32-notation
-function calcOTP(secret) {
+// Parameters are:
+//   secret: The secret key in Base32-Notation
+//   tpye: either TOTP for timer based or HOTP for counter based calculation
+//   counter: counter value for HOTP
+function calcOTP(secret, type, counter) {
   // Convert the key to HEX
   var key = base32tohex(secret);
-  // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC)
-  var epoch = Math.round(new Date().getTime() / 1000.0);
-  // Get last full 30 / 60 Seconds and convert to HEX
-  var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
+  var factor = "";
+
+  if (type == "TOTP") {
+    // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC)
+    var epoch = Math.round(new Date().getTime() / 1000.0);
+    // Get last full 30 / 60 Seconds and convert to HEX
+    factor = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
+  } else {
+    factor = leftpad(dec2hex(counter), 16, '0');
+  }
 
   try {
     // Calculate the SHA-1 HMAC Value from time and key
-    var hmacObj = new SHA.jsSHA(time, 'HEX');
+    var hmacObj = new SHA.jsSHA(factor, 'HEX');
     var hmac = hmacObj.getHMAC(key, 'HEX', 'SHA-1', "HEX");
 
     // Finally convert the HMAC-Value to the corresponding 6-digit token

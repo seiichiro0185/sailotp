@@ -38,7 +38,8 @@ ApplicationWindow
   // Properties to pass values between MainPage and Cover
   property string coverTitle: "SailOTP"
   property string coverSecret: ""
-  property string coverOTP: ""
+  property string coverType: ""
+  property string coverOTP: "------"
 
   initialPage: Component { MainView { } }
   cover: Qt.resolvedUrl("cover/CoverPage.qml")
