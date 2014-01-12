@@ -30,6 +30,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../lib/crypto.js" as OTP
+import "../lib/storage.js" as DB
 
 // Define the Layout of the Active Cover
 CoverBackground {
@@ -40,14 +41,14 @@ CoverBackground {
   Timer {
     interval: 1000
     // Timer runs only when cover is visible and favourite is set
-    running: !Qt.application.active && appWin.coverSecret != ""
+    running: !Qt.application.active && appWin.coverSecret != "" && appWin.coverType == "TOTP"
     repeat: true
     onTriggered: {
       // get seconds from current Date
       var curDate = new Date();
 
-      if (lOTP.text == "" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-        appWin.coverOTP = OTP.calcOTP(appWin.coverSecret);
+      if (lOTP.text == "------" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+        appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "TOTP", 0);
       }
 
       // Change color of the OTP to red if less than 5 seconds left
@@ -86,6 +87,16 @@ CoverBackground {
       anchors.horizontalCenter: parent.horizontalCenter
       color: Theme.highlightColor
       font.pixelSize: Theme.fontSizeExtraLarge
+    }
+  }
+  // CoverAction to update a HOTP-Token, only visible for HOTP-Type Tokens
+  CoverActionList {
+    enabled: appWin.coverType == "HOTP" ? true : false
+    CoverAction {
+      iconSource: "image://theme/icon-m-refresh"
+      onTriggered: {
+        appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "HOTP", DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
+      }
     }
   }
 }

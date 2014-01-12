@@ -43,27 +43,26 @@ Dialog {
   property string paramType: "TOTP"
   property string paramLabel: ""
   property string paramKey: ""
-  property int paramCounter: 0
+  property int paramCounter: 1 // New Counters start at 1
 
   SilicaFlickable {
     id: addOtpList
     anchors.fill: parent
-    width: parent.width
 
     VerticalScrollDecorator {}
 
     Column {
       anchors.fill: parent
-      width: parent.width
       DialogHeader {
         acceptText: paramLabel != "" ? "Save" : "Add"
       }
 
       ComboBox {
+        id: typeSel
         label: "Type"
         menu: ContextMenu {
-          MenuItem { text: "Time-based"; onClicked: { paramType = "TOTP" } }
-          MenuItem { text: "Counter-based"; onClicked: { paramType = "HOTP" } }
+          MenuItem { text: "Time-based (TOTP)"; onClicked: { paramType = "TOTP" } }
+          MenuItem { text: "Counter-based (HOTP)"; onClicked: { paramType = "HOTP" } }
         }
       }
       TextField {
@@ -88,18 +87,19 @@ Dialog {
         id: otpCounter
         width: parent.width
         visible: paramType == "HOTP" ? true : false
-        label: "Counter Value"
+        label: "Next Counter Value"
         text: paramCounter
-        placeholderText: "Initial Value of the Counter"
+        placeholderText: "Next Value of the Counter"
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+        validator: IntValidator { bottom: 0 }
       }
-
+      Component.onCompleted: { typeSel.currentIndex = paramType == "HOTP" ? 1 : 0 }
     }
   }
 
   // Check if we can Save
-  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 ? true : false
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && (paramType == "TOTP" || otpCounter.text.length > 0) ? true : false
 
   // Save if page is Left with Add
   onDone: {
@@ -107,10 +107,10 @@ Dialog {
 			// Save the entry to the Config DB
       if (paramLabel != "" && paramKey != "") {
         // Parameters where filled -> Change existing entry
-        DB.changeOTP(otpLabel.text, otpSecret.text, paramLabel, paramKey)
+        DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, paramLabel, paramKey)
       } else {
         // There were no parameters -> Add new entry
-        DB.addOTP(otpLabel.text, otpSecret.text);
+        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text);
       }
 			// Refresh the main Page
       parentPage.refreshOTPList();
