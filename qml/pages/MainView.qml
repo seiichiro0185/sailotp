@@ -45,14 +45,19 @@ Page {
 
   // Add an entry to the list
   function appendOTP(title, secret, type, counter, fav) {
-    otpListModel.append({"secret": secret, "title": title, "fav": fav, "otp": ""});
+    otpListModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "otp": "------"});
   }
 
   // Hand favorite over to the cover
-  function setCoverOTP(title, secret) {
+  function setCoverOTP(title, secret, type) {
     appWin.coverTitle = title
     appWin.coverSecret = secret
-    if (secret == "") appWin.coverOTP = ""
+    appWin.coverType = type
+    if (secret = "") {
+      appWin.coverOTP = "";
+    } else if (type == "HOTP") {
+      appWin.coverOTP = "------";
+    }
   }
 
   // Reload the List of OTPs from storage
@@ -72,10 +77,15 @@ Page {
 
 		// Iterate over all List entries
     for (var i=0; i<otpListModel.count; i++) {
-			// Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
-      if (otpListModel.get(i).otp == "" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-        var curOTP = OTP.calcOTP(otpListModel.get(i).secret)
-        otpListModel.setProperty(i, "otp", curOTP);
+      if (otpListModel.get(i).type == "TOTP") {
+        // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
+        if (otpListModel.get(i).otp == "------" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+          var curOTP = OTP.calcOTP(otpListModel.get(i).secret, "TOTP")
+          otpListModel.setProperty(i, "otp", curOTP);
+        }
+      } else if (appWin.coverType == "HOTP" && (curDate.getTime() - lastUpdated > 2000) && otpListModel.get(i).fav == 1) {
+        // If we are coming back from the CoverPage update OTP value if current favourite is HOTP
+        otpListModel.setProperty(i, "otp", appWin.coverOTP);
       }
     }
 
@@ -86,7 +96,7 @@ Page {
   }
 
   Timer {
-    interval: 1000
+    interval: 500
     // Timer only runs when app is acitive and we have entries
     running: Qt.application.active && otpListModel.count
     repeat: true
@@ -159,7 +169,8 @@ Page {
             onClicked: {
               if (fav == 0) {
                 DB.setFav(title, secret)
-                setCoverOTP(title, secret)
+                setCoverOTP(title, secret, type)
+                if (type == "HOTP") appWin.coverOTP = otp
                 for (var i=0; i<otpListModel.count; i++) {
                   if (i != index) {
                     otpListModel.setProperty(i, "fav", 0);
@@ -169,7 +180,7 @@ Page {
                 }
               } else {
                 DB.resetFav(title, secret)
-                setCoverOTP("SailOTP", "")
+                setCoverOTP("SailOTP", "", "")
                 otpListModel.setProperty(index, "fav", 0);
               }
             }
@@ -195,13 +206,25 @@ Page {
           }
         }
 
+        // Show an update button on HTOP-Type Tokens
+        IconButton {
+          icon.source: "image://theme/icon-m-refresh"
+          anchors.right: parent.right
+          visible: type == "HOTP" ? true : false
+          onClicked: {
+            otpListModel.setProperty(index, "counter", DB.getCounter(title, secret, true));
+            otpListModel.setProperty(index, "otp", OTP.calcOTP(secret, "HOTP", counter));
+            if (fav == 1) appWin.coverOTP = otp;
+          }
+        }
+
         Component {
           id: otpContextMenu
           ContextMenu {
             MenuItem {
               text: "Edit"
               onClicked: {
-                pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret})
+                pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret, paramType: type, paramCounter: DB.getCounter(title, secret, false)})
               }
             }
             MenuItem {
