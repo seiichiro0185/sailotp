@@ -239,6 +239,7 @@ Page {
       Component.onCompleted: {
 				// Load list of OTP-Entries
         refreshOTPList();
+        console.log("SailOTP Version " + Qt.application.version + " started");
       }
     }
   }

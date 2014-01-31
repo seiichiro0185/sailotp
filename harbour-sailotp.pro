@@ -8,6 +8,9 @@
 #         - icon definition filename in desktop file must be changed
 TARGET = harbour-sailotp
 
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
+
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-sailotp.cpp

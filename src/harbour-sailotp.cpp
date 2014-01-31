@@ -32,9 +32,11 @@
 #endif
 
 #include <sailfishapp.h>
+#include <QGuiApplication>
 
 int main(int argc, char *argv[])
 {
+  QCoreApplication::setApplicationVersion(APP_VERSION);
+
   return SailfishApp::main(argc, argv);
 }
-

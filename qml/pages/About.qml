@@ -44,7 +44,7 @@ Page {
     anchors.horizontalCenter: parent.horizontalCenter
     y: 320
     font.bold: true
-    text: "SailOTP 0.4"
+    text: "SailOTP " + Qt.application.version
   }
   Text {
     id: desc
@@ -67,9 +67,9 @@ Page {
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: copyright.bottom
     anchors.topMargin: 20
-    text: "<a href=\"https://github.com/seiichiro0185/sailotp\">SailOTP on Github</a>"
+    text: "<a href=\"https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git\">Source Code</a>"
     onClicked: {
-      Qt.openUrlExternally("https://github.com/seiichiro0185/sailotp")
+      Qt.openUrlExternally("https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git")
     }
   }
   Text {
