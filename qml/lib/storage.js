@@ -38,7 +38,7 @@ function getDB() {
       // Initialize an empty DB, Create the Table
       db.changeVersion("", "2",
         function(tx) {
-          tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT, type TEXT, counter INTEGER, fav INTEGER);");
+          tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT, type TEXT DEFAULT 'TOPT', counter INTEGER DEFAULT 0, fav INTEGER DEFAULT 0);");
         }
       );
     } else if (db.version == "1.0") {
