@@ -27,7 +27,8 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/lib/storage.js \
     qml/lib/crypto.js \
     qml/lib/sha.js \
-    qml/sailotp.png
+    qml/sailotp.png \
+    qml/pages/ExportPage.qml
 
 HEADERS += \
     src/fileio.h

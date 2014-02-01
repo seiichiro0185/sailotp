@@ -112,6 +112,10 @@ Page {
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
       }
       MenuItem {
+        text: "Export / Import DB"
+        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+      }
+      MenuItem {
         text: "Add OTP"
         onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
       }

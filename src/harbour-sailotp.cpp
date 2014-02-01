@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     app->setApplicationName("harbour-sailotp");
     app->setApplicationVersion(APP_VERSION);
 
-    qmlRegisterType<FileIO, 1>("FileIO", 1, 0, "FileIO");
+    qmlRegisterType<FileIO, 1>("harbour.sailotp.FileIO", 1, 0, "FileIO");
 
     view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
     view->show();
