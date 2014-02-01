@@ -37,13 +37,16 @@ import "../lib/storage.js" as DB // Import the storage library for Config-Access
 Dialog {
   id: exportPage
 
+  // We get the Object of the parent page on call to refresh it after adding a new Entry
+  property QtObject parentPage: null
+
   property string mode: "export"
 
   // FileIO Object for reading / writing files
   FileIO {
-      id: exportFile
-      source: fileName.text
-      onError: console.log(msg)
+    id: exportFile
+    source: fileName.text
+    onError: console.log(msg)
   }
 
   SilicaFlickable {
@@ -90,9 +93,16 @@ Dialog {
   canAccept: fileName.text.length > 0 && filePassword.text.length > 0 ? true : false
 
   // Do the DB-Export / Import
+  // TODO: Error handling and enctyption
   onDone: {
     if (result == DialogResult.Accepted) {
-     // TODO
+      if (mode == "export") {
+        console.log("Exporting to " + fileName.text, filePassword.text);
+        exportFile.write(DB.db2json());
+      } else if(mode == "import") {
+        console.log("Importing ftom " + fileName.text, filePassword.text);
+        DB.json2db(exportFile.read(), filePassword)
+      }
     }
   }
 }

@@ -5,25 +5,25 @@
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this 
+ * 1. Redistributions of source code must retain the above copyright notice, this
  *    list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice, this
- *    list of conditions and the following disclaimer in the documentation and/or other 
+ *    list of conditions and the following disclaimer in the documentation and/or other
  *    materials provided with the distribution.
- * 
- * 3. The names of the contributors may not be used to endorse or promote products 
+ *
+ * 3. The names of the contributors may not be used to endorse or promote products
  *    derived from this software without specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
- * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
@@ -40,7 +40,7 @@ Page {
     id: otpListModel
   }
 
-	// This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
+  // This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
   property double lastUpdated: 0
 
   // Add an entry to the list
@@ -71,11 +71,11 @@ Page {
 
   // Calculate new OTPs for every entry
   function refreshOTPValues() {
-		// get seconds from current Date
-		var curDate = new Date();
+    // get seconds from current Date
+    var curDate = new Date();
     var seconds = curDate.getSeconds();
 
-		// Iterate over all List entries
+    // Iterate over all List entries
     for (var i=0; i<otpListModel.count; i++) {
       if (otpListModel.get(i).type == "TOTP") {
         // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
@@ -89,9 +89,9 @@ Page {
       }
     }
 
-		// Update the Progressbar
+    // Update the Progressbar
     updateProgress.value = 29 - (seconds % 30)
-		// Set lastUpdate property
+    // Set lastUpdate property
     lastUpdated = curDate.getTime();
   }
 
@@ -113,7 +113,7 @@ Page {
       }
       MenuItem {
         text: "Export / Import DB"
-        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage})
       }
       MenuItem {
         text: "Add OTP"
@@ -241,7 +241,7 @@ Page {
       VerticalScrollDecorator{}
 
       Component.onCompleted: {
-				// Load list of OTP-Entries
+        // Load list of OTP-Entries
         refreshOTPList();
         console.log("SailOTP Version " + Qt.application.version + " started");
       }
