@@ -33,10 +33,23 @@
 
 #include <sailfishapp.h>
 #include <QGuiApplication>
+#include "fileio.h"
 
 int main(int argc, char *argv[])
 {
-  QCoreApplication::setApplicationVersion(APP_VERSION);
+    QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+    QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-  return SailfishApp::main(argc, argv);
+    app->setOrganizationName("harbour-sailotp");
+    app->setOrganizationDomain("harbour-sailotp");
+    app->setApplicationName("harbour-sailotp");
+    app->setApplicationVersion(APP_VERSION);
+
+    qmlRegisterType<FileIO, 1>("FileIO", 1, 0, "FileIO");
+
+    view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
+    view->show();
+
+    return app->exec();
 }
+

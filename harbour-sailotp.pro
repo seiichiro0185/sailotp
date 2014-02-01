@@ -13,7 +13,8 @@ DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-sailotp.cpp
+SOURCES += src/harbour-sailotp.cpp \
+    src/fileio.cpp
 
 OTHER_FILES += qml/harbour-sailotp.qml \
     qml/cover/CoverPage.qml \
@@ -27,4 +28,7 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/lib/crypto.js \
     qml/lib/sha.js \
     qml/sailotp.png
+
+HEADERS += \
+    src/fileio.h
 
