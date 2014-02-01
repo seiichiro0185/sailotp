@@ -112,11 +112,15 @@ Page {
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
       }
       MenuItem {
-        text: "Export / Import DB"
-        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage})
+        text: "Export Token-DB"
+        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "export"})
       }
       MenuItem {
-        text: "Add OTP"
+        text: "Import Token-DB"
+        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "import"})
+      }
+      MenuItem {
+        text: "Add Token"
         onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
       }
     }

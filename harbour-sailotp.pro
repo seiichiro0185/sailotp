@@ -28,7 +28,8 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/lib/crypto.js \
     qml/lib/sha.js \
     qml/sailotp.png \
-    qml/pages/ExportPage.qml
+    qml/pages/ExportPage.qml \
+    qml/lib/gibberish-aes.js
 
 HEADERS += \
     src/fileio.h

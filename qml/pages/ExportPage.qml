@@ -32,6 +32,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.sailotp.FileIO 1.0 // Import FileIO Class
 import "../lib/storage.js" as DB // Import the storage library for Config-Access
+import "../lib/gibberish-aes.js" as Gibberish //Import AES encryption library
 
 // Define Layout of the Export / Import Page
 Dialog {
@@ -40,7 +41,7 @@ Dialog {
   // We get the Object of the parent page on call to refresh it after adding a new Entry
   property QtObject parentPage: null
 
-  property string mode: "export"
+  property string mode: "import"
 
   // FileIO Object for reading / writing files
   FileIO {
@@ -61,14 +62,14 @@ Dialog {
         acceptText: mode == "export" ? "Export" : "Import"
       }
 
-      ComboBox {
+      /*ComboBox {
         id: modeSel
         label: "Mode: "
         menu: ContextMenu {
           MenuItem { text: "Export"; onClicked: { mode = "export" } }
           MenuItem { text: "Import"; onClicked: { mode = "import" } }
         }
-      }
+      }*/
       TextField {
         id: fileName
         width: parent.width
@@ -97,11 +98,11 @@ Dialog {
   onDone: {
     if (result == DialogResult.Accepted) {
       if (mode == "export") {
-        console.log("Exporting to " + fileName.text, filePassword.text);
-        exportFile.write(DB.db2json());
+        console.log("Exporting to " + fileName.text);
+        exportFile.write(Gibberish.AES.enc(DB.db2json(), filePassword.text));
       } else if(mode == "import") {
-        console.log("Importing ftom " + fileName.text, filePassword.text);
-        DB.json2db(exportFile.read(), filePassword)
+        console.log("Importing ftom " + fileName.text);
+        DB.json2db(Gibberish.AES.dec(exportFile.read(), filePassword.text))
       }
     }
   }

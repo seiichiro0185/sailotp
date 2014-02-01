@@ -72,12 +72,16 @@ Page {
       Qt.openUrlExternally("https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git")
     }
   }
-  Text {
-    id: accnowledgement
+  TextArea {
+    id: acknowledgement
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: homepage.bottom
     anchors.topMargin: 20
-    text: "SailOTP uses the SHA-1 Implementation<br />from http://caligatio.github.io/jsSHA/"
+    width: parent.width
+    font.pixelSize: Theme.fontSizeSmall
+    horizontalAlignment: TextEdit.Center
+    readOnly: true
+    text: "SailOTP uses the following third party libs:\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes"
     color: "white"
   }
 }

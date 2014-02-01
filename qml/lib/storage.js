@@ -72,7 +72,7 @@ function getOTP() {
 }
 
 // Get all OTP Values and put them into a JSON-Object
-function db2json(password) {
+function db2json() {
   var db = getDB();
   var otpList = [];
 
@@ -97,7 +97,7 @@ function db2json(password) {
 }
 
 // Read Values from JSON and put them into the DB
-function json2db(jsonString, password) {
+function json2db(jsonString) {
   var json = JSON.parse(jsonString);
 
   if (json.version != "1" && json.app != "sailotp" ) {
