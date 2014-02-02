@@ -45,7 +45,9 @@ int main(int argc, char *argv[])
     qmlRegisterType<FileIO, 1>("harbour.sailotp.FileIO", 1, 0, "FileIO");
 
     view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
+    view->rootContext()->setContextProperty("XDG_HOME_DIR", QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
     view->show();
+
 
     return app->exec();
 }

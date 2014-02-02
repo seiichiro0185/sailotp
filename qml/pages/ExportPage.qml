@@ -52,7 +52,7 @@ Dialog {
 
   function creFileName() {
     var date = new Date();
-    return("/home/nemo/sailotp_"+date.getFullYear()+fillNum(date.getMonth()+1)+fillNum(date.getDate())+".aes");
+    return(XDG_HOME_DIR + "/sailotp_"+date.getFullYear()+fillNum(date.getMonth()+1)+fillNum(date.getDate())+".aes");
   }
 
   function checkFileName(file) {
@@ -95,7 +95,7 @@ Dialog {
       TextField {
         id: fileName
         width: parent.width
-        text: mode == "export" ? creFileName() : "/home/nemo/";
+        text: mode == "export" ? creFileName() : XDG_HOME_DIR + "/";
         label: "Filename"
         placeholderText: mode == "import" ? "File to import" : "File to export"
         focus: true
