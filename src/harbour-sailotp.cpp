@@ -27,14 +27,28 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifdef QT_QML_DEBUG
 #include <QtQuick>
-#endif
-
 #include <sailfishapp.h>
+#include <QGuiApplication>
+#include "fileio.h"
 
 int main(int argc, char *argv[])
 {
-  return SailfishApp::main(argc, argv);
+    QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+    QScopedPointer<QQuickView> view(SailfishApp::createView());
+
+    app->setOrganizationName("harbour-sailotp");
+    app->setOrganizationDomain("harbour-sailotp");
+    app->setApplicationName("harbour-sailotp");
+    app->setApplicationVersion(APP_VERSION);
+
+    qmlRegisterType<FileIO, 1>("harbour.sailotp.FileIO", 1, 0, "FileIO");
+
+    view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
+    view->rootContext()->setContextProperty("XDG_HOME_DIR", QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
+    view->show();
+
+
+    return app->exec();
 }
 

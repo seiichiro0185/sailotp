@@ -8,9 +8,13 @@
 #         - icon definition filename in desktop file must be changed
 TARGET = harbour-sailotp
 
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
+
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-sailotp.cpp
+SOURCES += src/harbour-sailotp.cpp \
+    src/fileio.cpp
 
 OTHER_FILES += qml/harbour-sailotp.qml \
     qml/cover/CoverPage.qml \
@@ -23,5 +27,11 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/lib/storage.js \
     qml/lib/crypto.js \
     qml/lib/sha.js \
-    qml/sailotp.png
+    qml/sailotp.png \
+    qml/pages/ExportPage.qml \
+    qml/lib/gibberish-aes.js \
+    qml/components/NotifyBanner.qml
+
+HEADERS += \
+    src/fileio.h
 
