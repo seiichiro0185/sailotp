@@ -30,6 +30,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "components"
 
 ApplicationWindow
 {
@@ -40,6 +41,8 @@ ApplicationWindow
   property string coverSecret: ""
   property string coverType: ""
   property string coverOTP: "------"
+
+  NotifyBanner { id: notify }
 
   initialPage: Component { MainView { } }
   cover: Qt.resolvedUrl("cover/CoverPage.qml")

@@ -22,6 +22,16 @@ The item can be unstared by tapping the star icon again on the main view.
 
 From the main view a token can be copied to the clipboard by tapping on it.
 
+From the pulley menu the token database can be exported to a file for backup purposes. The backup is a AES-256-CBC encrypted and
+Base64 encoded file containing a JSON-representation of the database. It can be decrypted with openssl using the following command:
+ 
+    openssl enc -d -a -aes-256-cbc -in <file>
+
+if you need the information outside of SailOTP.
+
+Importing the file is also possible from the pulley menu. If a file contains tokens that are already in the database 
+(title and secret of the token match an existing one), these tokens will not be added again.
+
 ## Known Limitations
 
 At the moment the only way to insert new entries into the app is to insert the
@@ -42,6 +52,10 @@ SailOTP is licensed under a 3-Clause BSD-License. See COPYING for details.
 SailOTP uses the SHA-1 and HMAC-Implementation from 
 
 <a href="https://github.com/Caligatio/jsSHA" target="_blank">https://github.com/Caligatio/jsSHA</a>
+
+SailOTP also uses the AES-Implementation from
+
+<a href="https://github.com/mdp/gibberish-aes" target="_blank">https://github.com/mdp/gibberish-aes</a>
 
 The implementation of the TOTP-algorithm was inspired by:
 
