@@ -163,7 +163,7 @@ Page {
 
         onClicked: {
           Clipboard.text = otp
-          notify.show("Token for " + title + " copied", 3000);
+          notify.show("Token for " + title + " copied to clipboard", 3000);
         }
 
         ListView.onRemove: animateRemoval()

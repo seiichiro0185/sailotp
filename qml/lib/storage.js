@@ -97,11 +97,12 @@ function db2json() {
 }
 
 // Read Values from JSON and put them into the DB
-function json2db(jsonString) {
+function json2db(jsonString, error) {
   var json = JSON.parse(jsonString);
+  error = "";
 
   if (json.version != "1" && json.app != "sailotp" ) {
-    console.log("Unrecognized JSON format");
+    error = "Unrecognized format, file is not a SailOTP export";
     return(false);
   } else {
     var otpList = [];
@@ -114,8 +115,9 @@ function json2db(jsonString) {
         }
       }
       parentPage.refreshOTPList();
+      return(true);
     } else {
-      console.log("File contains no Items");
+      error = "File contains no Tokens";
       return(false);
     }
   }

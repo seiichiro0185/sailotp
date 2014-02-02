@@ -49,3 +49,25 @@ bool FileIO::write(const QString& data)
 
   return true;
 }
+
+bool FileIO::exists()
+{
+  if (mSource.isEmpty()) {
+    emit error("Source is empty!");
+    return false;
+  }
+
+  QFile file(mSource);
+  return file.exists();
+}
+
+bool FileIO::exists(const QString& filename)
+{
+  if (filename.isEmpty()) {
+    emit error("Source is empty!");
+    return false;
+  }
+
+  QFile file(filename);
+  return file.exists();
+}

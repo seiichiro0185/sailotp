@@ -16,6 +16,8 @@ public:
 
   Q_INVOKABLE QString read();
   Q_INVOKABLE bool write(const QString& data);
+  Q_INVOKABLE bool exists();
+  Q_INVOKABLE bool exists(const QString& filename);
 
   QString source() { return mSource; };
 

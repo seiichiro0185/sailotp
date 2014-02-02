@@ -40,14 +40,44 @@ Dialog {
 
   // We get the Object of the parent page on call to refresh it after adding a new Entry
   property QtObject parentPage: null
-
   property string mode: "import"
+
+  function fillNum(num) {
+    if (num < 10) {
+      return("0"+num);
+    } else {
+      return(num)
+    }
+  }
+
+  function creFileName() {
+    var date = new Date();
+    return("/home/nemo/sailotp_"+date.getFullYear()+fillNum(date.getMonth()+1)+fillNum(date.getDate())+".aes");
+  }
+
+  function checkFileName(file) {
+    if (mode == "export") {
+      if (exportFile.exists(file) && !fileOverwrite.checked) {
+        notify.show("File already exists, choose \"Overwrite existing\" to overwrite it.", 4000);
+        return(false)
+      } else {
+        return(true)
+      }
+    } else {
+      if (exportFile.exists(file)) {
+        return(true)
+      } else {
+        notify.show("Given file does not exist!", 4000);
+        return(false)
+      }
+    }
+  }
 
   // FileIO Object for reading / writing files
   FileIO {
     id: exportFile
     source: fileName.text
-    onError: console.log(msg)
+    onError: { console.log(msg); }
   }
 
   SilicaFlickable {
@@ -62,47 +92,124 @@ Dialog {
         acceptText: mode == "export" ? "Export" : "Import"
       }
 
-      /*ComboBox {
-        id: modeSel
-        label: "Mode: "
-        menu: ContextMenu {
-          MenuItem { text: "Export"; onClicked: { mode = "export" } }
-          MenuItem { text: "Import"; onClicked: { mode = "import" } }
-        }
-      }*/
       TextField {
         id: fileName
         width: parent.width
+        text: mode == "export" ? creFileName() : "/home/nemo/";
         label: "Filename"
-        placeholderText: "File to Export / Import"
+        placeholderText: mode == "import" ? "File to import" : "File to export"
         focus: true
         horizontalAlignment: TextInput.AlignLeft
       }
+
+      TextSwitch {
+        id: fileOverwrite
+        checked: false
+        visible: mode == "export"
+        text: "Overwrite existing"
+      }
+
       TextField {
         id: filePassword
         width: parent.width
         label: "Password"
-        placeholderText: "Password for the Export"
+        placeholderText: "Password for the file"
         echoMode: TextInput.Password
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+      }
+
+      TextField {
+        id: filePasswordCheck
+        width: parent.width
+        label: (filePassword.text != filePasswordCheck.text && filePassword.text.length > 0) ? "Passwords don't match!" : "Passwords match!"
+        placeholderText: "Repeated Password for the file"
+        visible: mode == "export"
+        echoMode: TextInput.Password
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+      }
+
+      Text {
+        id: importText
+
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottomMargin: 20
+        width: parent.width - 2*Theme.paddingLarge
+
+        wrapMode: Text.Wrap
+        maximumLineCount: 15
+        font.pixelSize: Theme.fontSizeSmall
+        color: Theme.secondaryColor
+
+        visible: mode == "import"
+        text: "Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import."
+      }
+
+      Text {
+        id: exportText
+
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottomMargin: 20
+        width: parent.width - 2*Theme.paddingLarge
+
+        wrapMode: Text.Wrap
+        maximumLineCount: 15
+        font.pixelSize: Theme.fontSizeSmall
+        color: Theme.secondaryColor
+
+        visible: mode == "export"
+        text: "Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export."
       }
     }
   }
 
   // Check if we can continue
-  canAccept: fileName.text.length > 0 && filePassword.text.length > 0 ? true : false
+  canAccept: fileName.text.length > 0 && filePassword.text.length > 0 && (mode == "import" || filePassword.text == filePasswordCheck.text) && checkFileName(fileName.text) ? true : false
 
   // Do the DB-Export / Import
-  // TODO: Error handling and enctyption
   onDone: {
     if (result == DialogResult.Accepted) {
+      var plainText = ""
+      var chipherText = ""
+
       if (mode == "export") {
-        console.log("Exporting to " + fileName.text);
-        exportFile.write(Gibberish.AES.enc(DB.db2json(), filePassword.text));
+        // Export Database to File
+        plainText = DB.db2json();
+
+        if (plainText != "") {
+          try {
+            chipherText = Gibberish.AES.enc(plainText, filePassword.text);
+            if (!exportFile.write(chipherText)) {
+              notify.show("Error writing to file "+ fileName.text, 4000);
+            } else {
+              notify.show("Token Database exported to "+ fileName.text, 4000);
+            }
+          } catch(e) {
+            notify.show("Could not encrypt tokens. Error: ", 4000);
+          }
+        } else {
+          notify.show("Could not read tokens from Database", 4000);
+        }
       } else if(mode == "import") {
-        console.log("Importing ftom " + fileName.text);
-        DB.json2db(Gibberish.AES.dec(exportFile.read(), filePassword.text))
+        // Import Tokens from File
+
+        chipherText = exportFile.read();
+        if (chipherText != "") {
+          try {
+            var errormsg = ""
+            plainText = Gibberish.AES.dec(chipherText, filePassword.text);
+            if (DB.json2db(plainText, errormsg)) {
+              notify.show("Tokens imported from "+ fileName.text, 4000);
+            } else {
+              notify.show(errormsg, 4000);
+            }
+          } catch (e) {
+            notify.show("Unable to decrypt file, did you use the right password?", 4000);
+          }
+        } else {
+          notify.show("Could not read from file " + fileName.text, 4000);
+        }
       }
     }
   }
