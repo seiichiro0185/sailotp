@@ -34,21 +34,31 @@
 
 int main(int argc, char *argv[])
 {
+    // Get App and QML-View objects
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
+    // Internationalization, Load the Language
+    QString locale = QLocale::system().name();
+    QTranslator translator;
+    translator.load(locale,SailfishApp::pathTo(QString("i18n")).toLocalFile());
+    app->installTranslator(&translator);
+
+    // Set some global values
     app->setOrganizationName("harbour-sailotp");
     app->setOrganizationDomain("harbour-sailotp");
     app->setApplicationName("harbour-sailotp");
     app->setApplicationVersion(APP_VERSION);
 
+    // Register FileIO Class
     qmlRegisterType<FileIO, 1>("harbour.sailotp.FileIO", 1, 0, "FileIO");
 
+    // Prepare the QML and set Homedir
     view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
     view->rootContext()->setContextProperty("XDG_HOME_DIR", QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
     view->show();
 
-
+    // Run the app
     return app->exec();
 }
 

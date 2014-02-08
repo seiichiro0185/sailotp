@@ -51,7 +51,7 @@ Page {
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: name.bottom
     anchors.topMargin: 20
-    text: "A Simple Sailfish OTP Generator<br />(RFC 6238/4226 compatible)"
+    text:  qsTr("A Simple Sailfish OTP Generator<br />(RFC 6238/4226 compatible)")
     color: "white"
   }
   Text {
@@ -59,7 +59,7 @@ Page {
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: desc.bottom
     anchors.topMargin: 20
-    text: "Copyright: Stefan Brand<br />License: BSD (3-clause)"
+    text: qsTr("Copyright: Stefan Brand<br />License: BSD (3-clause)")
     color: "white"
   }
   Button {
@@ -81,7 +81,7 @@ Page {
     font.pixelSize: Theme.fontSizeSmall
     horizontalAlignment: TextEdit.Center
     readOnly: true
-    text: "SailOTP uses the following third party libs:\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes"
+    text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes"
     color: "white"
   }
 }

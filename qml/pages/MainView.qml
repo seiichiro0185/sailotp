@@ -108,19 +108,19 @@ Page {
 
     PullDownMenu {
       MenuItem {
-        text: "About"
+        text: qsTr("About")
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
       }
       MenuItem {
-        text: "Export Token-DB"
+        text: qsTr("Export Token-DB")
         onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "export"})
       }
       MenuItem {
-        text: "Import Token-DB"
+        text: qsTr("Import Token-DB")
         onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "import"})
       }
       MenuItem {
-        text: "Add Token"
+        text: qsTr("Add Token")
         onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
       }
     }
@@ -146,8 +146,8 @@ Page {
 
       ViewPlaceholder {
         enabled: otpList.count == 0
-        text: "Nothing here"
-        hintText: "Pull down to add a OTP"
+        text: qsTr("Nothing here")
+        hintText: qsTr("Pull down to add a OTP")
       }
 
       delegate: ListItem {
@@ -158,12 +158,12 @@ Page {
 
         function remove() {
           // Show 5s countdown, then delete from DB and List
-          remorseAction("Deleting", function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
+          remorseAction(qsTr("Deleting"), function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
         }
 
         onClicked: {
           Clipboard.text = otp
-          notify.show("Token for " + title + " copied to clipboard", 3000);
+          notify.show(qsTr("Token for ") + title + qsTr(" copied to clipboard"), 3000);
         }
 
         ListView.onRemove: animateRemoval()
@@ -231,13 +231,13 @@ Page {
           id: otpContextMenu
           ContextMenu {
             MenuItem {
-              text: "Edit"
+              text: qsTr("Edit")
               onClicked: {
                 pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret, paramType: type, paramCounter: DB.getCounter(title, secret, false)})
               }
             }
             MenuItem {
-              text: "Delete"
+              text: qsTr("Delete")
               onClicked: remove()
             }
           }
@@ -248,10 +248,7 @@ Page {
       Component.onCompleted: {
         // Load list of OTP-Entries
         refreshOTPList();
-        console.log("SailOTP Version " + Qt.application.version + " started");
       }
     }
   }
 }
-
-
