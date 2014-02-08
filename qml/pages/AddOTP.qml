@@ -73,6 +73,10 @@ Dialog {
         text: paramLabel != "" ? paramLabel : ""
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 0
+        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: otpSecret.focus = true
       }
       TextField {
         id: otpSecret
@@ -82,6 +86,10 @@ Dialog {
         placeholderText: qsTr("Secret OTP Key")
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 15
+        EnterKey.iconSource: paramType == "TOTP" ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: paramType == "TOTP" ? addOTP.accept() : otpCounter.focus = true
       }
       TextField {
         id: otpCounter
@@ -93,6 +101,9 @@ Dialog {
         focus: true
         horizontalAlignment: TextInput.AlignLeft
         validator: IntValidator { bottom: 0 }
+
+        EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: addOTP.accept()
       }
       Component.onCompleted: { typeSel.currentIndex = paramType == "HOTP" ? 1 : 0 }
     }

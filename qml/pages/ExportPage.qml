@@ -100,6 +100,10 @@ Dialog {
         placeholderText: mode == "import" ? qsTr("File to import") : qsTr("File to export")
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 0
+        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: filePassword.focus = true
       }
 
       TextSwitch {
@@ -117,6 +121,10 @@ Dialog {
         echoMode: TextInput.Password
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 0
+        EnterKey.iconSource: mode == "export" ? "image://theme/icon-m-enter-next" : "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: mode == "export" ? filePasswordCheck.focus = true : exportPage.accept()
       }
 
       TextField {
@@ -128,6 +136,10 @@ Dialog {
         echoMode: TextInput.Password
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: filePassword.text == filePasswordCheck.text && filePassword.text.length > 0
+        EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: exportPage.accept()
       }
 
       Text {
