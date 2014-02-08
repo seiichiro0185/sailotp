@@ -37,36 +37,40 @@ Page {
     id: logo
     source: "../sailotp.png"
     anchors.horizontalCenter: parent.horizontalCenter
-    y: 200
+    y: 150
   }
   Label {
     id: name
     anchors.horizontalCenter: parent.horizontalCenter
-    y: 320
+    y: 270
     font.bold: true
     text: "SailOTP " + Qt.application.version
   }
-  Text {
+  TextArea {
     id: desc
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: name.bottom
     anchors.topMargin: 20
-    text:  qsTr("A Simple Sailfish OTP Generator<br />(RFC 6238/4226 compatible)")
+    width: parent.width
+    horizontalAlignment: TextEdit.Center
+    readOnly: true
+    text:  qsTr("A Simple Sailfish OTP Generator\n(RFC 6238/4226 compatible)")
     color: "white"
   }
-  Text {
+  TextArea {
     id: copyright
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: desc.bottom
-    anchors.topMargin: 20
-    text: qsTr("Copyright: Stefan Brand<br />License: BSD (3-clause)")
+    width: parent.width
+    horizontalAlignment: TextEdit.Center
+    readOnly: true
+    text: qsTr("Copyright: Stefan Brand\nLicense: BSD (3-clause)")
     color: "white"
   }
   Button {
     id: homepage
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: copyright.bottom
-    anchors.topMargin: 20
     text: "<a href=\"https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git\">Source Code</a>"
     onClicked: {
       Qt.openUrlExternally("https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git")

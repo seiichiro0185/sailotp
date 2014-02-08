@@ -4,17 +4,19 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="54"/>
-        <source>A Simple Sailfish OTP Generator&lt;br /&gt;(RFC 6238/4226 compatible)</source>
+        <location filename="../qml/pages/About.qml" line="57"/>
+        <source>A Simple Sailfish OTP Generator
+(RFC 6238/4226 compatible)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="62"/>
-        <source>Copyright: Stefan Brand&lt;br /&gt;License: BSD (3-clause)</source>
+        <location filename="../qml/pages/About.qml" line="67"/>
+        <source>Copyright: Stefan Brand
+License: BSD (3-clause)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="84"/>
+        <location filename="../qml/pages/About.qml" line="88"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation></translation>
     </message>
