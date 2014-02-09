@@ -54,45 +54,56 @@ Dialog {
     Column {
       anchors.fill: parent
       DialogHeader {
-        acceptText: paramLabel != "" ? "Save" : "Add"
+        acceptText: paramLabel != "" ? qsTr("Save") : qsTr("Add")
       }
 
       ComboBox {
         id: typeSel
-        label: "Type"
+        label: qsTr("Type")
         menu: ContextMenu {
-          MenuItem { text: "Time-based (TOTP)"; onClicked: { paramType = "TOTP" } }
-          MenuItem { text: "Counter-based (HOTP)"; onClicked: { paramType = "HOTP" } }
+          MenuItem { text: qsTr("Time-based (TOTP)"); onClicked: { paramType = "TOTP" } }
+          MenuItem { text: qsTr("Counter-based (HOTP)"); onClicked: { paramType = "HOTP" } }
         }
       }
       TextField {
         id: otpLabel
         width: parent.width
-        label: "Title"
-        placeholderText: "Title for the OTP"
+        label: qsTr("Title")
+        placeholderText: qsTr("Title for the OTP")
         text: paramLabel != "" ? paramLabel : ""
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 0
+        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: otpSecret.focus = true
       }
       TextField {
         id: otpSecret
         width: parent.width
-        label: "Secret (at least 16 characters)"
+        label: qsTr("Secret (at least 16 characters)")
         text: paramKey != "" ? paramKey : ""
-        placeholderText: "Secret OTP Key"
+        placeholderText: qsTr("Secret OTP Key")
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 15
+        EnterKey.iconSource: paramType == "TOTP" ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: paramType == "TOTP" ? addOTP.accept() : otpCounter.focus = true
       }
       TextField {
         id: otpCounter
         width: parent.width
         visible: paramType == "HOTP" ? true : false
-        label: "Next Counter Value"
+        label: qsTr("Next Counter Value")
         text: paramCounter
-        placeholderText: "Next Value of the Counter"
+        placeholderText: qsTr("Next Value of the Counter")
         focus: true
         horizontalAlignment: TextInput.AlignLeft
         validator: IntValidator { bottom: 0 }
+
+        EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: addOTP.accept()
       }
       Component.onCompleted: { typeSel.currentIndex = paramType == "HOTP" ? 1 : 0 }
     }

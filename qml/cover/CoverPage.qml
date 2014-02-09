@@ -38,28 +38,30 @@ CoverBackground {
 
   property double lastUpdated: 0
 
+  function updateOTP() {
+    // get seconds from current Date
+    var curDate = new Date();
+
+    if (lOTP.text == "------" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "TOTP", 0);
+    }
+
+    // Change color of the OTP to red if less than 5 seconds left
+    if (29 - (curDate.getSeconds() % 30) < 5) {
+      lOTP.color = "red"
+    } else {
+      lOTP.color = Theme.highlightColor
+    }
+
+    lastUpdated = curDate.getTime();
+  }
+
   Timer {
     interval: 1000
     // Timer runs only when cover is visible and favourite is set
     running: !Qt.application.active && appWin.coverSecret != "" && appWin.coverType == "TOTP"
     repeat: true
-    onTriggered: {
-      // get seconds from current Date
-      var curDate = new Date();
-
-      if (lOTP.text == "------" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-        appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "TOTP", 0);
-      }
-
-      // Change color of the OTP to red if less than 5 seconds left
-      if (29 - (curDate.getSeconds() % 30) < 5) {
-        lOTP.color = "red"
-      } else {
-        lOTP.color = Theme.highlightColor
-      }
-
-      lastUpdated = curDate.getTime();
-    }
+    onTriggered: updateOTP();
   }
 
   // Show the SailOTP Logo
@@ -79,7 +81,6 @@ CoverBackground {
     Label {
       text: appWin.coverTitle
       anchors.horizontalCenter: parent.horizontalCenter
-      color: Theme.secondaryColor
     }
     Label {
       id: lOTP
@@ -91,11 +92,28 @@ CoverBackground {
   }
   // CoverAction to update a HOTP-Token, only visible for HOTP-Type Tokens
   CoverActionList {
-    enabled: appWin.coverType == "HOTP" ? true : false
     CoverAction {
-      iconSource: "image://theme/icon-m-refresh"
+      iconSource: appWin.coverType == "HOTP" ? "image://theme/icon-cover-refresh" : "image://theme/icon-cover-previous"
       onTriggered: {
-        appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "HOTP", DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
+        if (appWin.coverType == "HOTP") {
+          appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "HOTP", DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
+        } else {
+          var index = appWin.coverIndex - 1
+          if (index < 0) index = appWin.listModel.count - 1
+          appWin.setCover(index);
+          DB.setFav(appWin.coverTitle, appWin.coverSecret)
+          if (appWin.coverType == "TOTP") updateOTP();
+        }
+      }
+    }
+    CoverAction {
+      iconSource: "image://theme/icon-cover-next"
+      onTriggered: {
+        var index = appWin.coverIndex + 1
+        if (index >= appWin.listModel.count) index = 0
+        appWin.setCover(index);
+        DB.setFav(appWin.coverTitle, appWin.coverSecret)
+        if (appWin.coverType == "TOTP") updateOTP();
       }
     }
   }

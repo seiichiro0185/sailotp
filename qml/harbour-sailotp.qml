@@ -37,15 +37,52 @@ ApplicationWindow
   id: appWin
 
   // Properties to pass values between MainPage and Cover
+  property alias listModel: otpListModel
   property string coverTitle: "SailOTP"
   property string coverSecret: ""
   property string coverType: ""
   property string coverOTP: "------"
+  property int coverIndex: 0
+
+  // Global Listmodel for Tokens
+  ListModel { id: otpListModel }
+
+  // Global Component for showing notification banners
+  NotifyBanner { id: notify }
+
+  // Add an entry to the list
+  function appendOTP(title, secret, type, counter, fav) {
+    listModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "otp": "------"});
+  }
+
+  // Set the OTP shown on the Cover
+  function setCover(index) {
+    if (index >= 0 && index < listModel.count) {
+      coverTitle = listModel.get(index).title;
+      coverSecret = listModel.get(index).secret;
+      coverType = listModel.get(index).type;
+      coverIndex = index;
+      if (coverType == "TOTP") { coverOTP = "------"; } else { coverOTP = listModel.get(index).otp; }
+      for (var i=0; i<listModel.count; i++) {
+        if (i != index) {
+          listModel.setProperty(i, "fav", 0);
+        } else {
+          listModel.setProperty(i, "fav", 1);
+        }
+      }
+    } else {
+      coverTitle = "SailOTP";
+      coverSecret = "";
+      coverType = "";
+      coverIndex = -1;
+    }
+  }
 
   NotifyBanner { id: notify }
 
   initialPage: Component { MainView { } }
   cover: Qt.resolvedUrl("cover/CoverPage.qml")
+
 }
 
 

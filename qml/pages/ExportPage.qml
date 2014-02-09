@@ -58,7 +58,7 @@ Dialog {
   function checkFileName(file) {
     if (mode == "export") {
       if (exportFile.exists(file) && !fileOverwrite.checked) {
-        notify.show("File already exists, choose \"Overwrite existing\" to overwrite it.", 4000);
+        notify.show(qsTr("File already exists, choose \"Overwrite existing\" to overwrite it."), 4000);
         return(false)
       } else {
         return(true)
@@ -67,7 +67,7 @@ Dialog {
       if (exportFile.exists(file)) {
         return(true)
       } else {
-        notify.show("Given file does not exist!", 4000);
+        notify.show(qsTr("Given file does not exist!"), 4000);
         return(false)
       }
     }
@@ -89,45 +89,57 @@ Dialog {
     Column {
       anchors.fill: parent
       DialogHeader {
-        acceptText: mode == "export" ? "Export" : "Import"
+        acceptText: mode == "export" ? qsTr("Export") : qsTr("Import")
       }
 
       TextField {
         id: fileName
         width: parent.width
         text: mode == "export" ? creFileName() : XDG_HOME_DIR + "/";
-        label: "Filename"
-        placeholderText: mode == "import" ? "File to import" : "File to export"
+        label: qsTr("Filename")
+        placeholderText: mode == "import" ? qsTr("File to import") : qsTr("File to export")
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 0
+        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: filePassword.focus = true
       }
 
       TextSwitch {
         id: fileOverwrite
         checked: false
         visible: mode == "export"
-        text: "Overwrite existing"
+        text: qsTr("Overwrite existing")
       }
 
       TextField {
         id: filePassword
         width: parent.width
-        label: "Password"
-        placeholderText: "Password for the file"
+        label: qsTr("Password")
+        placeholderText: qsTr("Password for the file")
         echoMode: TextInput.Password
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: text.length > 0
+        EnterKey.iconSource: mode == "export" ? "image://theme/icon-m-enter-next" : "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: mode == "export" ? filePasswordCheck.focus = true : exportPage.accept()
       }
 
       TextField {
         id: filePasswordCheck
         width: parent.width
-        label: (filePassword.text != filePasswordCheck.text && filePassword.text.length > 0) ? "Passwords don't match!" : "Passwords match!"
-        placeholderText: "Repeated Password for the file"
+        label: (filePassword.text != filePasswordCheck.text && filePassword.text.length > 0) ? qsTr("Passwords don't match!") : qsTr("Passwords match!")
+        placeholderText: qsTr("Repeated Password for the file")
         visible: mode == "export"
         echoMode: TextInput.Password
         focus: true
         horizontalAlignment: TextInput.AlignLeft
+
+        EnterKey.enabled: filePassword.text == filePasswordCheck.text && filePassword.text.length > 0
+        EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: exportPage.accept()
       }
 
       Text {
@@ -143,7 +155,7 @@ Dialog {
         color: Theme.secondaryColor
 
         visible: mode == "import"
-        text: "Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import."
+        text: qsTr("Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.")
       }
 
       Text {
@@ -159,7 +171,7 @@ Dialog {
         color: Theme.secondaryColor
 
         visible: mode == "export"
-        text: "Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export."
+        text: qsTr("Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.")
       }
     }
   }
@@ -181,15 +193,15 @@ Dialog {
           try {
             chipherText = Gibberish.AES.enc(plainText, filePassword.text);
             if (!exportFile.write(chipherText)) {
-              notify.show("Error writing to file "+ fileName.text, 4000);
+              notify.show(qsTr("Error writing to file ")+ fileName.text, 4000);
             } else {
-              notify.show("Token Database exported to "+ fileName.text, 4000);
+              notify.show(qsTr("Token Database exported to ")+ fileName.text, 4000);
             }
           } catch(e) {
-            notify.show("Could not encrypt tokens. Error: ", 4000);
+            notify.show(qsTr("Could not encrypt tokens. Error: "), 4000);
           }
         } else {
-          notify.show("Could not read tokens from Database", 4000);
+          notify.show(qsTr("Could not read tokens from Database"), 4000);
         }
       } else if(mode == "import") {
         // Import Tokens from File
@@ -200,15 +212,15 @@ Dialog {
             var errormsg = ""
             plainText = Gibberish.AES.dec(chipherText, filePassword.text);
             if (DB.json2db(plainText, errormsg)) {
-              notify.show("Tokens imported from "+ fileName.text, 4000);
+              notify.show(qsTr("Tokens imported from ")+ fileName.text, 4000);
             } else {
               notify.show(errormsg, 4000);
             }
           } catch (e) {
-            notify.show("Unable to decrypt file, did you use the right password?", 4000);
+            notify.show(qsTr("Unable to decrypt file, did you use the right password?"), 4000);
           }
         } else {
-          notify.show("Could not read from file " + fileName.text, 4000);
+          notify.show(qsTr("Could not read from file ") + fileName.text, 4000);
         }
       }
     }

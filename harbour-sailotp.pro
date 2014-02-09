@@ -35,3 +35,18 @@ OTHER_FILES += qml/harbour-sailotp.qml \
 HEADERS += \
     src/fileio.h
 
+i18n.files = i18n/*.qm
+i18n.path = /usr/share/$${TARGET}/i18n
+
+INSTALLS += i18n
+
+lupdate_only {
+    SOURCES = qml/*.qml \
+              qml/pages/*.qml \
+              qml/covers/*.qml \
+              qml/components/*.qml
+
+    TRANSLATIONS = i18n/de.ts \
+                   i18n/en.ts
+}
+

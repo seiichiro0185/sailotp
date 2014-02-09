@@ -1,6 +1,6 @@
 Name: harbour-sailotp
 Summary: SailOTP
-Version: 0.5
+Version: 0.6
 Release: 1
 Group: Security
 URL: https://github.com/seiichiro0185/sailotp/
@@ -19,6 +19,9 @@ PkgConfigBR:
 - Qt5Qml
 - Qt5Core
 - sailfishapp >= 0.0.10
+- Qt5Core
+- Qt5Qml
+- Qt5Quick
 Requires:
 - sailfishsilica-qt5 >= 0.10.9
 Files:
@@ -30,4 +33,5 @@ Files:
 - /usr/share/harbour-sailotp
 - /usr/share/applications
 - /usr/share/icons/hicolor/86x86/apps
+- /usr/share/harbour-sailotp/i18n
 PkgBR: []
