@@ -65,8 +65,8 @@ function getOTP() {
     function(tx) {
       var res = tx.executeSql("select * from OTPStorage;");
       for (var i=0; i < res.rows.length; i++) {
-        mainPage.appendOTP(res.rows.item(i).title, res.rows.item(i).secret, res.rows.item(i).type, res.rows.item(i).counter, res.rows.item(i).fav);
-        if (res.rows.item(i).fav) mainPage.setCoverOTP(res.rows.item(i).title, res.rows.item(i).secret, res.rows.item(i).type);
+        appWin.appendOTP(res.rows.item(i).title, res.rows.item(i).secret, res.rows.item(i).type, res.rows.item(i).counter, res.rows.item(i).fav);
+        if (res.rows.item(i).fav) appWin.setCover(i);
       }
   });
 }

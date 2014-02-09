@@ -36,17 +36,8 @@ import "../lib/crypto.js" as OTP
 Page {
   id: mainPage
 
-  ListModel {
-    id: otpListModel
-  }
-
   // This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
   property double lastUpdated: 0
-
-  // Add an entry to the list
-  function appendOTP(title, secret, type, counter, fav) {
-    otpListModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "otp": "------"});
-  }
 
   // Hand favorite over to the cover
   function setCoverOTP(title, secret, type) {
@@ -63,7 +54,7 @@ Page {
   // Reload the List of OTPs from storage
   function refreshOTPList() {
     otpList.visible = false;
-    otpListModel.clear();
+    appWin.listModel.clear();
     DB.getOTP();
     refreshOTPValues();
     otpList.visible = true;
@@ -76,16 +67,16 @@ Page {
     var seconds = curDate.getSeconds();
 
     // Iterate over all List entries
-    for (var i=0; i<otpListModel.count; i++) {
-      if (otpListModel.get(i).type == "TOTP") {
+    for (var i=0; i<appWin.listModel.count; i++) {
+      if (appWin.listModel.get(i).type == "TOTP") {
         // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
-        if (otpListModel.get(i).otp == "------" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-          var curOTP = OTP.calcOTP(otpListModel.get(i).secret, "TOTP")
-          otpListModel.setProperty(i, "otp", curOTP);
+        if (appWin.listModel.get(i).otp == "------" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, "TOTP")
+          appWin.listModel.setProperty(i, "otp", curOTP);
         }
-      } else if (appWin.coverType == "HOTP" && (curDate.getTime() - lastUpdated > 2000) && otpListModel.get(i).fav == 1) {
+      } else if (appWin.coverType == "HOTP" && (curDate.getTime() - lastUpdated > 2000) && appWin.listModel.get(i).fav == 1) {
         // If we are coming back from the CoverPage update OTP value if current favourite is HOTP
-        otpListModel.setProperty(i, "otp", appWin.coverOTP);
+        appWin.listModel.setProperty(i, "otp", appWin.coverOTP);
       }
     }
 
@@ -98,7 +89,7 @@ Page {
   Timer {
     interval: 500
     // Timer only runs when app is acitive and we have entries
-    running: Qt.application.active && otpListModel.count
+    running: Qt.application.active && appWin.listModel.count
     repeat: true
     onTriggered: refreshOTPValues();
   }
@@ -132,7 +123,7 @@ Page {
       anchors.top: parent.top
       anchors.topMargin: 48
       // Only show when there are enries
-      visible: otpListModel.count
+      visible: appWin.listModel.count
     }
 
     SilicaListView {
@@ -141,7 +132,7 @@ Page {
         title: "SailOTP"
       }
       anchors.fill: parent
-      model: otpListModel
+      model: appWin.listModel
       width: parent.width
 
       ViewPlaceholder {
@@ -158,7 +149,7 @@ Page {
 
         function remove() {
           // Show 5s countdown, then delete from DB and List
-          remorseAction(qsTr("Deleting"), function() { DB.removeOTP(title, secret); otpListModel.remove(index) })
+          remorseAction(qsTr("Deleting"), function() { DB.removeOTP(title, secret); appWin.listModel.remove(index) })
         }
 
         onClicked: {
@@ -178,19 +169,19 @@ Page {
             onClicked: {
               if (fav == 0) {
                 DB.setFav(title, secret)
-                setCoverOTP(title, secret, type)
+                appWin.setCover(index)
                 if (type == "HOTP") appWin.coverOTP = otp
-                for (var i=0; i<otpListModel.count; i++) {
+                for (var i=0; i<appWin.listModel.count; i++) {
                   if (i != index) {
-                    otpListModel.setProperty(i, "fav", 0);
+                    appWin.listModel.setProperty(i, "fav", 0);
                   } else {
-                    otpListModel.setProperty(i, "fav", 1);
+                    appWin.listModel.setProperty(i, "fav", 1);
                   }
                 }
               } else {
                 DB.resetFav(title, secret)
-                setCoverOTP("SailOTP", "", "")
-                otpListModel.setProperty(index, "fav", 0);
+                appWin.setCover(-1)
+                appWin.listModel.setProperty(index, "fav", 0);
               }
             }
           }
@@ -221,8 +212,8 @@ Page {
           anchors.right: parent.right
           visible: type == "HOTP" ? true : false
           onClicked: {
-            otpListModel.setProperty(index, "counter", DB.getCounter(title, secret, true));
-            otpListModel.setProperty(index, "otp", OTP.calcOTP(secret, "HOTP", counter));
+            appWin.listModel.setProperty(index, "counter", DB.getCounter(title, secret, true));
+            appWin.listModel.setProperty(index, "otp", OTP.calcOTP(secret, "HOTP", counter));
             if (fav == 1) appWin.coverOTP = otp;
           }
         }
