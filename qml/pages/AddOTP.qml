@@ -44,6 +44,7 @@ Dialog {
   property string paramLabel: ""
   property string paramKey: ""
   property int paramCounter: 1 // New Counters start at 1
+  property bool paramNew: false
 
   SilicaFlickable {
     id: addOtpList
@@ -54,7 +55,7 @@ Dialog {
     Column {
       anchors.fill: parent
       DialogHeader {
-        acceptText: paramLabel != "" ? qsTr("Save") : qsTr("Add")
+        acceptText: paramNew ? qsTr("Add") : qsTr("Save")
       }
 
       ComboBox {
@@ -116,7 +117,7 @@ Dialog {
   onDone: {
     if (result == DialogResult.Accepted) {
 			// Save the entry to the Config DB
-      if (paramLabel != "" && paramKey != "") {
+      if (paramLabel != "" && paramKey != "" && !paramNew) {
         // Parameters where filled -> Change existing entry
         DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, paramLabel, paramKey)
       } else {

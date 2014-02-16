@@ -114,6 +114,11 @@ Page {
         text: qsTr("Add Token")
         onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
       }
+
+      MenuItem {
+        text: qsTr("Scan Token")
+        onClicked: pageStack.push(Qt.resolvedUrl("ScanOTP.qml"), {parentPage: mainPage})
+      }
     }
 
     ProgressBar {

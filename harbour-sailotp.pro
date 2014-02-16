@@ -30,7 +30,9 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/sailotp.png \
     qml/pages/ExportPage.qml \
     qml/lib/gibberish-aes.js \
-    qml/components/NotifyBanner.qml
+    qml/components/NotifyBanner.qml \
+    qml/pages/ScanOTP.qml \
+    qml/lib/urldecoder.js
 
 HEADERS += \
     src/fileio.h
