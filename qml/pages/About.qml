@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -85,7 +85,7 @@ Page {
     font.pixelSize: Theme.fontSizeSmall
     horizontalAlignment: TextEdit.Center
     readOnly: true
-    text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes"
+    text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes/\nhttp://sourceforge.net/projects/qzxing/"
     color: "white"
   }
 }

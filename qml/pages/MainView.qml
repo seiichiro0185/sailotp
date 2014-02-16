@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -103,20 +103,11 @@ Page {
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
       }
       MenuItem {
-        text: qsTr("Export Token-DB")
+        text: qsTr("Export / Import")
         onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "export"})
       }
       MenuItem {
-        text: qsTr("Import Token-DB")
-        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "import"})
-      }
-      MenuItem {
         text: qsTr("Add Token")
-        onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
-      }
-
-      MenuItem {
-        text: qsTr("Scan Token")
         onClicked: pageStack.push(Qt.resolvedUrl("ScanOTP.qml"), {parentPage: mainPage})
       }
     }

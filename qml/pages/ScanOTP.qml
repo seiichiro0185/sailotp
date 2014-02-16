@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -32,6 +32,7 @@ import QtMultimedia 5.0
 import Sailfish.Silica 1.0
 import Sailfish.Media 1.0 // Not allowed in harbour, but normal VideoOutput doesn't work yet!
 import harbour.sailotp.QZXing 2.2
+import harbour.sailotp.FileIO 1.0
 import "../lib/urldecoder.js" as URL
 
 Page {
@@ -39,8 +40,43 @@ Page {
 
   property QtObject parentPage: null
 
+  Timer {
+    id: scanTimer
+    interval: 100
+    running: false
+    repeat: false
+    onTriggered: {
+      if (fileIO.mkpath(XDG_CACHE_DIR)) {
+        busy.running = true
+        cam.imageCapture.captureToLocation(XDG_CACHE_DIR + "/qrscan.jpg");
+      } else {
+        notify.show(qsTr("Can't access temporary directory"), 3000);
+      }
+    }
+  }
+
   SilicaFlickable {
     anchors.fill: parent
+
+    PullDownMenu {
+      MenuItem {
+        text: qsTr("Add manually")
+        onClicked: pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramNew: true})
+      }
+    }
+
+    PageHeader {
+      id: header
+      title: "Scan Code"
+    }
+
+    BusyIndicator {
+      id: busy
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      anchors.topMargin: 16
+      running: false
+    }
 
     Camera {
       id: cam
@@ -51,24 +87,12 @@ Page {
 
       imageCapture {
         onImageSaved: {
-          decoder.decodeImageFromFile("/tmp/qrscan.jpg");
+          decoder.decodeImageFromFile(XDG_CACHE_DIR + "/qrscan.jpg");
         }
       }
     }
 
-    GStreamerVideoOutput {
-      id: videoPreview
-      anchors.centerIn: parent
-      source: cam
-      MouseArea {
-        anchors.fill: parent
-        onClicked: {
-          cam.imageCapture.captureToLocation("/tmp/qrscan.jpg");
-        }
-      }
-    }
-
-    QZXing{
+    QZXing {
       id: decoder
 
       enabledDecoders: QZXing.DecoderFormat_QR_CODE
@@ -77,14 +101,45 @@ Page {
       onTagFound: {
         console.log("Barcode data: " + tag)
         var ret = URL.decode(tag);
-        if (ret.type != "" && ret.title != "" && ret.secret != "" && (ret.counter != "" || ret.type == "TOTP  ")) {
+        busy.running = false
+        if (ret && ret.type != "" && ret.title != "" && ret.secret != "" && (ret.counter != "" || ret.type == "TOTP")) {
           pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramLabel: ret.title, paramKey: ret.secret, paramType: ret.type, paramCounter: ret.counter, paramNew: true})
         } else {
-          notify.show(qsTr("Error decoding QR-Code"), 3000);
+          notify.show(qsTr("No valid Token data found."), 3000);
         }
       }
 
-      onDecodingFinished: console.log("Decoding finished " + (succeeded==true ? "successfully" :    "unsuccessfully") )
+      onDecodingFinished: if (succeeded==false) scanTimer.start();
+    }
+
+    FileIO {
+      id: fileIO
+    }
+
+    GStreamerVideoOutput {
+      id: prev
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: header.bottom
+      source: cam
+      MouseArea {
+        anchors.fill: parent
+        onClicked: scanTimer.start();
+      }
+    }
+
+    Text {
+      id: text
+
+      anchors.top: prev.bottom
+      anchors.topMargin: 32
+      anchors.horizontalCenter: parent.horizontalCenter
+      width: parent.width - 2*Theme.paddingLarge
+
+      wrapMode: Text.Wrap
+      maximumLineCount: 4
+      font.pixelSize: Theme.fontSizeSmall
+      color: Theme.primaryColor
+      text: qsTr("Tap the picture to start scanning. Pull down to add Token manually.")
     }
   }
 }
