@@ -14,7 +14,7 @@ DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-sailotp.cpp \
-    src/fileio.cpp
+		src/fileio.cpp
 
 OTHER_FILES += qml/harbour-sailotp.qml \
     qml/cover/CoverPage.qml \
@@ -50,3 +50,4 @@ lupdate_only {
                    i18n/en.ts
 }
 
+include(src/qzxing/QZXing.pri)

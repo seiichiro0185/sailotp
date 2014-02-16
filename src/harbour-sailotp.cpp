@@ -31,12 +31,17 @@
 #include <sailfishapp.h>
 #include <QGuiApplication>
 #include "fileio.h"
+#include "qzxing.h"
 
 int main(int argc, char *argv[])
 {
     // Get App and QML-View objects
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
+
+    // QZXing QR Decoder
+    QZXing qrdecoder;
+    qrdecoder.registerQMLTypes();
 
     // Internationalization, Load the Language
     QString locale = QLocale::system().name();
