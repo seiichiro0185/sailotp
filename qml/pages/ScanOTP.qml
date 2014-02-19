@@ -39,6 +39,7 @@ Page {
   id: scanPage
 
   property QtObject parentPage: null
+  property bool scanning: false
 
   Timer {
     id: scanTimer
@@ -47,7 +48,6 @@ Page {
     repeat: false
     onTriggered: {
       if (fileIO.mkpath(XDG_CACHE_DIR)) {
-        busy.running = true
         cam.imageCapture.captureToLocation(XDG_CACHE_DIR + "/qrscan.jpg");
       } else {
         notify.show(qsTr("Can't access temporary directory"), 3000);
@@ -67,15 +67,7 @@ Page {
 
     PageHeader {
       id: header
-      title: "Scan Code"
-    }
-
-    BusyIndicator {
-      id: busy
-      anchors.horizontalCenter: parent.horizontalCenter
-      anchors.top: parent.top
-      anchors.topMargin: 16
-      running: false
+      title: scanning ? qsTr("Scanning...") : qsTr("Scan Code")
     }
 
     Camera {
@@ -101,7 +93,7 @@ Page {
       onTagFound: {
         console.log("Barcode data: " + tag)
         var ret = URL.decode(tag);
-        busy.running = false
+        scanning = false
         if (ret && ret.type != "" && ret.title != "" && ret.secret != "" && (ret.counter != "" || ret.type == "TOTP")) {
           pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramLabel: ret.title, paramKey: ret.secret, paramType: ret.type, paramCounter: ret.counter, paramNew: true})
         } else {
@@ -109,7 +101,7 @@ Page {
         }
       }
 
-      onDecodingFinished: if (succeeded==false) scanTimer.start();
+      onDecodingFinished: if (succeeded==false && scanning) scanTimer.start();
     }
 
     FileIO {
@@ -123,7 +115,14 @@ Page {
       source: cam
       MouseArea {
         anchors.fill: parent
-        onClicked: scanTimer.start();
+        onClicked: {
+          if (scanning) {
+            scanning = false;
+          } else {
+            scanning = true;
+            scanTimer.start();
+          }
+        }
       }
     }
 
@@ -139,7 +138,7 @@ Page {
       maximumLineCount: 4
       font.pixelSize: Theme.fontSizeSmall
       color: Theme.primaryColor
-      text: qsTr("Tap the picture to start scanning. Pull down to add Token manually.")
+      text: qsTr("Tap the picture to start / stop scanning. Pull down to add Token manually.")
     }
   }
 }
