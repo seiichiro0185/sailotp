@@ -88,7 +88,6 @@ Page {
       id: decoder
 
       enabledDecoders: QZXing.DecoderFormat_QR_CODE
-      onDecodingStarted: console.log("Decoding of image started...")
 
       onTagFound: {
         console.log("Barcode data: " + tag)

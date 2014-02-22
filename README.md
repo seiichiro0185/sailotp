@@ -32,12 +32,6 @@ if you need the information outside of SailOTP.
 Importing the file is also possible from the pulley menu. If a file contains tokens that are already in the database 
 (title and secret of the token match an existing one), these tokens will not be added again.
 
-## Known Limitations
-
-At the moment the only way to insert new entries into the app is to insert the
-title and secret key by hand. It's not possible to use the QR-Codes some sites
-provide directly.
-
 ## Contact and Issues
 
 If you find any bugs or want to suggest a feature, feel free to use Githubs
