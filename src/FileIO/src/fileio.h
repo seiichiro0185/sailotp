@@ -31,16 +31,15 @@
 #define FILEIO_H
 
 #include <QObject>
+#include <QString>
 
 class FileIO : public QObject
 {
   Q_OBJECT
 
 public:
-  Q_PROPERTY(QString source
-             READ source
-             WRITE setSource
-             NOTIFY sourceChanged)
+  Q_PROPERTY(QString source READ source WRITE setSource NOTIFY sourceChanged)
+
   explicit FileIO(QObject *parent = 0);
 
   Q_INVOKABLE QString read();

@@ -13,8 +13,7 @@ DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-sailotp.cpp \
-		src/fileio.cpp
+SOURCES += src/harbour-sailotp.cpp
 
 OTHER_FILES += qml/harbour-sailotp.qml \
     qml/cover/CoverPage.qml \
@@ -34,9 +33,6 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/pages/ScanOTP.qml \
     qml/lib/urldecoder.js
 
-HEADERS += \
-    src/fileio.h
-
 i18n.files = i18n/*.qm
 i18n.path = /usr/share/$${TARGET}/i18n
 
@@ -53,3 +49,4 @@ lupdate_only {
 }
 
 include(src/qzxing/QZXing.pri)
+include(src/FileIO/FileIO.pri)
