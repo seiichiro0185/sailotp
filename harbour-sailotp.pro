@@ -31,7 +31,8 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/lib/gibberish-aes.js \
     qml/components/NotifyBanner.qml \
     qml/pages/ScanOTP.qml \
-    qml/lib/urldecoder.js
+    qml/lib/urldecoder.js \
+    qml/pages/QRPage.qml
 
 i18n.files = i18n/*.qm
 i18n.path = /usr/share/$${TARGET}/i18n
@@ -50,3 +51,4 @@ lupdate_only {
 
 include(src/qzxing/QZXing.pri)
 include(src/FileIO/FileIO.pri)
+include(src/qqrencode/qqrencode.pri)

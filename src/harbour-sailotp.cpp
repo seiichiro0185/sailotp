@@ -32,6 +32,7 @@
 #include <QGuiApplication>
 #include "fileio.h"
 #include "qzxing.h"
+#include "qqrencode.h"
 
 int main(int argc, char *argv[])
 {
@@ -62,6 +63,7 @@ int main(int argc, char *argv[])
     view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
     view->rootContext()->setContextProperty("XDG_HOME_DIR", QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
     view->rootContext()->setContextProperty("XDG_CACHE_DIR", QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
+    view->engine()->addImageProvider("qqrencoder", new QQRencoder());
     view->show();
 
     // Run the app

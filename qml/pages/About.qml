@@ -85,7 +85,7 @@ Page {
     font.pixelSize: Theme.fontSizeSmall
     horizontalAlignment: TextEdit.Center
     readOnly: true
-    text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes/\nhttp://sourceforge.net/projects/qzxing/"
+    text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes/\nhttp://sourceforge.net/projects/qzxing/\nhttp://fukuchi.org/works/qrencode/"
     color: "white"
   }
 }

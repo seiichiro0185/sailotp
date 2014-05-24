@@ -46,9 +46,27 @@ Dialog {
   property int paramCounter: 1 // New Counters start at 1
   property bool paramNew: false
 
+  function checkQR() {
+    if (paramLabel != "" && paramKey != "" && !paramNew) {
+      return(true);
+    } else {
+      return(false);
+    }
+  }
+
   SilicaFlickable {
     id: addOtpList
     anchors.fill: parent
+
+
+
+    PullDownMenu {
+      visible: checkQR()
+      MenuItem {
+        text: qsTr("Show QR-Code")
+        onClicked: pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text})
+      }
+    }
 
     VerticalScrollDecorator {}
 
