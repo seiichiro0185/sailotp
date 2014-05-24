@@ -39,57 +39,62 @@ Lizenz: BSD (3-Klausel)</translation>
         <translation>QR-Code anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="76"/>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <source>Can&apos;t create QR-Code from incomplete settings!</source>
+        <translation>Ein QR-Code kann nur mit vollständigen Einstellungen erzeugt werden!</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="82"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="76"/>
+        <location filename="../qml/pages/AddOTP.qml" line="82"/>
         <source>Add</source>
         <translation>Hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="81"/>
+        <location filename="../qml/pages/AddOTP.qml" line="87"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="83"/>
+        <location filename="../qml/pages/AddOTP.qml" line="89"/>
         <source>Time-based (TOTP)</source>
         <translation>Zeitbasiert (TOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="84"/>
+        <location filename="../qml/pages/AddOTP.qml" line="90"/>
         <source>Counter-based (HOTP)</source>
         <translation>Zählerbasiert (HOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="90"/>
+        <location filename="../qml/pages/AddOTP.qml" line="96"/>
         <source>Title</source>
         <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="91"/>
+        <location filename="../qml/pages/AddOTP.qml" line="97"/>
         <source>Title for the OTP</source>
         <translation>Titel für das Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <location filename="../qml/pages/AddOTP.qml" line="109"/>
         <source>Secret (at least 16 characters)</source>
         <translation>Schlüssel (mindestens 16 Zeichen)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <location filename="../qml/pages/AddOTP.qml" line="111"/>
         <source>Secret OTP Key</source>
         <translation>Geheimer Schlüssel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="117"/>
+        <location filename="../qml/pages/AddOTP.qml" line="123"/>
         <source>Next Counter Value</source>
         <translation>Nächster Zählerwert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="119"/>
+        <location filename="../qml/pages/AddOTP.qml" line="125"/>
         <source>Next Value of the Counter</source>
         <translation>Nächster Wert für den Zähler</translation>
     </message>
@@ -283,7 +288,7 @@ Lizenz: BSD (3-Klausel)</translation>
 <context>
     <name>QRPage</name>
     <message>
-        <location filename="../qml/pages/QRPage.qml" line="70"/>
+        <location filename="../qml/pages/QRPage.qml" line="71"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Ein QR-Code kann nur mit vollständigen Einstellungen erzeugt werden!</translation>
     </message>

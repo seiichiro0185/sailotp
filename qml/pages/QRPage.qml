@@ -51,6 +51,7 @@ Page {
     id: qrImage
     anchors.horizontalCenter: parent.horizontalCenter
     y: 200
+    cache: false
   }
 
   Component.onCompleted: {
@@ -61,7 +62,7 @@ Page {
         otpurl = "otpauth://totp/"+paramLabel+"?secret="+paramKey;
 
     } else if (paramType == "HOTP") {
-      if (paramLabel != "" && paramKey != "" && paramCounter > 0) return;
+      if (paramLabel != "" && paramKey != "" && paramCounter > 0)
         otpurl = "otpauth://hotp/"+paramLabel+"?secret="+paramKey+"&counter="+paramCounter;
     }
     if (otpurl != "") {

@@ -64,7 +64,13 @@ Dialog {
       visible: checkQR()
       MenuItem {
         text: qsTr("Show QR-Code")
-        onClicked: pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text})
+        onClicked: {
+          if ((paramType == "TOTP" && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
+            notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
+          } else {
+            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text});
+          }
+        }
       }
     }
 
