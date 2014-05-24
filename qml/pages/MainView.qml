@@ -148,6 +148,17 @@ Page {
           remorseAction(qsTr("Deleting"), function() { DB.removeOTP(title, secret); appWin.listModel.remove(index) })
         }
 
+        function moveEntry(direction, index) {
+          if (direction) {
+            appWin.listModel.move(index, index-1, 1);
+          } else {
+            appWin.listModel.move(index, index+1, 1);
+          }
+          for (var i=0; i<appWin.listModel.count; i++) {
+              DB.changeOTPSort(appWin.listModel.get(i).title, appWin.listModel.get(i).secret, i);
+          }
+        }
+
         onClicked: {
           Clipboard.text = otp
           notify.show(qsTr("Token for ") + title + qsTr(" copied to clipboard"), 3000);
@@ -217,6 +228,16 @@ Page {
         Component {
           id: otpContextMenu
           ContextMenu {
+            MenuItem {
+              text: qsTr("Move up")
+              visible: index > 0 ? true : false;
+              onClicked: moveEntry(1, index);
+            }
+            MenuItem {
+              text: qsTr("Move down")
+              visible: index < appWin.listModel.count - 1 ? true : false;
+              onClicked: moveEntry(0, index);
+            }
             MenuItem {
               text: qsTr("Edit")
               onClicked: {

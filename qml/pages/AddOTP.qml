@@ -116,13 +116,13 @@ Dialog {
   // Save if page is Left with Add
   onDone: {
     if (result == DialogResult.Accepted) {
-			// Save the entry to the Config DB
+      // Save the entry to the Config DB
       if (paramLabel != "" && paramKey != "" && !paramNew) {
         // Parameters where filled -> Change existing entry
         DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, paramLabel, paramKey)
       } else {
         // There were no parameters -> Add new entry
-        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text);
+        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count);
       }
 			// Refresh the main Page
       parentPage.refreshOTPList();
