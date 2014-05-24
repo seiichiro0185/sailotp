@@ -37,12 +37,12 @@ Page {
     id: logo
     source: "../sailotp.png"
     anchors.horizontalCenter: parent.horizontalCenter
-    y: 150
+    y: 140
   }
   Label {
     id: name
     anchors.horizontalCenter: parent.horizontalCenter
-    y: 270
+    y: 260
     font.bold: true
     text: "SailOTP " + Qt.application.version
   }
