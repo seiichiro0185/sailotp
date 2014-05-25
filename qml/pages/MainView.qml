@@ -44,7 +44,7 @@ Page {
     appWin.coverTitle = title
     appWin.coverSecret = secret
     appWin.coverType = type
-    if (secret = "") {
+    if (secret == "") {
       appWin.coverOTP = "";
     } else if (type == "HOTP") {
       appWin.coverOTP = "------";
