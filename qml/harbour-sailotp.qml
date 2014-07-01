@@ -78,8 +78,6 @@ ApplicationWindow
     }
   }
 
-  NotifyBanner { id: notify }
-
   initialPage: Component { MainView { } }
   cover: Qt.resolvedUrl("cover/CoverPage.qml")
 

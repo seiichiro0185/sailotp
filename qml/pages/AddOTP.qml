@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -44,17 +44,42 @@ Dialog {
   property string paramLabel: ""
   property string paramKey: ""
   property int paramCounter: 1 // New Counters start at 1
+  property bool paramNew: false
+
+  function checkQR() {
+    if (paramLabel != "" && paramKey != "" && !paramNew) {
+      return(true);
+    } else {
+      return(false);
+    }
+  }
 
   SilicaFlickable {
     id: addOtpList
     anchors.fill: parent
+
+
+
+    PullDownMenu {
+      visible: checkQR()
+      MenuItem {
+        text: qsTr("Show QR-Code")
+        onClicked: {
+          if ((paramType == "TOTP" && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
+            notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
+          } else {
+            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text});
+          }
+        }
+      }
+    }
 
     VerticalScrollDecorator {}
 
     Column {
       anchors.fill: parent
       DialogHeader {
-        acceptText: paramLabel != "" ? qsTr("Save") : qsTr("Add")
+        acceptText: paramNew ? qsTr("Add") : qsTr("Save")
       }
 
       ComboBox {
@@ -115,13 +140,13 @@ Dialog {
   // Save if page is Left with Add
   onDone: {
     if (result == DialogResult.Accepted) {
-			// Save the entry to the Config DB
-      if (paramLabel != "" && paramKey != "") {
+      // Save the entry to the Config DB
+      if (paramLabel != "" && paramKey != "" && !paramNew) {
         // Parameters where filled -> Change existing entry
         DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, paramLabel, paramKey)
       } else {
         // There were no parameters -> Add new entry
-        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text);
+        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count);
       }
 			// Refresh the main Page
       parentPage.refreshOTPList();

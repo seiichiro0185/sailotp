@@ -75,12 +75,17 @@ CoverBackground {
 
   Column {
     anchors.top: logo.bottom
+    width: parent.width
     anchors.topMargin: 48
     anchors.horizontalCenter: parent.horizontalCenter
 
     Label {
       text: appWin.coverTitle
       anchors.horizontalCenter: parent.horizontalCenter
+      width: parent.width - Theme.paddingMedium*2
+      maximumLineCount: 1
+      truncationMode: TruncationMode.Fade
+      horizontalAlignment: contentWidth <= width ? Text.AlignHCenter : Text.AlignLeft
     }
     Label {
       id: lOTP

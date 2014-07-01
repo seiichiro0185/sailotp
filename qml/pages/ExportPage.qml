@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -83,6 +83,19 @@ Dialog {
   SilicaFlickable {
     id: exportFlickable
     anchors.fill: parent
+
+    PullDownMenu {
+      MenuItem {
+        text: mode == "export" ? qsTr("Import") : qsTr("Export")
+        onClicked: {
+          if (mode == "export") {
+            mode = "import"
+          } else {
+            mode = "export"
+          }
+        }
+      }
+    }
 
     VerticalScrollDecorator {}
 

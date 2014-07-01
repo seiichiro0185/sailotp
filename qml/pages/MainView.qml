@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -44,7 +44,7 @@ Page {
     appWin.coverTitle = title
     appWin.coverSecret = secret
     appWin.coverType = type
-    if (secret = "") {
+    if (secret == "") {
       appWin.coverOTP = "";
     } else if (type == "HOTP") {
       appWin.coverOTP = "------";
@@ -103,16 +103,12 @@ Page {
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
       }
       MenuItem {
-        text: qsTr("Export Token-DB")
+        text: qsTr("Export / Import")
         onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "export"})
       }
       MenuItem {
-        text: qsTr("Import Token-DB")
-        onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "import"})
-      }
-      MenuItem {
         text: qsTr("Add Token")
-        onClicked: pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage})
+        onClicked: pageStack.push(Qt.resolvedUrl("ScanOTP.qml"), {parentPage: mainPage})
       }
     }
 
@@ -150,6 +146,17 @@ Page {
         function remove() {
           // Show 5s countdown, then delete from DB and List
           remorseAction(qsTr("Deleting"), function() { DB.removeOTP(title, secret); appWin.listModel.remove(index) })
+        }
+
+        function moveEntry(direction, index) {
+          if (direction) {
+            appWin.listModel.move(index, index-1, 1);
+          } else {
+            appWin.listModel.move(index, index+1, 1);
+          }
+          for (var i=0; i<appWin.listModel.count; i++) {
+              DB.changeOTPSort(appWin.listModel.get(i).title, appWin.listModel.get(i).secret, i);
+          }
         }
 
         onClicked: {
@@ -221,6 +228,16 @@ Page {
         Component {
           id: otpContextMenu
           ContextMenu {
+            MenuItem {
+              text: qsTr("Move up")
+              visible: index > 0 ? true : false;
+              onClicked: moveEntry(1, index);
+            }
+            MenuItem {
+              text: qsTr("Move down")
+              visible: index < appWin.listModel.count - 1 ? true : false;
+              onClicked: moveEntry(0, index);
+            }
             MenuItem {
               text: qsTr("Edit")
               onClicked: {

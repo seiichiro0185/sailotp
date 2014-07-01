@@ -30,10 +30,11 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/sailotp.png \
     qml/pages/ExportPage.qml \
     qml/lib/gibberish-aes.js \
-    qml/components/NotifyBanner.qml
-
-HEADERS += \
-    src/fileio.h
+    qml/components/NotifyBanner.qml \
+    qml/pages/ScanOTP.qml \
+    qml/lib/urldecoder.js \
+    qml/pages/QRPage.qml \
+    rpm/harbour-sailotp.changes
 
 i18n.files = i18n/*.qm
 i18n.path = /usr/share/$${TARGET}/i18n
@@ -50,3 +51,6 @@ lupdate_only {
                    i18n/en.ts
 }
 
+include(src/qzxing/QZXing.pri)
+include(src/FileIO/FileIO.pri)
+include(src/qqrencode/qqrencode.pri)

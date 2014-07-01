@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Stefan Brand <seiichiro@seiichiro0185.org>
+ * Copyright (c) 2014, Stefan Brand <seiichiro@seiichiro0185.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -31,12 +31,18 @@
 #include <sailfishapp.h>
 #include <QGuiApplication>
 #include "fileio.h"
+#include "qzxing.h"
+#include "qqrencode.h"
 
 int main(int argc, char *argv[])
 {
     // Get App and QML-View objects
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
+
+    // QZXing QR Decoder
+    QZXing qrdecoder;
+    qrdecoder.registerQMLTypes();
 
     // Internationalization, Load the Language
     QString locale = QLocale::system().name();
@@ -56,6 +62,8 @@ int main(int argc, char *argv[])
     // Prepare the QML and set Homedir
     view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));
     view->rootContext()->setContextProperty("XDG_HOME_DIR", QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
+    view->rootContext()->setContextProperty("XDG_CACHE_DIR", QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
+    view->engine()->addImageProvider("qqrencoder", new QQRencoder());
     view->show();
 
     // Run the app
