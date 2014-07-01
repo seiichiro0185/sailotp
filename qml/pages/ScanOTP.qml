@@ -87,7 +87,6 @@ Page {
       id: decoder
 
       onTagFound: {
-        console.log("Barcode data: " + tag)
         var ret = URL.decode(tag);
         scanning = false
         if (ret && ret.type != "" && ret.title != "" && ret.secret != "" && (ret.counter != "" || ret.type == "TOTP")) {
