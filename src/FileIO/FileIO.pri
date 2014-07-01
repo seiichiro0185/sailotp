@@ -1,4 +1,4 @@
-QT += core declarative
+QT += core quick
 
 INCLUDEPATH += $$PWD/src
 

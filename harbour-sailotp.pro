@@ -32,7 +32,8 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/components/NotifyBanner.qml \
     qml/pages/ScanOTP.qml \
     qml/lib/urldecoder.js \
-    qml/pages/QRPage.qml
+    qml/pages/QRPage.qml \
+    rpm/harbour-sailotp.changes
 
 i18n.files = i18n/*.qm
 i18n.path = /usr/share/$${TARGET}/i18n

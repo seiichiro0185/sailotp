@@ -30,7 +30,6 @@
 import QtQuick 2.0
 import QtMultimedia 5.0
 import Sailfish.Silica 1.0
-import Sailfish.Media 1.0 // Not allowed in harbour, but normal VideoOutput doesn't work yet!
 import harbour.sailotp.QZXing 2.2
 import harbour.sailotp.FileIO 1.0
 import "../lib/urldecoder.js" as URL
@@ -87,8 +86,6 @@ Page {
     QZXing {
       id: decoder
 
-      enabledDecoders: QZXing.DecoderFormat_QR_CODE
-
       onTagFound: {
         console.log("Barcode data: " + tag)
         var ret = URL.decode(tag);
@@ -107,7 +104,7 @@ Page {
       id: fileIO
     }
 
-    GStreamerVideoOutput {
+    VideoOutput {
       id: prev
       anchors.horizontalCenter: parent.horizontalCenter
       anchors.top: header.bottom
