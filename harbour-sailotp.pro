@@ -13,8 +13,7 @@ DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-sailotp.cpp \
-    src/fileio.cpp
+SOURCES += src/harbour-sailotp.cpp
 
 OTHER_FILES += qml/harbour-sailotp.qml \
     qml/cover/CoverPage.qml \
