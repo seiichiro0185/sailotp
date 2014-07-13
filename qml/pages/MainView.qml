@@ -54,9 +54,11 @@ Page {
   // Reload the List of OTPs from storage
   function refreshOTPList() {
     otpList.visible = false;
+    otpList.model = null; // Hack to prevent unaccessible pulley after List refresh
     appWin.listModel.clear();
     DB.getOTP();
     refreshOTPValues();
+    otpList.model = appWin.listModel; // Hack to prevent unaccessible pulley after List refresh
     otpList.visible = true;
   }
 
@@ -186,8 +188,8 @@ Page {
                   }
                 }
               } else {
-                DB.resetFav(title, secret)
-                appWin.setCover(-1)
+                DB.resetFav(title, secret);
+                appWin.setCover(-1);
                 appWin.listModel.setProperty(index, "fav", 0);
               }
             }

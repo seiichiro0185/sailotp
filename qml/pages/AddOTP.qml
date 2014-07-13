@@ -148,7 +148,8 @@ Dialog {
         // There were no parameters -> Add new entry
         DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count);
       }
-			// Refresh the main Page
+
+      // Refresh the main Page
       parentPage.refreshOTPList();
     }
   }
