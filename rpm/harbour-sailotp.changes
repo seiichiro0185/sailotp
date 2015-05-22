@@ -1,2 +1,5 @@
+* Fri May 22 2015 Stefan Brand <sailfish@seiichiro0185.org> 1.1-1
+- Added URL-decoding for OTP-titles when scanning QR-codes
+
 * Tue Jul 01 2014 Stefan Brand <sailfish@seiichiro0185.org> 1.0-1
 - Added harbour-compatible QR-Reader
