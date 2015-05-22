@@ -6,7 +6,7 @@ function decode(url) {
   if (url.search(/^otpauth:\/\/[th]otp\/.*?.*/) != -1) {
     var ret = {"type": "", "title": "", "secret": "", "counter": ""};
     ret.type = url.slice(10,14).toUpperCase();
-    ret.title = url.slice(15, url.indexOf("?"));
+    ret.title = decodeURIComponent(url.slice(15, url.indexOf("?")));
     var pstr = url.slice(url.indexOf("?")+1, url.length);
     var params = pstr.split("&");
 
