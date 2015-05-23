@@ -50,3 +50,10 @@ An adapted version of the QZXing-library is used for QRCode-decoding
 The qrencode library is used for QRCode-encoding existing tokens for export to other devices.
 <a href="http://fukuchi.org/works/qrencode/">http://fukuchi.org/works/qrencode/</a>
 
+## Translations
+
+The following people have contributed to translating SailOTP:
+
+  * Swedish: Åke Engelbrektson (eson57)
+  * English: Stefan Brand (seiichiro0185)
+  * German: Stefan Brand (seiichiro0185)
