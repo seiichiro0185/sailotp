@@ -12,23 +12,28 @@
         <translation type="vanished">Copyright: Stefan Brand&lt;br/&gt;Lizenz: BSD (3-Klausel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="57"/>
+        <location filename="../qml/pages/About.qml" line="65"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
         <translation>Ein einfacher Sailfish OTP-Generator
 (RFC 6238/4226-kompatibel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="67"/>
+        <location filename="../qml/pages/About.qml" line="74"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
         <translation>Copyright: Stefan Brand
 Lizenz: BSD (3-Klausel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="88"/>
+        <location filename="../qml/pages/About.qml" line="92"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP verwendet folgende externe Bibliotheken:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="103"/>
+        <source>Translators:</source>
+        <translation>Übersetzer:</translation>
     </message>
 </context>
 <context>
@@ -217,7 +222,7 @@ Lizenz: BSD (3-Klausel)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="102"/>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
@@ -230,57 +235,57 @@ Lizenz: BSD (3-Klausel)</translation>
         <translation type="vanished">Datenbank importieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="106"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Export / Import</source>
         <translation>Export / Import</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="110"/>
+        <location filename="../qml/pages/MainView.qml" line="112"/>
         <source>Add Token</source>
         <translation>Token hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="136"/>
+        <location filename="../qml/pages/MainView.qml" line="138"/>
         <source>Nothing here</source>
         <translation>Hier ist nichts</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="137"/>
+        <location filename="../qml/pages/MainView.qml" line="139"/>
         <source>Pull down to add a OTP</source>
         <translation>Nach unten ziehen zum hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="148"/>
+        <location filename="../qml/pages/MainView.qml" line="150"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="164"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source>Token for </source>
         <translation>Token für </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="164"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source> copied to clipboard</source>
         <translation> kopiert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="232"/>
+        <location filename="../qml/pages/MainView.qml" line="234"/>
         <source>Move up</source>
         <translation>Nach oben</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="237"/>
+        <location filename="../qml/pages/MainView.qml" line="239"/>
         <source>Move down</source>
         <translation>Nach unten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="242"/>
+        <location filename="../qml/pages/MainView.qml" line="244"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="248"/>
+        <location filename="../qml/pages/MainView.qml" line="250"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
@@ -296,32 +301,32 @@ Lizenz: BSD (3-Klausel)</translation>
 <context>
     <name>ScanOTP</name>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="53"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="52"/>
         <source>Can&apos;t access temporary directory</source>
         <translation>Kein Zugriff auf temporäres Verzeichnis.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="63"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="62"/>
         <source>Add manually</source>
         <translation>Manuell hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="70"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="69"/>
         <source>Scan Code</source>
         <translation>Code scannen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="70"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="69"/>
         <source>Scanning...</source>
         <translation>scanne...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="99"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="95"/>
         <source>No valid Token data found.</source>
         <translation>Kein gültiges Token gefunden.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="140"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="136"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
         <translation>Vorschau antippen um den Scan zu starten / zu stoppen. Nach unten ziehen um manuell hinzu zu fügen.</translation>
     </message>
