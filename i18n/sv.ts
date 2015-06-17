@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sv_SE">
+<TS version="2.1" language="sv_SE">
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="57"/>
+        <location filename="../qml/pages/About.qml" line="65"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
         <translation>En enkel Sailfish OTP-generator
 (RFC 6238/4226-kompatibel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="67"/>
+        <location filename="../qml/pages/About.qml" line="74"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
         <translation>Copyright: Stefan Brand
 Licens: BSD (3-clause)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="88"/>
+        <location filename="../qml/pages/About.qml" line="92"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP använder följande tredjeparts bibliotek:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="103"/>
+        <source>Translators:</source>
+        <translation>Översättare:</translation>
     </message>
 </context>
 <context>
@@ -209,62 +214,62 @@ Licens: BSD (3-clause)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="102"/>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="106"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Export / Import</source>
         <translation>Export / Import</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="110"/>
+        <location filename="../qml/pages/MainView.qml" line="112"/>
         <source>Add Token</source>
         <translation>Lägg till Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="136"/>
+        <location filename="../qml/pages/MainView.qml" line="138"/>
         <source>Nothing here</source>
         <translation>Inget här</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="137"/>
+        <location filename="../qml/pages/MainView.qml" line="139"/>
         <source>Pull down to add a OTP</source>
         <translation>Dra neråt för att lägga till en OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="148"/>
+        <location filename="../qml/pages/MainView.qml" line="150"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="164"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source>Token for </source>
         <translation>Token för </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="164"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source> copied to clipboard</source>
         <translation>kopierad till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="232"/>
+        <location filename="../qml/pages/MainView.qml" line="234"/>
         <source>Move up</source>
         <translation>Flytta upp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="237"/>
+        <location filename="../qml/pages/MainView.qml" line="239"/>
         <source>Move down</source>
         <translation>Flytta ner</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="242"/>
+        <location filename="../qml/pages/MainView.qml" line="244"/>
         <source>Edit</source>
         <translation>Redigera</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="248"/>
+        <location filename="../qml/pages/MainView.qml" line="250"/>
         <source>Delete</source>
         <translation>Ta bort</translation>
     </message>
@@ -280,32 +285,32 @@ Licens: BSD (3-clause)</translation>
 <context>
     <name>ScanOTP</name>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="53"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="52"/>
         <source>Can&apos;t access temporary directory</source>
         <translation>Kan inte komma åt temp-mapp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="63"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="62"/>
         <source>Add manually</source>
         <translation>Lägg till manuellt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="70"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="69"/>
         <source>Scan Code</source>
         <translation>Skanna kod</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="70"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="69"/>
         <source>Scanning...</source>
         <translation>Skannar...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="99"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="95"/>
         <source>No valid Token data found.</source>
         <translation>Ingen giltig Token-data hittades.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="140"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="136"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
         <translation>Tryck på bilden för att starta / stoppa skanning. Dra neråt för att lägga till Token manuellt.</translation>
     </message>

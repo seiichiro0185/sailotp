@@ -47,7 +47,8 @@ lupdate_only {
               qml/components/*.qml
 
     TRANSLATIONS = i18n/de.ts \
-                   i18n/en.ts
+                   i18n/en.ts \
+                   i18n/sv.ts
 }
 
 include(src/qzxing/QZXing.pri)
