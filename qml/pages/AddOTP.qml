@@ -36,6 +36,8 @@ import "../lib/storage.js" as DB // Import the storage library for Config-Access
 Dialog {
   id: addOTP
 
+  allowedOrientations: Orientation.All
+
 	// We get the Object of the parent page on call to refresh it after adding a new Entry
   property QtObject parentPage: null
 

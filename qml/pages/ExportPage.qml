@@ -38,6 +38,8 @@ import "../lib/gibberish-aes.js" as Gibberish //Import AES encryption library
 Dialog {
   id: exportPage
 
+  allowedOrientations: Orientation.All
+
   // We get the Object of the parent page on call to refresh it after adding a new Entry
   property QtObject parentPage: null
   property string mode: "import"

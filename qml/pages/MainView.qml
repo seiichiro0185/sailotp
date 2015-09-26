@@ -36,6 +36,8 @@ import "../lib/crypto.js" as OTP
 Page {
   id: mainPage
 
+  allowedOrientations: Orientation.All
+
   // This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
   property double lastUpdated: 0
 
@@ -119,16 +121,20 @@ Page {
       width: parent.width
       maximumValue: 29
       anchors.top: parent.top
-      anchors.topMargin: 48
+      anchors.topMargin: 36 * Theme.pixelRatio
       // Only show when there are enries
       visible: appWin.listModel.count
     }
 
+
+
     SilicaListView {
       id: otpList
+
       header: PageHeader {
         title: "SailOTP"
       }
+
       anchors.fill: parent
       model: appWin.listModel
       width: parent.width

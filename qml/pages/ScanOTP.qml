@@ -37,6 +37,8 @@ import "../lib/urldecoder.js" as URL
 Page {
   id: scanPage
 
+  allowedOrientations: Orientation.All
+
   property QtObject parentPage: null
   property bool scanning: false
 

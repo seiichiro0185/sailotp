@@ -33,6 +33,9 @@ import Sailfish.Silica 1.0
 // Define the Layout of the About Page
 Page {
   id: aboutPage
+
+  allowedOrientations: Orientation.All
+
   SilicaFlickable {
     id: flickable
     anchors.fill: parent
