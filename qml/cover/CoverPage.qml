@@ -41,9 +41,15 @@ CoverBackground {
   function updateOTP() {
     // get seconds from current Date
     var curDate = new Date();
+    var type;
 
     if (lOTP.text == "------" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "TOTP", 0);
+     if (appWin.coverTitle.substr(0,6) == "Steam:") {
+       type = "TOTP_STEAM"
+     } else {
+       type = "TOTP"
+     }
+      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, type, 0);
     }
 
     // Change color of the OTP to red if less than 5 seconds left
