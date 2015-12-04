@@ -63,6 +63,11 @@ function leftpad(str, len, pad) {
   return str;
 }
 
+// characters steam uses to generate the final code
+var steamChars = ['2', '3', '4', '5', '6', '7', '8', '9', 'B', 'C',
+                  'D', 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'P', 'Q',
+                  'R', 'T', 'V', 'W', 'X', 'Y']
+
 // *** Main Function *** //
 
 // Calculate an OTP-Value from the given secret
@@ -75,7 +80,7 @@ function calcOTP(secret, type, counter) {
   var key = base32tohex(secret);
   var factor = "";
 
-  if (type == "TOTP") {
+  if (type.substr(0, 4) == "TOTP") {
     // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC)
     var epoch = Math.round(new Date().getTime() / 1000.0);
     // Get last full 30 / 60 Seconds and convert to HEX
@@ -92,8 +97,19 @@ function calcOTP(secret, type, counter) {
     // Finally convert the HMAC-Value to the corresponding 6-digit token
     var offset = hex2dec(hmac.substring(hmac.length - 1));
 
-    var otp = (hex2dec(hmac.substr(offset * 2, 8)) & hex2dec('7fffffff')) + '';
-    otp = (otp).substr(otp.length - 6, 6);
+    var code = hex2dec(hmac.substr(offset * 2, 8)) & hex2dec('7fffffff');
+    var otp = '';
+
+    // Steam has it's own way of creating the code from the result
+    if (type == "TOTP_STEAM") {
+      for (var i = 0; i < 5; i++) {
+        otp += steamChars[code % steamChars.length];
+        code = Math.floor(code/steamChars.length);
+      }
+    } else {
+      otp = code + '';
+      otp = (otp).substr(otp.length - 6, 6);
+    }
   } catch (e) {
     otp = "Invalid Secret!"
   }
