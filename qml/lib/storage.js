@@ -200,13 +200,10 @@ function changeOTP(title, secret, type, counter, oldtitle, oldsecret) {
 
   db.transaction(
     function(tx) {
-      if (checkOTP(title, secret)) {
-        console.log("Token " + title + " is already in DB");
-      } else {
         tx.executeSql("UPDATE OTPStorage SET title=?, secret=?, type=?, counter=? WHERE title=? and secret=?;", [title, secret, type, counter, oldtitle, oldsecret]);
         console.log("Token " + title + " modified.");
       }
-  });
+  );
 }
 
 function changeOTPSort(title, secret, sort) {

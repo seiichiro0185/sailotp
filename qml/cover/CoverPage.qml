@@ -41,15 +41,9 @@ CoverBackground {
   function updateOTP() {
     // get seconds from current Date
     var curDate = new Date();
-    var type;
 
     if (lOTP.text == "------" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-     if (appWin.coverTitle.substr(0,6) == "Steam:") {
-       type = "TOTP_STEAM"
-     } else {
-       type = "TOTP"
-     }
-      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, type, 0);
+      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, appWin.coverType, 0);
     }
 
     // Change color of the OTP to red if less than 5 seconds left
@@ -65,7 +59,7 @@ CoverBackground {
   Timer {
     interval: 1000
     // Timer runs only when cover is visible and favourite is set
-    running: !Qt.application.active && appWin.coverSecret != "" && appWin.coverType == "TOTP"
+    running: !Qt.application.active && appWin.coverSecret != "" && (appWin.coverType == "TOTP" || appWin.coverType == "TOTP_STEAM")
     repeat: true
     onTriggered: updateOTP();
   }
@@ -113,7 +107,7 @@ CoverBackground {
           if (index < 0) index = appWin.listModel.count - 1
           appWin.setCover(index);
           DB.setFav(appWin.coverTitle, appWin.coverSecret)
-          if (appWin.coverType == "TOTP") updateOTP();
+          if (appWin.coverType == "TOTP" || appWin.coverType == "TOTP_STEAM") updateOTP();
         }
       }
     }
@@ -124,7 +118,7 @@ CoverBackground {
         if (index >= appWin.listModel.count) index = 0
         appWin.setCover(index);
         DB.setFav(appWin.coverTitle, appWin.coverSecret)
-        if (appWin.coverType == "TOTP") updateOTP();
+        if (appWin.coverType == "TOTP" || appWin.coverType == "TOTP_STEAM") updateOTP();
       }
     }
   }
