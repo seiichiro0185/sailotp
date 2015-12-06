@@ -33,6 +33,8 @@ import Sailfish.Silica 1.0
 Page {
   id: qrpage
 
+  allowedOrientations: Orientation.All
+
   property string paramType: ""
   property string paramLabel: ""
   property string paramKey: ""

@@ -36,6 +36,8 @@ import "../lib/crypto.js" as OTP
 Page {
   id: mainPage
 
+  allowedOrientations: Orientation.All
+
   // This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
   property double lastUpdated: 0
 
@@ -70,10 +72,10 @@ Page {
 
     // Iterate over all List entries
     for (var i=0; i<appWin.listModel.count; i++) {
-      if (appWin.listModel.get(i).type == "TOTP") {
+      if (appWin.listModel.get(i).type == "TOTP" || appWin.listModel.get(i).type == "TOTP_STEAM" ) {
         // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
         if (appWin.listModel.get(i).otp == "------" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, "TOTP")
+          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, appWin.listModel.get(i).type)
           appWin.listModel.setProperty(i, "otp", curOTP);
         }
       } else if (appWin.coverType == "HOTP" && (curDate.getTime() - lastUpdated > 2000) && appWin.listModel.get(i).fav == 1) {
@@ -119,16 +121,20 @@ Page {
       width: parent.width
       maximumValue: 29
       anchors.top: parent.top
-      anchors.topMargin: 48
+      anchors.topMargin: 36 * Theme.pixelRatio
       // Only show when there are enries
       visible: appWin.listModel.count
     }
 
+
+
     SilicaListView {
       id: otpList
+
       header: PageHeader {
         title: "SailOTP"
       }
+
       anchors.fill: parent
       model: appWin.listModel
       width: parent.width

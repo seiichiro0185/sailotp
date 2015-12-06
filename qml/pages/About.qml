@@ -33,6 +33,9 @@ import Sailfish.Silica 1.0
 // Define the Layout of the About Page
 Page {
   id: aboutPage
+
+  allowedOrientations: Orientation.All
+
   SilicaFlickable {
     id: flickable
     anchors.fill: parent
@@ -90,6 +93,17 @@ Page {
         horizontalAlignment: TextEdit.Center
         readOnly: true
         text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes/\nhttp://sourceforge.net/projects/qzxing/\nhttp://fukuchi.org/works/qrencode/"
+        color: "white"
+      }
+
+      TextArea {
+        id: contributors
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        font.pixelSize: Theme.fontSizeSmall
+        horizontalAlignment: TextEdit.Center
+        readOnly: true
+        text: qsTr("Contributors:")+"\n\nRobin Appelman: SteamGuard "+qsTr("Support")
         color: "white"
       }
 
