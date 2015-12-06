@@ -97,6 +97,17 @@ Page {
       }
 
       TextArea {
+        id: contributors
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        font.pixelSize: Theme.fontSizeSmall
+        horizontalAlignment: TextEdit.Center
+        readOnly: true
+        text: qsTr("Contributors:")+"\n\nRobin Apelmann: SteamGuard "+qsTr("Support")
+        color: "white"
+      }
+
+      TextArea {
         id: translators
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
