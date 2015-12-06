@@ -103,7 +103,7 @@ Page {
         font.pixelSize: Theme.fontSizeSmall
         horizontalAlignment: TextEdit.Center
         readOnly: true
-        text: qsTr("Contributors:")+"\n\nRobin Apelmann: SteamGuard "+qsTr("Support")
+        text: qsTr("Contributors:")+"\n\nRobin Appelman: SteamGuard "+qsTr("Support")
         color: "white"
       }
 
