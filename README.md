@@ -21,6 +21,8 @@ if you need the information outside of SailOTP.
 
 Importing the file is also possible from the pulley menu. If a file contains tokens that are already in the database (title and secret of the token match an existing one), these tokens will not be added again.
 
+It is also possible to generate tokens for SteamGuard (Steams TOTP-Variant for 2-Factor-Auth). To use this feature, one will have to activate it using the original Steam Android app. After activating it one can get the secret code from '/opt/alien/data/data/com.valvesoftware.android.steam.community/files/Steamguard-$STEAMID'. This file contains json data, including the OTP-URL in the form 'otpauth://totp/Steam:$STEAM_USERNAME?secret=$SECRET&issuer=Steam'. The code from this URL can be added manually using the 'Steam Guard'-OTP-Type in SailOTP.
+
 ## Contact and Issues
 
 If you find any bugs or want to suggest a feature, feel free to use Githubs

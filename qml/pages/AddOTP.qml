@@ -67,7 +67,7 @@ Dialog {
       MenuItem {
         text: qsTr("Show QR-Code")
         onClicked: {
-          if ((paramType == "TOTP" && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
+          if (((paramType == "TOTP" || paramType == "TOTP_STEAM") && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
             notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
           } else {
             pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text});
@@ -90,6 +90,7 @@ Dialog {
         menu: ContextMenu {
           MenuItem { text: qsTr("Time-based (TOTP)"); onClicked: { paramType = "TOTP" } }
           MenuItem { text: qsTr("Counter-based (HOTP)"); onClicked: { paramType = "HOTP" } }
+          MenuItem { text: qsTr("Steam Guard"); onClicked: { paramType = "TOTP_STEAM" } }
         }
       }
       TextField {
@@ -115,8 +116,8 @@ Dialog {
         horizontalAlignment: TextInput.AlignLeft
 
         EnterKey.enabled: text.length > 15
-        EnterKey.iconSource: paramType == "TOTP" ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-next"
-        EnterKey.onClicked: paramType == "TOTP" ? addOTP.accept() : otpCounter.focus = true
+        EnterKey.iconSource: paramType == "HOTP" ? "image://theme/icon-m-enter-next" : "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: paramType == "HOTP" ? otpCounter.focus = true : addOTP.accept()
       }
       TextField {
         id: otpCounter
@@ -137,7 +138,7 @@ Dialog {
   }
 
   // Check if we can Save
-  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && (paramType == "TOTP" || otpCounter.text.length > 0) ? true : false
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && (paramType == "TOTP" || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
 
   // Save if page is Left with Add
   onDone: {

@@ -69,20 +69,13 @@ Page {
     // get seconds from current Date
     var curDate = new Date();
     var seconds = curDate.getSeconds();
-    var type;
 
     // Iterate over all List entries
     for (var i=0; i<appWin.listModel.count; i++) {
-      if (appWin.listModel.get(i).type == "TOTP") {
+      if (appWin.listModel.get(i).type == "TOTP" || appWin.listModel.get(i).type == "TOTP_STEAM" ) {
         // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
         if (appWin.listModel.get(i).otp == "------" || seconds == 30 || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-          if (appWin.listModel.get(i).title.substr(0,6) == "Steam:") {
-            type = "TOTP_STEAM"
-          } else {
-            type = "TOTP"
-          }
-
-          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, type)
+          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, appWin.listModel.get(i).type)
           appWin.listModel.setProperty(i, "otp", curOTP);
         }
       } else if (appWin.coverType == "HOTP" && (curDate.getTime() - lastUpdated > 2000) && appWin.listModel.get(i).fav == 1) {
