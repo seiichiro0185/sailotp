@@ -45,6 +45,8 @@ Dialog {
   property string paramType: "TOTP"
   property string paramLabel: ""
   property string paramKey: ""
+  property int paramLen: 6
+  property int paramDiff: 0
   property int paramCounter: 1 // New Counters start at 1
   property bool paramNew: false
 
@@ -70,7 +72,7 @@ Dialog {
           if (((paramType == "TOTP" || paramType == "TOTP_STEAM") && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
             notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
           } else {
-            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text});
+            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text, paramLen: otpLen.text});
           }
         }
       }
@@ -116,8 +118,35 @@ Dialog {
         horizontalAlignment: TextInput.AlignLeft
 
         EnterKey.enabled: text.length > 15
-        EnterKey.iconSource: paramType == "HOTP" ? "image://theme/icon-m-enter-next" : "image://theme/icon-m-enter-accept"
-        EnterKey.onClicked: paramType == "HOTP" ? otpCounter.focus = true : addOTP.accept()
+        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: otpLen.focus = true
+      }
+      TextField {
+        id: otpLen
+        width: parent.width
+        label: qsTr("Length")
+        text: paramLen
+        placeholderText: qsTr("Length of the Token")
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+        validator: IntValidator { bottom: 1 }
+
+        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+        EnterKey.onClicked: paramType == "HOTP" ? otpCounter.focus = true : otpDiff.focus = true
+      }
+      TextField {
+        id: otpDiff
+        width: parent.width
+        visible: paramType == "TOTP" ? true : false
+        label: qsTr("Time Derivation (Seconds)")
+        text: paramDiff
+        placeholderText: qsTr("Time Derivation (Seconds)")
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+        validator: IntValidator {}
+
+        EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: addOTP.accept()
       }
       TextField {
         id: otpCounter
@@ -138,7 +167,7 @@ Dialog {
   }
 
   // Check if we can Save
-  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && (paramType == "TOTP" || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && otpLen.text >= 1 && ((paramType == "TOTP" && otpDiff.text != "") || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
 
   // Save if page is Left with Add
   onDone: {
@@ -146,10 +175,10 @@ Dialog {
       // Save the entry to the Config DB
       if (paramLabel != "" && paramKey != "" && !paramNew) {
         // Parameters where filled -> Change existing entry
-        DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, paramLabel, paramKey)
+        DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, otpLen.text, otpDiff.text, paramLabel, paramKey)
       } else {
         // There were no parameters -> Add new entry
-        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count);
+        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count, otpLen.text, otpDiff.text);
       }
 
       // Refresh the main Page

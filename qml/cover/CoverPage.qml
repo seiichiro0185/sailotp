@@ -42,12 +42,14 @@ CoverBackground {
     // get seconds from current Date
     var curDate = new Date();
 
-    if (lOTP.text == "------" || curDate.getSeconds() == 30 || curDate.getSeconds() == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, appWin.coverType, 0);
+    var seconds = (curDate.getSeconds() + appWin.coverDiff) % 30
+
+    if (lOTP.text == "------" || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, appWin.coverType, appWin.coverLen, appWin.coverDiff, 0);
     }
 
     // Change color of the OTP to red if less than 5 seconds left
-    if (29 - (curDate.getSeconds() % 30) < 5) {
+    if (29 - seconds < 5) {
       lOTP.color = "red"
     } else {
       lOTP.color = Theme.highlightColor
@@ -101,7 +103,7 @@ CoverBackground {
       iconSource: appWin.coverType == "HOTP" ? "image://theme/icon-cover-refresh" : "image://theme/icon-cover-previous"
       onTriggered: {
         if (appWin.coverType == "HOTP") {
-          appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "HOTP", DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
+          appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "HOTP", appWin.CoverLen, 0, DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
         } else {
           var index = appWin.coverIndex - 1
           if (index < 0) index = appWin.listModel.count - 1

@@ -1,3 +1,7 @@
+* Thu Jul 14 2016 Stefan Brand <sailfish@seiichiro0185.org> 1.4-1
+- Added Setting for Time Derivation
+- Added Setting for Token Length
+
 * Sun Dec 06 2015 Stefan Brand <sailfish@seiichiro0185.org> 1.3-1
 - Added SteamGuard OTP Type (Thanks to Robin Appelman)
 
