@@ -62,7 +62,7 @@ Page {
     var otpurl = "";
     if (paramType == "TOTP") {
       if (paramLabel != "" && paramKey != "")
-        otpurl = "otpauth://totp/"+paramLabel+"?secret="+paramKey;
+        otpurl = "otpauth://totp/"+paramLabel+"?secret="+paramKey+"&digits="+paramLen;
 
     } else if (paramType == "HOTP") {
       if (paramLabel != "" && paramKey != "" && paramCounter > 0)
