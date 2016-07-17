@@ -61,8 +61,7 @@ Dialog {
   SilicaFlickable {
     id: addOtpList
     anchors.fill: parent
-
-
+    contentHeight: dialog.height
 
     PullDownMenu {
       visible: checkQR()
@@ -81,7 +80,8 @@ Dialog {
     VerticalScrollDecorator {}
 
     Column {
-      anchors.fill: parent
+      id: dialog
+      width: parent.width
       DialogHeader {
         acceptText: paramNew ? qsTr("Add") : qsTr("Save")
       }
