@@ -15,6 +15,7 @@ function decode(url) {
       var tmp = pstr.split("=");
       if (tmp[0] == "secret") ret.secret = tmp[1];
       if (tmp[0] == "counter") ret.counter = tmp[1];
+      if (tmp[0] == "digits") ret.digits = tmp[1];
     }
 
     return ret;

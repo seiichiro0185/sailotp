@@ -90,9 +90,13 @@ Page {
 
       onTagFound: {
         var ret = URL.decode(tag);
+        var len = 6
         scanning = false
         if (ret && ret.type != "" && ret.title != "" && ret.secret != "" && (ret.counter != "" || ret.type == "TOTP")) {
-          pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramLabel: ret.title, paramKey: ret.secret, paramType: ret.type, paramCounter: ret.counter, paramNew: true})
+          if (ret.digits != "") {
+            len = ret.digits
+          }
+          pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramLabel: ret.title, paramKey: ret.secret, paramType: ret.type, paramCounter: ret.counter, paramLen: len, paramNew: true})
         } else {
           notify.show(qsTr("No valid Token data found."), 3000);
         }
