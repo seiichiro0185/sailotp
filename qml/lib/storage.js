@@ -38,22 +38,33 @@ function getDB() {
       // Initialize an empty DB, Create the Table
       db.changeVersion("", "3",
         function(tx) {
-          tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT, type TEXT DEFAULT 'TOPT', counter INTEGER DEFAULT 0, fav INTEGER DEFAULT 0, sort INTEGER DEFAULT 0);");
+          tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT, type TEXT DEFAULT 'TOPT', counter INTEGER DEFAULT 0, fav INTEGER DEFAULT 0, sort INTEGER DEFAULT 0, len INTEGER default 6, diff INTEGER default 0);");
       });
     } else if (db.version == "1.0") {
-      // Upgrade DB Schema to Version 3
-      db.changeVersion("1.0", "3",
+      // Upgrade DB Schema to Version 4
+      db.changeVersion("1.0", "4",
         function(tx) {
           tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN type TEXT DEFAULT 'TOTP';");
           tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN counter INTEGER DEFAULT 0;");
           tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN fav INTEGER DEFAULT 0;");
           tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN sort INTEGER DEFAULT 0;");
+          tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN len INTEGER DEFAULT 6;");
+          tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN diff INTEGER DEFAULT 0;");
       });
     } else if (db.version == "2") {
         // Upgrade DB Schema to Version 3
-        db.changeVersion("2", "3",
+        db.changeVersion("2", "4",
           function(tx) {
             tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN sort INTEGER DEFAULT 0;");
+            tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN len INTEGER DEFAULT 6;");
+            tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN diff INTEGER DEFAULT 0;");
+        });
+    } else if (db.version == "3") {
+        // Upgrade DB Schema to Version 4
+        db.changeVersion("3", "4",
+          function(tx) {
+            tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN len INTEGER DEFAULT 6;");
+            tx.executeSql("ALTER TABLE OTPStorage ADD COLUMN diff INTEGER DEFAULT 0;");
         });
     }
   } catch (e) {
@@ -72,7 +83,7 @@ function getOTP() {
     function(tx) {
       var res = tx.executeSql("select * from OTPStorage order by sort;");
       for (var i=0; i < res.rows.length; i++) {
-        appWin.appendOTP(res.rows.item(i).title, res.rows.item(i).secret, res.rows.item(i).type, res.rows.item(i).counter, res.rows.item(i).fav, res.rows.item(i).sort);
+        appWin.appendOTP(res.rows.item(i).title, res.rows.item(i).secret, res.rows.item(i).type, res.rows.item(i).counter, res.rows.item(i).fav, res.rows.item(i).len, res.rows.item(i).diff);
         if (res.rows.item(i).fav) appWin.setCover(i);
       }
   });
@@ -93,12 +104,14 @@ function db2json() {
           "type": res.rows.item(i).type,
           "counter": res.rows.item(i).counter,
           "sort": res.rows.item(i).sort,
+          "len": res.rows.item(i).len,
+          "diff": res.rows.item(i).diff,
       });
     }
   });
 
   if (otpList.length > 0) {
-    return(JSON.stringify({"app": "sailotp", "version": 2, "otplist": otpList}));
+    return(JSON.stringify({"app": "sailotp", "version": 3, "otplist": otpList}));
   } else {
     return("")
   }
@@ -109,7 +122,7 @@ function json2db(jsonString, error) {
   var json = JSON.parse(jsonString);
   error = "";
 
-  if ((json.version != "1" || json.version != "2") && json.app != "sailotp" ) {
+  if ((json.version != "1" || json.version != "2" || json.version != "3") && json.app != "sailotp" ) {
     error = "Unrecognized format, file is not a SailOTP export";
     return(false);
   } else {
@@ -120,9 +133,11 @@ function json2db(jsonString, error) {
         var otpItem = otpList.shift();
         if (otpItem.title != "" & otpItem.secret.length >= 16) {
           if (json.version == "1") {
-            addOTP(otpItem.title, otpItem.secret, otpItem.type, otpItem.counter, 0);
+            addOTP(otpItem.title, otpItem.secret, otpItem.type, otpItem.counter, 0, 6, 0);
+          } else if (json.version == "2") {
+            addOTP(otpItem.title, otpItem.secret, otpItem.type, otpItem.counter, otpItem.sort, 6, 0);
           } else {
-            addOTP(otpItem.title, otpItem.secret, otpItem.type, otpItem.counter, otpItem.sort);
+            addOTP(otpItem.title, otpItem.secret, otpItem.type, otpItem.counter, otpItem.sort, otpItem.len, otpItem.diff);
           }
         }
       }
@@ -136,7 +151,7 @@ function json2db(jsonString, error) {
 }
 
 // Add a new OTP
-function addOTP(title, secret, type, counter, sort) {
+function addOTP(title, secret, type, counter, sort, len, diff) {
   var db = getDB();
 
   db.transaction(
@@ -144,7 +159,7 @@ function addOTP(title, secret, type, counter, sort) {
       if (checkOTP(title, secret)) {
         console.log("Token " + title + " is already in DB");
       } else {
-        tx.executeSql("INSERT INTO OTPStorage VALUES(?, ?, ?, ?, ?, ?);", [title, secret, type, counter, 0, sort]);
+        tx.executeSql("INSERT INTO OTPStorage VALUES(?, ?, ?, ?, ?, ?, ?, ?);", [title, secret, type, counter, 0, sort, len, diff]);
         console.log("Token " + title + " added.");
       }
   });
@@ -195,12 +210,12 @@ function resetFav(title, secret) {
 }
 
 // Change an existing OTP
-function changeOTP(title, secret, type, counter, oldtitle, oldsecret) {
+function changeOTP(title, secret, type, counter, len, diff, oldtitle, oldsecret) {
   var db = getDB();
 
   db.transaction(
     function(tx) {
-        tx.executeSql("UPDATE OTPStorage SET title=?, secret=?, type=?, counter=? WHERE title=? and secret=?;", [title, secret, type, counter, oldtitle, oldsecret]);
+        tx.executeSql("UPDATE OTPStorage SET title=?, secret=?, type=?, counter=?, len=?, diff=? WHERE title=? and secret=?;", [title, secret, type, counter, len, diff, oldtitle, oldsecret]);
         console.log("Token " + title + " modified.");
       }
   );

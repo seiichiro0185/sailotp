@@ -38,6 +38,7 @@ Page {
   property string paramType: ""
   property string paramLabel: ""
   property string paramKey: ""
+  property int paramLen: 6
   property int paramCounter: 0
 
   Label {
@@ -61,11 +62,11 @@ Page {
     var otpurl = "";
     if (paramType == "TOTP") {
       if (paramLabel != "" && paramKey != "")
-        otpurl = "otpauth://totp/"+paramLabel+"?secret="+paramKey;
+        otpurl = "otpauth://totp/"+paramLabel+"?secret="+paramKey+"&digits="+paramLen;
 
     } else if (paramType == "HOTP") {
       if (paramLabel != "" && paramKey != "" && paramCounter > 0)
-        otpurl = "otpauth://hotp/"+paramLabel+"?secret="+paramKey+"&counter="+paramCounter;
+        otpurl = "otpauth://hotp/"+paramLabel+"?secret="+paramKey+"&counter="+paramCounter+"&digits="+paramLen;
     }
     if (otpurl != "") {
       qrImage.source = "image://qqrencoder/"+otpurl;

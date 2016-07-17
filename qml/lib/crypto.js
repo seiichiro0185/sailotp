@@ -75,14 +75,16 @@ var steamChars = ['2', '3', '4', '5', '6', '7', '8', '9', 'B', 'C',
 //   secret: The secret key in Base32-Notation
 //   tpye: either TOTP for timer based or HOTP for counter based calculation
 //   counter: counter value for HOTP
-function calcOTP(secret, type, counter) {
+//   length: length of the returned token
+//   diff: derivation of time between phone and server
+function calcOTP(secret, type, len, diff, counter) {
   // Convert the key to HEX
   var key = base32tohex(secret);
   var factor = "";
 
   if (type.substr(0, 4) == "TOTP") {
-    // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC)
-    var epoch = Math.round(new Date().getTime() / 1000.0);
+    // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC), and add derivation value
+    var epoch = Math.round(new Date().getTime() / 1000.0) + diff;
     // Get last full 30 / 60 Seconds and convert to HEX
     factor = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
   } else {
@@ -108,7 +110,11 @@ function calcOTP(secret, type, counter) {
       }
     } else {
       otp = code + '';
-      otp = (otp).substr(otp.length - 6, 6);
+      otp = (otp).substr(otp.length - len, len);
+      // pad return code with 0 from the left
+      for (i=0; i++; otp.length < len) {
+          otp = "0" + otp;
+      }
     }
   } catch (e) {
     otp = "Invalid Secret!"
