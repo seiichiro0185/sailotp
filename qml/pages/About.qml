@@ -114,7 +114,7 @@ Page {
         font.pixelSize: Theme.fontSizeSmall
         horizontalAlignment: TextEdit.Center
         readOnly: true
-        text: qsTr("Translators:")+"\n\nSwedish: Åke Engelbrektson\nEnglish: Stefan Brand\nGerman: Stefan Brand"
+        text: qsTr("Translators:")+"\n\nSwedish: Åke Engelbrektson\nEnglish: Stefan Brand\nGerman: Stefan Brand\nFrench: Romain Tartière"
         color: "white"
       }
     }
