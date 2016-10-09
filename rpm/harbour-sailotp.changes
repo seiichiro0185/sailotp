@@ -1,3 +1,7 @@
+* Sun Oct 09 2016 Stefan Brand <sailfish@seiichiro0185.org> 1.5-1
+- Added French Translation (Thanks to Romain Tartière)
+- Bugfix: Refresh HOTP-Token from Cover. Closes Github Issue #11
+
 * Thu Jul 14 2016 Stefan Brand <sailfish@seiichiro0185.org> 1.4-1
 - Added Setting for Time Derivation
 - Added Setting for Token Length
