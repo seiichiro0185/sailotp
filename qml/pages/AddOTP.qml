@@ -124,6 +124,7 @@ Dialog {
       TextField {
         id: otpLen
         width: parent.width
+        visible: paramType != "TOTP_STEAM" ? true : false
         label: qsTr("Length")
         text: paramLen
         placeholderText: qsTr("Length of the Token")

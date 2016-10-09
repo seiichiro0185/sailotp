@@ -103,7 +103,9 @@ CoverBackground {
       iconSource: appWin.coverType == "HOTP" ? "image://theme/icon-cover-refresh" : "image://theme/icon-cover-previous"
       onTriggered: {
         if (appWin.coverType == "HOTP") {
-          appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, "HOTP", appWin.CoverLen, 0, DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
+          appWin.listModel.setProperty(appWin.coverIndex, "counter", DB.getCounter(appWin.coverTitle, appWin.coverSecret, true));
+          appWin.listModel.setProperty(appWin.coverIndex, "otp", OTP.calcOTP(appWin.coverSecret, "HOTP", appWin.coverLen, 0, appWin.listModel.get(appWin.coverIndex).counter));
+          appWin.coverOTP = appWin.listModel.get(appWin.coverIndex).otp;
         } else {
           var index = appWin.coverIndex - 1
           if (index < 0) index = appWin.listModel.count - 1
