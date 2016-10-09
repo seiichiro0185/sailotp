@@ -77,22 +77,6 @@ Dialog {
       }
     }
 
-
-
-    PullDownMenu {
-      visible: checkQR()
-      MenuItem {
-        text: qsTr("Show QR-Code")
-        onClicked: {
-          if (((paramType == "TOTP" || paramType == "TOTP_STEAM") && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
-            notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
-          } else {
-            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text});
-          }
-        }
-      }
-    }
-
     VerticalScrollDecorator {}
 
     Column {
@@ -140,6 +124,7 @@ Dialog {
       TextField {
         id: otpLen
         width: parent.width
+        visible: paramType != "TOTP_STEAM" ? true : false
         label: qsTr("Length")
         text: paramLen
         placeholderText: qsTr("Length of the Token")
@@ -202,8 +187,3 @@ Dialog {
     }
   }
 }
-
-
-
-
-
