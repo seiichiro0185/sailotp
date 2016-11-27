@@ -80,9 +80,9 @@ Page {
       Button {
         id: homepage
         anchors.horizontalCenter: parent.horizontalCenter
-        text: "<a href=\"https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git\">Source Code</a>"
+        text: "<a href=\"https://www.seiichiro0185.org/git/SailfishOS/harbour-sailotp\">Source Code</a>"
         onClicked: {
-          Qt.openUrlExternally("https://www.seiichiro0185.org/gitlab/seiichiro0185/harbour-sailotp.git")
+          Qt.openUrlExternally("https://www.seiichiro0185.org/git/SailfishOS/harbour-sailotp")
         }
       }
       TextArea {
