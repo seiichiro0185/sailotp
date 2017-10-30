@@ -1,3 +1,6 @@
+* Mon Oct 30 2017 Stefan Brand <sailfish@seiichiro0185.org> 1.6-1
+- Changed AES Engine to cryptojs for Export/Import
+
 * Sun Oct 09 2016 Stefan Brand <sailfish@seiichiro0185.org> 1.5-1
 - Added French Translation (Thanks to Romain Tartière)
 - Bugfix: Refresh HOTP-Token from Cover. Closes Github Issue #11

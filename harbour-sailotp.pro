@@ -28,7 +28,6 @@ OTHER_FILES += qml/harbour-sailotp.qml \
     qml/lib/sha.js \
     qml/sailotp.png \
     qml/pages/ExportPage.qml \
-    qml/lib/gibberish-aes.js \
     qml/components/NotifyBanner.qml \
     qml/pages/ScanOTP.qml \
     qml/lib/urldecoder.js \
@@ -55,3 +54,6 @@ lupdate_only {
 include(src/qzxing/QZXing.pri)
 include(src/FileIO/FileIO.pri)
 include(src/qqrencode/qqrencode.pri)
+
+DISTFILES += \
+    qml/lib/cryptojs-aes.js

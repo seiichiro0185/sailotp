@@ -32,7 +32,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.sailotp.FileIO 1.0 // Import FileIO Class
 import "../lib/storage.js" as DB // Import the storage library for Config-Access
-import "../lib/gibberish-aes.js" as Gibberish //Import AES encryption library
+import "../lib/cryptojs-aes.js" as CryptoJS //Import AES encryption library
 
 // Define Layout of the Export / Import Page
 Dialog {
@@ -206,7 +206,7 @@ Dialog {
 
         if (plainText != "") {
           try {
-            chipherText = Gibberish.AES.enc(plainText, filePassword.text);
+            chipherText = CryptoJS.CryptoJS.AES.encrypt(plainText, filePassword.text);
             if (!exportFile.write(chipherText)) {
               notify.show(qsTr("Error writing to file ")+ fileName.text, 4000);
             } else {
@@ -225,7 +225,7 @@ Dialog {
         if (chipherText != "") {
           try {
             var errormsg = ""
-            plainText = Gibberish.AES.dec(chipherText, filePassword.text);
+            plainText = CryptoJS.CryptoJS.AES.decrypt(chipherText, filePassword.text).toString(CryptoJS.CryptoJS.enc.Utf8);
             if (DB.json2db(plainText, errormsg)) {
               notify.show(qsTr("Tokens imported from ")+ fileName.text, 4000);
             } else {
