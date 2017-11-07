@@ -333,7 +333,7 @@ Lisenssi: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="71"/>
         <source>Scanning...</source>
-        <translation>Skannaa...</translation>
+        <translation>Skannataan...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="101"/>
