@@ -49,6 +49,7 @@ lupdate_only {
                    i18n/en.ts \
                    i18n/fi.ts \
                    i18n/fr.ts \
+                   i18n/ru.ts \
                    i18n/sv.ts
 }
 
