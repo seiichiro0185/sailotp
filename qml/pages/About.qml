@@ -45,12 +45,19 @@ Page {
     Column {
       id: column
       width: parent.width
-      spacing: Theme.paddingLarge
+      spacing: Theme.paddingSmall
 
+      TextArea {
+          id: spacer
+          anchors.horizontalCenter: parent.horizontalCenter
+          width: parent.width
+          readOnly: true
+          text: ""
+          height: Theme.paddingLarge*2
+      }
       Image {
         id: logo
         source: "../sailotp.png"
-        anchors.topMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
       }
       Label {
@@ -78,11 +85,19 @@ Page {
         color: "white"
       }
       Button {
+        id: manual
+        anchors.horizontalCenter: parent.horizontalCenter
+        text: "<a href=\"https://www.seiichiro0185.org/sailfish:apps:sailotp:manual\">Online Manual</a>"
+        onClicked: {
+          Qt.openUrlExternally("https://www.seiichiro0185.org/sailfish:apps:sailotp:manual")
+        }
+      }
+      Button {
         id: homepage
         anchors.horizontalCenter: parent.horizontalCenter
-        text: "<a href=\"https://www.seiichiro0185.org/git/SailfishOS/harbour-sailotp\">Source Code</a>"
+        text: "<a href=\"https://github.com/seiichiro0185/sailotp/\">Source Code & Issue Tracker</a>"
         onClicked: {
-          Qt.openUrlExternally("https://www.seiichiro0185.org/git/SailfishOS/harbour-sailotp")
+          Qt.openUrlExternally("https://github.com/seiichiro0185/sailotp/")
         }
       }
       TextArea {
@@ -92,7 +107,7 @@ Page {
         font.pixelSize: Theme.fontSizeSmall
         horizontalAlignment: TextEdit.Center
         readOnly: true
-        text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://github.com/mdp/gibberish-aes/\nhttp://sourceforge.net/projects/qzxing/\nhttp://fukuchi.org/works/qrencode/"
+        text: qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://code.google.com/archive/p/crypto-js/\nhttp://sourceforge.net/projects/qzxing/\nhttp://fukuchi.org/works/qrencode/"
         color: "white"
       }
 
