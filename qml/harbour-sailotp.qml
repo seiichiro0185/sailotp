@@ -29,6 +29,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import org.nemomobile.configuration 1.0
 import "pages"
 import "components"
 
@@ -51,6 +52,15 @@ ApplicationWindow
 
   // Global Component for showing notification banners
   NotifyBanner { id: notify }
+
+  // Global Settings Storage
+  ConfigurationGroup
+  {
+      id: settings
+      path: "/apps/harbour-sailotp"
+
+      property bool showQrDefaultAction: false
+  }
 
   // Add an entry to the list
   function appendOTP(title, secret, type, counter, fav, len, diff) {

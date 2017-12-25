@@ -257,56 +257,62 @@ License: BSD (3-clause)</source>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="100"/>
+        <source>Settings</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>настройки</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>Экспорт / импорт</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>Добавить токен</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="134"/>
+        <location filename="../qml/pages/MainView.qml" line="138"/>
         <source>Nothing here</source>
         <translation>Ничего нету</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="135"/>
+        <location filename="../qml/pages/MainView.qml" line="139"/>
         <source>Pull down to add a OTP</source>
         <translation>Потяните вниз чтобы добавить OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="146"/>
+        <location filename="../qml/pages/MainView.qml" line="150"/>
         <source>Deleting</source>
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="162"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source>Token for </source>
         <translation>Токен для </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="162"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source> copied to clipboard</source>
         <translation> скопирован в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="230"/>
+        <location filename="../qml/pages/MainView.qml" line="234"/>
         <source>Move up</source>
         <translation>Передвинуть вверх</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="239"/>
         <source>Move down</source>
         <translation>Передвинуть вниз</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="244"/>
         <source>Edit</source>
         <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="246"/>
+        <location filename="../qml/pages/MainView.qml" line="250"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
@@ -350,6 +356,26 @@ License: BSD (3-clause)</source>
         <location filename="../qml/pages/ScanOTP.qml" line="142"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
         <translation>Нажмите на изображение чтобы начать / остановить сканирование. Потяните вниз чтобы добавить токен вручную.</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="50"/>
+        <source>Settings</source>
+        <translation>настройки</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="52"/>
+        <source>Behaviour</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>поведение</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="56"/>
+        <source>Show Token as QRCode on Tap</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>Сенсорный токен как QR-код</translation>
     </message>
 </context>
 </TS>
