@@ -97,6 +97,10 @@ Page {
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
       }
       MenuItem {
+        text: qsTr("Settings")
+        onClicked: pageStack.push(Qt.resolvedUrl("Settings.qml"))
+      }
+      MenuItem {
         text: qsTr("Export / Import")
         onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"), {parentPage: mainPage, mode: "export"})
       }

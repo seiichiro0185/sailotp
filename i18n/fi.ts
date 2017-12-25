@@ -257,56 +257,62 @@ Lisenssi: BSD (3-clause)</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="100"/>
+        <source>Settings</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>Asetukset</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>Eksportoi / Importoi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>Lisää tunnus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="134"/>
+        <location filename="../qml/pages/MainView.qml" line="138"/>
         <source>Nothing here</source>
         <translation>Tyhjä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="135"/>
+        <location filename="../qml/pages/MainView.qml" line="139"/>
         <source>Pull down to add a OTP</source>
         <translation>Vedä alaspäin lisääksesi OTP:n</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="146"/>
+        <location filename="../qml/pages/MainView.qml" line="150"/>
         <source>Deleting</source>
         <translation>Poistaa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="162"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source>Token for </source>
         <translation>Tunnus </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="162"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source> copied to clipboard</source>
         <translation> kopioitu leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="230"/>
+        <location filename="../qml/pages/MainView.qml" line="234"/>
         <source>Move up</source>
         <translation>Siirrä ylös</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="239"/>
         <source>Move down</source>
         <translation>Siirrä alas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="244"/>
         <source>Edit</source>
         <translation>Muokkaa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="246"/>
+        <location filename="../qml/pages/MainView.qml" line="250"/>
         <source>Delete</source>
         <translation>Poista</translation>
     </message>
@@ -350,6 +356,26 @@ Lisenssi: BSD (3-clause)</translation>
         <location filename="../qml/pages/ScanOTP.qml" line="142"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
         <translation>Käynnistä / lopeta skannaus painamalla kuvaa. Vedä alaspäin lisääksesi tunnuksen käsin.</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="50"/>
+        <source>Settings</source>
+        <translation>Asetukset</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="52"/>
+        <source>Behaviour</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>Käytös</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="56"/>
+        <source>Show Token as QRCode on Tap</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>Kosketa tokenä QR-koodina</translation>
     </message>
 </context>
 </TS>
