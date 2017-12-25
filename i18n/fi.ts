@@ -4,36 +4,36 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="68"/>
+        <location filename="../qml/pages/About.qml" line="75"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
         <translation>Yksinkertainen Sailfish OTP-generaattori
 (RFC 6238/4226-yhteensopiva)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="77"/>
+        <location filename="../qml/pages/About.qml" line="84"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
         <translation>Copyright: Stefan Brand
 Lisenssi: BSD (3-clause)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="95"/>
+        <location filename="../qml/pages/About.qml" line="110"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP käyttää seuraavat kolmannen osapuolen kirjastot:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="106"/>
+        <location filename="../qml/pages/About.qml" line="121"/>
         <source>Contributors:</source>
         <translation>Avustajat:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="106"/>
+        <location filename="../qml/pages/About.qml" line="121"/>
         <source>Support</source>
         <translation>tuki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="117"/>
+        <location filename="../qml/pages/About.qml" line="132"/>
         <source>Translators:</source>
         <translation>Kääntäjät:</translation>
     </message>
@@ -41,12 +41,12 @@ Lisenssi: BSD (3-clause)</translation>
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="70"/>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
         <source>Show QR-Code</source>
         <translation>Näytä QR-koodi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>QR-koodin luonti epäonnistui puutteellisten asetuksien takia!</translation>
     </message>
@@ -101,28 +101,28 @@ Lisenssi: BSD (3-clause)</translation>
         <translation>Salainen OTP-avain</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="127"/>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
         <source>Length</source>
         <translation>Pituus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="129"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length of the Token</source>
         <translation>Tunnuksen pituus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="141"/>
-        <location filename="../qml/pages/AddOTP.qml" line="143"/>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Aikapoikkeama (sekunneissa)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="155"/>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
         <source>Next Counter Value</source>
         <translation>Seuraava laskenta-arvo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Value of the Counter</source>
         <translation>Laskurin seuraava arvo</translation>
     </message>
@@ -205,6 +205,12 @@ Lisenssi: BSD (3-clause)</translation>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
         <translation>Voit eksportoida tunnukset tiedostoon. Eksportoitu tiedosto enkryptataan AES-256-CBC- ja Base64-salauksella. Valitse vahva salasana, koska tiedostosta voidaan kääntää tiliesi tunnukset. Pyyhkäise vasemmalle aloittaaksesi eksportin.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ExportPage.qml" line="189"/>
+        <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
+        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translation>Jos haluat tarkastella vientitiedoston sisältöä SailOTP: n ulkopuolella, käytä seuraavaa openssl-komentoa:</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="211"/>

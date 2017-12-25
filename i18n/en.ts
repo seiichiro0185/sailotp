@@ -4,34 +4,34 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="68"/>
+        <location filename="../qml/pages/About.qml" line="75"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="77"/>
+        <location filename="../qml/pages/About.qml" line="84"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="95"/>
+        <location filename="../qml/pages/About.qml" line="110"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="106"/>
+        <location filename="../qml/pages/About.qml" line="121"/>
         <source>Contributors:</source>
         <translation>Contributor:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="106"/>
+        <location filename="../qml/pages/About.qml" line="121"/>
         <source>Support</source>
         <translation>support</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="117"/>
+        <location filename="../qml/pages/About.qml" line="132"/>
         <source>Translators:</source>
         <translation>Translators:</translation>
     </message>
@@ -39,12 +39,12 @@ License: BSD (3-clause)</source>
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="70"/>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
         <source>Show QR-Code</source>
         <translation>Show QR-Code</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Can&apos;t create QR-Code from incomplete settings!</translation>
     </message>
@@ -99,28 +99,28 @@ License: BSD (3-clause)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="127"/>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
         <source>Length</source>
         <translation>Length</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="129"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length of the Token</source>
         <translation>Length of the Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="141"/>
-        <location filename="../qml/pages/AddOTP.qml" line="143"/>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Time Derivation (Seconds)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="155"/>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
         <source>Next Counter Value</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Value of the Counter</source>
         <translation></translation>
     </message>
@@ -202,6 +202,11 @@ License: BSD (3-clause)</source>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ExportPage.qml" line="189"/>
+        <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
         <translation></translation>
     </message>
     <message>
