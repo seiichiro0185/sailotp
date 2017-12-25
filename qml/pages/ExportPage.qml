@@ -166,7 +166,7 @@ Dialog {
 
         wrapMode: Text.Wrap
         maximumLineCount: 15
-        font.pixelSize: Theme.fontSizeSmall
+        font.pixelSize: Theme.fontSizeTiny
         color: Theme.secondaryColor
 
         visible: mode == "import"
@@ -182,11 +182,11 @@ Dialog {
 
         wrapMode: Text.Wrap
         maximumLineCount: 15
-        font.pixelSize: Theme.fontSizeSmall
+        font.pixelSize: Theme.fontSizeTiny
         color: Theme.secondaryColor
 
         visible: mode == "export"
-        text: qsTr("Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.")
+        text: qsTr("Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.")+"\n\n"+qsTr("To view the content of the export file outside of SailOTP use the following openssl command:") + "\n\nopenssl enc -d -a -A -md md5 -aes-256-cbc -in <file>"
       }
     }
   }
