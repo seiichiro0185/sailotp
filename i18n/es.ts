@@ -20,7 +20,7 @@ Licencia: BSD (de 3 cláusulas)</translation>
     <message>
         <location filename="../qml/pages/About.qml" line="110"/>
         <source>SailOTP uses the following third party libs:</source>
-        <translation>SailOTP usa las siguientes librerías de terceros</translation>
+        <translation>SailOTP usa las siguientes librerías de terceros:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
