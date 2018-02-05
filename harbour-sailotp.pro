@@ -47,6 +47,7 @@ lupdate_only {
 
     TRANSLATIONS = i18n/de.ts \
                    i18n/en.ts \
+                   i18n/es.ts \
                    i18n/fi.ts \
                    i18n/fr.ts \
                    i18n/ru.ts \
