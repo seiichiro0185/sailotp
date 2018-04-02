@@ -1,3 +1,10 @@
+* Mon Apr 02 2019 Stefan Brand <sailfish@seiichiro0185.org> 1.7-1
+- Added Chinese Translation
+- Added Finish Translation
+- Added Russian Translation
+- Added Spanish Translation
+- Some internal Preparation for future features
+
 * Mon Oct 30 2017 Stefan Brand <sailfish@seiichiro0185.org> 1.6-1
 - Changed AES Engine to cryptojs for Export/Import
 
