@@ -98,6 +98,7 @@ Page {
       }
       MenuItem {
         text: qsTr("Settings")
+        visible: false
         onClicked: pageStack.push(Qt.resolvedUrl("Settings.qml"))
       }
       MenuItem {
