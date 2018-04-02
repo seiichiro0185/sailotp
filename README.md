@@ -15,7 +15,7 @@ From the main view a token can be copied to the clipboard by tapping on it.
 From the pulley menu the token database can be exported to a file for backup purposes. The backup is a AES-256-CBC encrypted and
 Base64 encoded file containing a JSON-representation of the database. It can be decrypted with openssl using the following command:
 
-openssl enc -d -a -aes-256-cbc -in <file>
+openssl enc -d -a -A -md md5 -aes-256-cbc -in <file>
 
 if you need the information outside of SailOTP.
 
@@ -25,8 +25,9 @@ It is also possible to generate tokens for SteamGuard (Steams TOTP-Variant for 2
 
 ## Contact and Issues
 
-If you find any bugs or want to suggest a feature, feel free to use Githubs
-Issues feature or write an email to sailfish _AT_ seiichiro0185.org
+If you find any bugs or want to suggest a feature, feel free to use Githubs Issues feature at
+<a href="https://github.com/seiichiro0185/sailotp/issues" target="_blank">https://github.com/seiichiro0185/sailotp/issues</a>
+or write an email to sailfish _AT_ seiichiro0185.org
 
 ## License
 
@@ -40,7 +41,7 @@ SailOTP uses the SHA-1 and HMAC-Implementation from
 
 SailOTP also uses the AES-Implementation from
 
-<a href="https://github.com/mdp/gibberish-aes" target="_blank">https://github.com/mdp/gibberish-aes</a>
+<a href="https://code.google.com/archive/p/crypto-js/" target="_blank">https://code.google.com/archive/p/crypto-js/</a>
 
 The implementation of the TOTP-algorithm was inspired by:
 
@@ -56,6 +57,11 @@ The qrencode library is used for QRCode-encoding existing tokens for export to o
 
 The following people have contributed to translating SailOTP:
 
+  * Chinese: BirdZhang
+  * Finnish: Johan Heikkilä (hevanaa)
+  * French: Romain Tartière (smortex)
+  * Russian: moorchegue
+  * Spanish: p4moedo
   * Swedish: Åke Engelbrektson (eson57)
   * English: Stefan Brand (seiichiro0185)
   * German: Stefan Brand (seiichiro0185)

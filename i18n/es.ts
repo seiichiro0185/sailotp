@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="es">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="75"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
-        <translation>En enkel Sailfish OTP-generator
-(RFC 6238/4226-kompatibel)</translation>
+        <translation>Un sencillo generador de códigos OTP
+(Compatible con RFC 6238/4226)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="84"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
-        <translation>Copyright: Stefan Brand
-Licens: BSD (3-clause)</translation>
+        <translation>Derechos de autor: Stefan Brand
+Licencia: BSD (de 3 cláusulas)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="110"/>
         <source>SailOTP uses the following third party libs:</source>
-        <translation>SailOTP använder följande tredjeparts bibliotek:</translation>
+        <translation>SailOTP usa las siguientes librerías de terceros:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
         <source>Contributors:</source>
-        <translation>Medarbetare:</translation>
+        <translation>Contribuidor:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
         <source>Support</source>
-        <translation>försörjning</translation>
+        <translation>soporte</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="132"/>
         <source>Translators:</source>
-        <translation>Översättare:</translation>
+        <translation>Traductores:</translation>
     </message>
 </context>
 <context>
@@ -43,37 +43,37 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="69"/>
         <source>Show QR-Code</source>
-        <translation>Visa QR-kod</translation>
+        <translation>Mostrar código QR</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="72"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
-        <translation>Kan inte skapa QR-kod från ofullständiga inställningar!</translation>
+        <translation>¡No se puede crear el código QR a partir de una configuración incompleta!</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Save</source>
-        <translation>Spara</translation>
+        <translation>Guardar</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Add</source>
-        <translation>Lägg till</translation>
+        <translation>Añadir</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="91"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="93"/>
         <source>Time-based (TOTP)</source>
-        <translation>Tidsbaserad (TOTP)</translation>
+        <translation>Basado en tiempo (TOTP)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="94"/>
         <source>Counter-based (HOTP)</source>
-        <translation>Räknarbaserad (HOTP)</translation>
+        <translation>Basado en contador (HOTP)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="95"/>
@@ -83,48 +83,48 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="101"/>
         <source>Title</source>
-        <translation>Namn</translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="102"/>
         <source>Title for the OTP</source>
-        <translation>Namn på OTP:n</translation>
+        <translation>Nombre para el OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Secret (at least 16 characters)</source>
-        <translation>Hemlighet (Minst 16 tecken)</translation>
+        <translation>Cadena secreta (al menos 16 caracteres)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="116"/>
         <source>Secret OTP Key</source>
-        <translation>Hemlig OTP-nyckel</translation>
+        <translation>Llave secreta OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="128"/>
         <source>Length</source>
-        <translation>längd</translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length of the Token</source>
-        <translation>Längden av token</translation>
+        <translation>Longitud del token</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Time Derivation (Seconds)</source>
-        <translation>Tidsavvikelsen (sekunder)</translation>
+        <translation>Derivación de tiempo (segundos)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="156"/>
         <source>Next Counter Value</source>
-        <translation>Nästa räknarvärde</translation>
+        <translation>Siguiente Contador</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Value of the Counter</source>
-        <translation>Nästa värde på räknaren</translation>
+        <translation>Siguiente valor del contador</translation>
     </message>
 </context>
 <context>
@@ -132,120 +132,119 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="63"/>
         <source>File already exists, choose &quot;Overwrite existing&quot; to overwrite it.</source>
-        <translation>Filen finns redan. Välj &quot;Skriv över befintlig&quot; för att skriva över den.</translation>
+        <translation>El fichero ya existe, escoja la opción &quot;Sobreescribir existente&quot; para sobreescribirlo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="72"/>
         <source>Given file does not exist!</source>
-        <translation>Angiven fil finns inte!</translation>
+        <translation>¡El fichero proporcionado no exsiste!</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="91"/>
         <location filename="../qml/pages/ExportPage.qml" line="107"/>
         <source>Export</source>
-        <translation>Exportera</translation>
+        <translation>Exportar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="91"/>
         <location filename="../qml/pages/ExportPage.qml" line="107"/>
         <source>Import</source>
-        <translation>Importera</translation>
+        <translation>Importar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="114"/>
         <source>Filename</source>
-        <translation>Filnamn</translation>
+        <translation>Nombre del fichero</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="115"/>
         <source>File to import</source>
-        <translation>Fil att importera</translation>
+        <translation>Fichero a importar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="115"/>
         <source>File to export</source>
-        <translation>Fil att exportera</translation>
+        <translation>Fichero a exportar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="128"/>
         <source>Overwrite existing</source>
-        <translation>Skriv över befintlig</translation>
+        <translation>Sobreescribir existente</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="134"/>
         <source>Password</source>
-        <translation>Lösenord</translation>
+        <translation>Contraseña</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="135"/>
         <source>Password for the file</source>
-        <translation>Lösenord för filen</translation>
+        <translation>Contraseña para el fichero</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="148"/>
         <source>Passwords don&apos;t match!</source>
-        <translation>Lösenorden stämmer inte!</translation>
+        <translation>¡Las contraseñas no coinciden!</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="148"/>
         <source>Passwords match!</source>
-        <translation>Lösenorden stämmer!</translation>
+        <translation>¡Las contraseñas coinciden!</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="149"/>
         <source>Repeated Password for the file</source>
-        <translation>Upprepat lösenord för filen</translation>
+        <translation>Contraseña repetida para el archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="173"/>
         <source>Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.</source>
-        <translation>Här kan du importera Token från en fil. Ange filens sökväg och lösenordet du angav vid exporten. Svep åt vänster för att starta importen.</translation>
+        <translation>Aquí puede Importar Tokens desde un fichero. Ponga la localización del fichero y la contraseña utilizada en la exportación. Tire hacia la izquierda para comenzar la importación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
-        <translation>Här kan du exportera Token till en fil. Den exporterade filen kommer att krypteras med AES-256-CBC och Base64. Välj ett starkt lösenord, filen kommer att innehålla hemligheterna som användes för att generera Token för ditt konto. Svep åt vänster för att starta exporten.</translation>
+        <translation>Aquí puede exportar Tokens a un fichero. El fichero exportado será encriptado con AES-256-CBC y codificado en Base64. Escoja una contraseña segura, el fichero contendrá las cadenas secretas utilizadas para la generación de los Tokens. Tire hacia la izquierda para comenzar la exportación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Om du vill visa innehållet i exportfilen utanför SailOTP använder du följande openssl-kommando:</translation>
+        <translation>Para ver los contenidos del fichero de exportación fuera de SailOTP utilize el siguiente comando openssl:</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="211"/>
         <source>Error writing to file </source>
-        <translation>Fel vid skrivning till fil </translation>
+        <translation>Error escribiendo el fichero</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="213"/>
         <source>Token Database exported to </source>
-        <translation>Token-databas exporterad till </translation>
+        <translation>Base de datos de Tokens exportada en</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="216"/>
         <source>Could not encrypt tokens. Error: </source>
-        <translation>Kunde inte kryptera token. Fel: </translation>
+        <translation>No se ha podido encriptar los tokens. Error: </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="219"/>
         <source>Could not read tokens from Database</source>
-        <translation>Kunde inte läsa in token från databasen</translation>
+        <translation>No se ha podido leer los tokens desde la Base de datos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="230"/>
         <source>Tokens imported from </source>
-        <translation>Token importerad från </translation>
+        <translation>Tokens importados desde</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="235"/>
         <source>Unable to decrypt file, did you use the right password?</source>
-        <translation>Kunde inte dekryptera filen. Angav du rätt lösenord?</translation>
+        <translation>No se ha podido desencriptar el fichero, ¿ha utilizado el password correcto?</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="238"/>
         <source>Could not read from file </source>
-        <translation>Kunde inte läsa från fil </translation>
+        <translation>No se ha podido leer desde el fichero</translation>
     </message>
 </context>
 <context>
@@ -253,68 +252,67 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/MainView.qml" line="96"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="100"/>
         <source>Settings</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Inställningar</translation>
+        <translation>Configuración</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
-        <translation>Export / Import</translation>
+        <translation>Exportar/Importar</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
-        <translation>Lägg till Token</translation>
+        <translation>Añadir Token</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="138"/>
         <source>Nothing here</source>
-        <translation>Inget här</translation>
+        <translation>Nada aquí</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="139"/>
         <source>Pull down to add a OTP</source>
-        <translation>Dra neråt för att lägga till en OTP</translation>
+        <translation>Tire hacia abajo para añadir tokens OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="150"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation>Borrando</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="166"/>
         <source>Token for </source>
-        <translation>Token för </translation>
+        <translation>Token para </translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="166"/>
         <source> copied to clipboard</source>
-        <translation>kopierad till urklipp</translation>
+        <translation> copiado al portapapeles</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="234"/>
         <source>Move up</source>
-        <translation>Flytta upp</translation>
+        <translation>Ascender</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="239"/>
         <source>Move down</source>
-        <translation>Flytta ner</translation>
+        <translation>Descender</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="244"/>
         <source>Edit</source>
-        <translation>Redigera</translation>
+        <translation>Editar</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="250"/>
         <source>Delete</source>
-        <translation>Ta bort</translation>
+        <translation>Borrar</translation>
     </message>
 </context>
 <context>
@@ -322,7 +320,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
-        <translation>Kan inte skapa QR-kod från ofullständiga inställningar!</translation>
+        <translation>¡No se puede crear el código QR a partir de una configuración incompleta!</translation>
     </message>
 </context>
 <context>
@@ -330,32 +328,32 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="54"/>
         <source>Can&apos;t access temporary directory</source>
-        <translation>Kan inte komma åt temp-mapp</translation>
+        <translation>No se puede acceder al directorio temporal</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="64"/>
         <source>Add manually</source>
-        <translation>Lägg till manuellt</translation>
+        <translation>Añadir manualmente</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="71"/>
         <source>Scan Code</source>
-        <translation>Skanna kod</translation>
+        <translation>Escanear código</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="71"/>
         <source>Scanning...</source>
-        <translation>Skannar...</translation>
+        <translation>Escaneando...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="101"/>
         <source>No valid Token data found.</source>
-        <translation>Ingen giltig Token-data hittades.</translation>
+        <translation>No se han encontrado datos válidos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="142"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
-        <translation>Tryck på bilden för att starta / stoppa skanning. Dra neråt för att lägga till Token manuellt.</translation>
+        <translation>Toque la imagen para comenzar/parar el escaneo. Tire hacia abajo para una configuración manual.</translation>
     </message>
 </context>
 <context>
@@ -363,19 +361,17 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/Settings.qml" line="50"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Configuración</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
-        <source>Behaviour</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Beteende</translation>
+        <source>Funcionamiento</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
         <source>Show Token as QRCode on Tap</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Peka token som en QR-kod</translation>
+        <translation>Mostrar el token como código QR al tocar</translation>
     </message>
 </context>
 </TS>

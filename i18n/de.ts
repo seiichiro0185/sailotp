@@ -12,36 +12,36 @@
         <translation type="vanished">Copyright: Stefan Brand&lt;br/&gt;Lizenz: BSD (3-Klausel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="68"/>
+        <location filename="../qml/pages/About.qml" line="75"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
         <translation>Ein einfacher Sailfish OTP-Generator
 (RFC 6238/4226-kompatibel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="77"/>
+        <location filename="../qml/pages/About.qml" line="84"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
         <translation>Copyright: Stefan Brand
 Lizenz: BSD (3-Klausel)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="95"/>
+        <location filename="../qml/pages/About.qml" line="110"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP verwendet folgende externe Bibliotheken:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="106"/>
+        <location filename="../qml/pages/About.qml" line="121"/>
         <source>Contributors:</source>
         <translation>Mitwirkende:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="106"/>
+        <location filename="../qml/pages/About.qml" line="121"/>
         <source>Support</source>
         <translation>Unterstützung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="117"/>
+        <location filename="../qml/pages/About.qml" line="132"/>
         <source>Translators:</source>
         <translation>Übersetzer:</translation>
     </message>
@@ -49,12 +49,12 @@ Lizenz: BSD (3-Klausel)</translation>
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="70"/>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
         <source>Show QR-Code</source>
         <translation>QR-Code anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Ein QR-Code kann nur mit vollständigen Einstellungen erzeugt werden!</translation>
     </message>
@@ -109,28 +109,28 @@ Lizenz: BSD (3-Klausel)</translation>
         <translation>Geheimer Schlüssel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="127"/>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
         <source>Length</source>
         <translation>Länge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="129"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length of the Token</source>
         <translation>Länge des Tokens</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="141"/>
-        <location filename="../qml/pages/AddOTP.qml" line="143"/>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Zeitabweichung (Sekunden)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="155"/>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
         <source>Next Counter Value</source>
         <translation>Nächster Zählerwert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Value of the Counter</source>
         <translation>Nächster Wert für den Zähler</translation>
     </message>
@@ -215,6 +215,11 @@ Lizenz: BSD (3-Klausel)</translation>
         <translation>Hier können Tokens in eine Datei exportiert werden. Die Datei wird mit AES-256-CBC verschlüsselt und Base64-kodiert. Wähle ein starkes Passwort, die Datei enthält die geheimen Schlüssel zur Erzeugung der Tokens für deine Accounts. Nach links ziehen um zu starten.</translation>
     </message>
     <message>
+        <location filename="../qml/pages/ExportPage.qml" line="189"/>
+        <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
+        <translation>Mit folgendem Openssl-Befehl kann der Inhalt der Exportdatei außerhalb von SailOTP angezeigt werden:</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/ExportPage.qml" line="211"/>
         <source>Error writing to file </source>
         <translation>Fehler beim Schreiben der Datei</translation>
@@ -267,56 +272,61 @@ Lizenz: BSD (3-Klausel)</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="100"/>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>Export / Import</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>Token hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="134"/>
+        <location filename="../qml/pages/MainView.qml" line="138"/>
         <source>Nothing here</source>
         <translation>Hier ist nichts</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="135"/>
+        <location filename="../qml/pages/MainView.qml" line="139"/>
         <source>Pull down to add a OTP</source>
         <translation>Nach unten ziehen zum hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="146"/>
+        <location filename="../qml/pages/MainView.qml" line="150"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="162"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source>Token for </source>
         <translation>Token für </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="162"/>
+        <location filename="../qml/pages/MainView.qml" line="166"/>
         <source> copied to clipboard</source>
         <translation> kopiert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="230"/>
+        <location filename="../qml/pages/MainView.qml" line="234"/>
         <source>Move up</source>
         <translation>Nach oben</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="239"/>
         <source>Move down</source>
         <translation>Nach unten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="244"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="246"/>
+        <location filename="../qml/pages/MainView.qml" line="250"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
@@ -364,6 +374,24 @@ Lizenz: BSD (3-Klausel)</translation>
     <message>
         <source>Tap the picture to start scanning. Pull down to add Token manually.</source>
         <translation type="vanished">Vorschau antippen um den Scan zu starten. Nach unten ziehen um manuell hinzu zu fügen.</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="50"/>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="52"/>
+        <source>Behaviour</source>
+        <translation>Verhalten</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="56"/>
+        <source>Show Token as QRCode on Tap</source>
+        <translation>Token bei antippen als QR-Code zeigen</translation>
     </message>
 </context>
 </TS>
