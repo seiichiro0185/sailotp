@@ -15,49 +15,40 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-sailotp.cpp
 
-OTHER_FILES += qml/harbour-sailotp.qml \
+DISTFILES += qml/harbour-sailotp.qml \
     qml/cover/CoverPage.qml \
-    rpm/harbour-sailotp.spec \
-    rpm/harbour-sailotp.yaml \
-    harbour-sailotp.desktop \
     qml/pages/MainView.qml \
     qml/pages/AddOTP.qml \
     qml/pages/About.qml \
+    qml/pages/ExportPage.qml \
+    qml/pages/ScanOTP.qml \
+    qml/pages/QRPage.qml \
+    qml/pages/Settings.qml \
+    qml/components/NotifyBanner.qml \
+    qml/lib/urldecoder.js \
     qml/lib/storage.js \
     qml/lib/crypto.js \
+    qml/lib/cryptojs-aes.js \
     qml/lib/sha.js \
     qml/sailotp.png \
-    qml/pages/ExportPage.qml \
-    qml/components/NotifyBanner.qml \
-    qml/pages/ScanOTP.qml \
-    qml/lib/urldecoder.js \
-    qml/pages/QRPage.qml \
-    rpm/harbour-sailotp.changes
+    rpm/harbour-sailotp.spec \
+    rpm/harbour-sailotp.yaml \
+    rpm/harbour-sailotp.changes \
+    translations/*.ts \
+    harbour-sailotp.desktop
 
-i18n.files = i18n/*.qm
-i18n.path = /usr/share/$${TARGET}/i18n
+SAILFISHAPP_ICONS = 86x86 108x108 128x128
 
-INSTALLS += i18n
+CONFIG += sailfishapp_i18n
 
-lupdate_only {
-    SOURCES = qml/*.qml \
-              qml/pages/*.qml \
-              qml/covers/*.qml \
-              qml/components/*.qml
-
-    TRANSLATIONS = i18n/de.ts \
-                   i18n/en.ts \
-                   i18n/es.ts \
-                   i18n/fi.ts \
-                   i18n/fr.ts \
-                   i18n/ru.ts \
-                   i18n/sv.ts \
-                   i18n/zh_CN.ts
-}
+TRANSLATIONS = translations/harbour-sailotp-de.ts \
+    translations/harbour-sailotp-es.ts \
+    translations/harbour-sailotp-fi.ts \
+    translations/harbour-sailotp-fr.ts \
+    translations/harbour-sailotp-ru.ts \
+    translations/harbour-sailotp-sv.ts \
+    translations/harbour-sailotp-zh_CN.ts
 
 include(src/qzxing/QZXing.pri)
 include(src/FileIO/FileIO.pri)
-include(src/qqrencode/qqrencode.pri)
-
-DISTFILES += \
-    qml/lib/cryptojs-aes.js
+include(src/qqrencode/qqrencode.pri)   

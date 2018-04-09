@@ -3,4 +3,4 @@
 *.pro.user.*
 rpm/harbour-sailotp.spec
 rpm/harbour-sailotp.spec.*
-i18n/*.qm
+translations/*.qm

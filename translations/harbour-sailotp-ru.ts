@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.1" language="ru_RU">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="75"/>
         <source>A Simple Sailfish OTP Generator
 (RFC 6238/4226 compatible)</source>
-        <translation>Un générateur d&apos;OTP simple pour Sailfish (compatible avec les RFC6238 et 4226)</translation>
+        <translation>Простой генератор OTP для Sailfish
+(совместим с RFS 6238/4226)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="84"/>
         <source>Copyright: Stefan Brand
 License: BSD (3-clause)</source>
-        <translation>Copyright: Stefan Brand
-Licence : BSD (3 clauses)</translation>
+        <translation>Авторские права: Стефан Брэнд
+Лицензия: BSD (3-clause)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="110"/>
         <source>SailOTP uses the following third party libs:</source>
-        <translation>SailOTP utilise les bibliothèques tierces suivantes :</translation>
+        <translation>SailOTP использует следующие сторонние библиотеки:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
         <source>Contributors:</source>
-        <translation>Contributeurs :</translation>
+        <translation>Участники:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
         <source>Support</source>
-        <translation>Support</translation>
+        <translation>Поддержка</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="132"/>
         <source>Translators:</source>
-        <translation>Traducteurs :</translation>
+        <translation>Переводчики:</translation>
     </message>
 </context>
 <context>
@@ -42,37 +43,37 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="69"/>
         <source>Show QR-Code</source>
-        <translation>Afficher le code QR</translation>
+        <translation>Показать QR-код</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="72"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
-        <translation>Impossible de créer un code QR avec des paramètres incomplets !</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddOTP.qml" line="86"/>
-        <source>Add</source>
-        <translation>Ajouter</translation>
+        <translation>Невозможно создать QR-код из-за неполных настроек!</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Save</source>
-        <translation>Enregistrer</translation>
+        <translation>Сохранить</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="86"/>
+        <source>Add</source>
+        <translation>Добавить</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="91"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="93"/>
         <source>Time-based (TOTP)</source>
-        <translation>Basé sur le temps (TOTP)</translation>
+        <translation>На основе времени (TOTP)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="94"/>
         <source>Counter-based (HOTP)</source>
-        <translation>Basé sur un compteur (HOTP)</translation>
+        <translation>На основе счетчика (HOTP)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="95"/>
@@ -82,48 +83,48 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="101"/>
         <source>Title</source>
-        <translation>Titre</translation>
+        <translation>Заголовок</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="102"/>
         <source>Title for the OTP</source>
-        <translation>Titre de l&apos;OTP</translation>
+        <translation>Заголовок для OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Secret (at least 16 characters)</source>
-        <translation>Secret (au moins 16 caractètres)</translation>
+        <translation>Секрет (минимум 16 символов)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="116"/>
         <source>Secret OTP Key</source>
-        <translation>Clé secrète OTP</translation>
+        <translation>Секретный ключ OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="128"/>
         <source>Length</source>
-        <translation>Longueur</translation>
+        <translation>Длина</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length of the Token</source>
-        <translation>Longueur du jeton</translation>
+        <translation>Длина токена</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Time Derivation (Seconds)</source>
-        <translation>Dérivation de temps (secondes)</translation>
+        <translation>Интервал расхождения (секунд)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="156"/>
         <source>Next Counter Value</source>
-        <translation>Prochaine valeur du compteur</translation>
+        <translation>Следующее значение счетчика</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Value of the Counter</source>
-        <translation>Prochaine valeur du compteur</translation>
+        <translation>Следующее значение счетчика</translation>
     </message>
 </context>
 <context>
@@ -131,120 +132,120 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="63"/>
         <source>File already exists, choose &quot;Overwrite existing&quot; to overwrite it.</source>
-        <translation>Le fichier existe déjà, cochez &quot;Écraser un fichier existant&quot; pour le remplacer.</translation>
+        <translation>Файл уже существует, выберите: «Перезаписать существующий» для его перезаписи.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="72"/>
         <source>Given file does not exist!</source>
-        <translation>Le fichier spécifé n&apos;existe pas !</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ExportPage.qml" line="91"/>
-        <location filename="../qml/pages/ExportPage.qml" line="107"/>
-        <source>Import</source>
-        <translation>Importer</translation>
+        <translation>Данный файл не существует!</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="91"/>
         <location filename="../qml/pages/ExportPage.qml" line="107"/>
         <source>Export</source>
-        <translation>Exporter</translation>
+        <translation>Экспорт</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ExportPage.qml" line="91"/>
+        <location filename="../qml/pages/ExportPage.qml" line="107"/>
+        <source>Import</source>
+        <translation>Импорт</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="114"/>
         <source>Filename</source>
-        <translation>Nom du fichier</translation>
+        <translation>Имя файла</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="115"/>
         <source>File to import</source>
-        <translation>Fichier à importer</translation>
+        <translation>Файл для импорта</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="115"/>
         <source>File to export</source>
-        <translation>Fichier à exporter</translation>
+        <translation>Файл для экспорта</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="128"/>
         <source>Overwrite existing</source>
-        <translation>Écraser un fichier existant</translation>
+        <translation>Перезаписать существующий</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="134"/>
         <source>Password</source>
-        <translation>Mot de passe</translation>
+        <translation>Пароль</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="135"/>
         <source>Password for the file</source>
-        <translation>Mot de passe pour le fichier</translation>
+        <translation>Пароль для файла</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="148"/>
         <source>Passwords don&apos;t match!</source>
-        <translation>Les mots de passe ne correspondent pas !</translation>
+        <translation>Пароли не совпадают!</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="148"/>
         <source>Passwords match!</source>
-        <translation>Les mots de passe correspondent !</translation>
+        <translation>Пароли совпадают!</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="149"/>
         <source>Repeated Password for the file</source>
-        <translation>Confirmation du mot de passe pour le fichier</translation>
+        <translation>Повторный пароль для файла</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="173"/>
         <source>Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.</source>
-        <translation>Vous pouvez ici importer les paramètres d&apos;OTP depuis un fichier. Indiquez le fichier et le mot de passe utilisés lors de l&apos;export. Glissez vers la droite pour démarrer l&apos;import.</translation>
+        <translation>Здесь можно импортировать токены из файла. Введите путь к файлу и пароль, использованный при экспорте. Потяните влево чтобы начать импорт.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
-        <translation>Vous pouvez ici exporter les paramètres d&apos;OTP vers un fichier. Ce fichier sera chiffré en AES-256-CBC et encodé en Base64. Ce fichier contiendra les secrets utilisés pour générer les OTP de vos comptes, choisissez donc un mot de passe fort. Glissez vers la droite pour démarrer l&apos;export.</translation>
+        <translation>Здесь можно экспортировать токены в файл. Экспортированный файл будет зашифрован с использованием AES-256-CBC и кодирован в Base64. Выберите сильный пароль — файл будет содержать секреты, использованные для генерации токенов для Ваших аккаунтов. Потяните влево чтобы начать экспорт.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
         <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Pour afficher le contenu du fichier d&apos;exportation en dehors de SailOTP, utilisez la commande openssl suivante:</translation>
+        <translation>Чтобы просмотреть содержимое файла экспорта за пределами SailOTP, используйте следующую команду openssl:</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="211"/>
         <source>Error writing to file </source>
-        <translation>Erreur lors de l&apos;écriture du fichier</translation>
+        <translation>Ошибка при записи в файл </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="213"/>
         <source>Token Database exported to </source>
-        <translation>Base des paramètres d&apos;OTP exportée vers</translation>
+        <translation>База данных токенов экспортирована в </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="216"/>
         <source>Could not encrypt tokens. Error: </source>
-        <translation>Impossible de chiffrer les paramètes d&apos;OTP. Erreur :</translation>
+        <translation>Не удалось зашифровать токены. Ошибка: </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="219"/>
         <source>Could not read tokens from Database</source>
-        <translation>Impossible de lire les paramètres d&apos;OTP depuis la base de données</translation>
+        <translation>Не удалось прочесть токены из базы данных</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="230"/>
         <source>Tokens imported from </source>
-        <translation>Paramètres d&apos;OTP importés depuis</translation>
+        <translation>Токены импортированы из </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="235"/>
         <source>Unable to decrypt file, did you use the right password?</source>
-        <translation>Impossible de déchiffrer le fichier, utilisez-vous le bon mot de passe ?</translation>
+        <translation>Не удалось расшифровать файл. Был ли введен правильный пароль?</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="238"/>
         <source>Could not read from file </source>
-        <translation>Impossible de lire depuis le fichier</translation>
+        <translation>Не удалось прочесть из файла </translation>
     </message>
 </context>
 <context>
@@ -252,68 +253,68 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/MainView.qml" line="96"/>
         <source>About</source>
-        <translation>À propos</translation>
+        <translation>О приложении</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="100"/>
         <source>Settings</source>
         <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Paramètres</translation>
+        <translation>настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="105"/>
         <source>Export / Import</source>
-        <translation>Exporter / Importer</translation>
+        <translation>Экспорт / импорт</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="108"/>
+        <location filename="../qml/pages/MainView.qml" line="109"/>
         <source>Add Token</source>
-        <translation>Ajouter un OTP</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainView.qml" line="138"/>
-        <source>Nothing here</source>
-        <translation>Aucun mot de passe</translation>
+        <translation>Добавить токен</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="139"/>
+        <source>Nothing here</source>
+        <translation>Ничего нету</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="140"/>
         <source>Pull down to add a OTP</source>
-        <translation>Glissez vers le bas pour ajouter un OTP</translation>
+        <translation>Потяните вниз чтобы добавить OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="150"/>
+        <location filename="../qml/pages/MainView.qml" line="151"/>
         <source>Deleting</source>
-        <translation>Suppression</translation>
+        <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="166"/>
+        <location filename="../qml/pages/MainView.qml" line="167"/>
         <source>Token for </source>
-        <translation>OTP pour </translation>
+        <translation>Токен для </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="166"/>
+        <location filename="../qml/pages/MainView.qml" line="167"/>
         <source> copied to clipboard</source>
-        <translation> copié dans le presse-papier</translation>
+        <translation> скопирован в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="234"/>
+        <location filename="../qml/pages/MainView.qml" line="235"/>
         <source>Move up</source>
-        <translation>Déplacer vers le haut</translation>
+        <translation>Передвинуть вверх</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="239"/>
+        <location filename="../qml/pages/MainView.qml" line="240"/>
         <source>Move down</source>
-        <translation>Déplacer vers le bas</translation>
+        <translation>Передвинуть вниз</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="244"/>
+        <location filename="../qml/pages/MainView.qml" line="245"/>
         <source>Edit</source>
-        <translation>Modifier</translation>
+        <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="250"/>
+        <location filename="../qml/pages/MainView.qml" line="251"/>
         <source>Delete</source>
-        <translation>Supprimer</translation>
+        <translation>Удалить</translation>
     </message>
 </context>
 <context>
@@ -321,7 +322,7 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
-        <translation>Impossible de créer un code QR avec des paramètres incomplets !</translation>
+        <translation>Не удалось создать QR-код из-за неполных настроек!</translation>
     </message>
 </context>
 <context>
@@ -329,32 +330,32 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="54"/>
         <source>Can&apos;t access temporary directory</source>
-        <translation>Impossible d&apos;accéder au répertoire temportaire</translation>
+        <translation>Не удалось получить доступ к временной директории</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="64"/>
         <source>Add manually</source>
-        <translation>Ajouter manuellement</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="71"/>
-        <source>Scanning...</source>
-        <translation>Balayage…</translation>
+        <translation>Добавить вручную</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="71"/>
         <source>Scan Code</source>
-        <translation>Balayer un code</translation>
+        <translation>Отсканировать код</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ScanOTP.qml" line="71"/>
+        <source>Scanning...</source>
+        <translation>Сканирование...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="101"/>
         <source>No valid Token data found.</source>
-        <translation>Pas d&apos;information valide trouvée.</translation>
+        <translation>Не найдено корректных данных для токена.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="142"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
-        <translation>Appuyez sur l&apos;image pour démarrer / arréter le balayage. Glissez vers le bas pour entrer les paramètres manuellement.</translation>
+        <translation>Нажмите на изображение чтобы начать / остановить сканирование. Потяните вниз чтобы добавить токен вручную.</translation>
     </message>
 </context>
 <context>
@@ -362,19 +363,19 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/Settings.qml" line="50"/>
         <source>Settings</source>
-        <translation>Paramètres</translation>
+        <translation>настройки</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
         <source>Behaviour</source>
         <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Comportement</translation>
+        <translation>поведение</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
         <source>Show Token as QRCode on Tap</source>
         <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Touchez le jeton comme un code QR</translation>
+        <translation>Сенсорный токен как QR-код</translation>
     </message>
 </context>
 </TS>
