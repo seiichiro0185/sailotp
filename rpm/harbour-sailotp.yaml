@@ -31,7 +31,8 @@ Requires:
   - sailfishsilica-qt5 >= 0.10.9
 
 Files:
-  - '%{_bindir}'
+  - '%defattr(644, root, root, 755)'
+  - '%attr(755, root, root) %{_bindir}'
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
