@@ -116,7 +116,7 @@ Page {
       width: parent.width
       maximumValue: 29
       anchors.top: parent.top
-      anchors.topMargin: 36 * Theme.pixelRatio
+      anchors.topMargin: Theme.itemSizeExtraSmall - Theme.paddingSmall
       // Only show when there are enries
       visible: appWin.listModel.count
     }
