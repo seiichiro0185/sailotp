@@ -100,28 +100,28 @@ License: BSD (3-clause)</source>
         <translation>OTP密钥</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length</source>
         <translation>长度</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="132"/>
         <source>Length of the Token</source>
         <translation>令牌的长度</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="146"/>
         <source>Time Derivation (Seconds)</source>
         <translation>时间推导（秒）</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Counter Value</source>
         <translation>下一个计数器的值</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="160"/>
         <source>Next Value of the Counter</source>
         <translation>下一个计数器的值</translation>
     </message>

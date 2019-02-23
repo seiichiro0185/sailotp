@@ -100,28 +100,28 @@ Licença: BSD (3-clause)</translation>
         <translation>Chave secreta OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length</source>
         <translation>Tamanho</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="132"/>
         <source>Length of the Token</source>
         <translation>Tamanho to Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="146"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Derivação do tempo (segundos)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Counter Value</source>
         <translation>Próximo valor do contador</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="160"/>
         <source>Next Value of the Counter</source>
         <translation>Próximo valor do contador</translation>
     </message>

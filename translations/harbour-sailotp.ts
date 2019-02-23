@@ -99,28 +99,28 @@ License: BSD (3-clause)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length</source>
         <translation>Length</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="132"/>
         <source>Length of the Token</source>
         <translation>Length of the Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="146"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Time Derivation (Seconds)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Counter Value</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="160"/>
         <source>Next Value of the Counter</source>
         <translation></translation>
     </message>

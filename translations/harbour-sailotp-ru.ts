@@ -101,28 +101,28 @@ License: BSD (3-clause)</source>
         <translation>Секретный ключ OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length</source>
         <translation>Длина</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="132"/>
         <source>Length of the Token</source>
         <translation>Длина токена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="146"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Интервал расхождения (секунд)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Counter Value</source>
         <translation>Следующее значение счетчика</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="160"/>
         <source>Next Value of the Counter</source>
         <translation>Следующее значение счетчика</translation>
     </message>
