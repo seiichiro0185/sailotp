@@ -115,6 +115,8 @@ Dialog {
         text: paramKey != "" ? paramKey : ""
         placeholderText: qsTr("Secret OTP Key")
         focus: true
+        validator: RegExpValidator { regExp: /^(?:[A-Za-z2-7]{8})*(?:[A-Za-z2-7]{2}={6}|[A-Za-z2-7]{4}={4}|[A-Za-z2-7]{5}={3}|[A-Za-z2-7]{7}=)?$/ }
+        inputMethodHints: Qt.ImhNoPredictiveText
         horizontalAlignment: TextInput.AlignLeft
 
         EnterKey.enabled: text.length > 15
@@ -168,7 +170,7 @@ Dialog {
   }
 
   // Check if we can Save
-  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && otpLen.text >= 1 && ((paramType == "TOTP" && otpDiff.text != "") || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && otpSecret.acceptableInput && otpLen.text >= 1 && ((paramType == "TOTP" && otpDiff.text != "") || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
 
   // Save if page is Left with Add
   onDone: {

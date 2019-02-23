@@ -73,7 +73,7 @@ Page {
         horizontalAlignment: TextEdit.Center
         readOnly: true
         text:  qsTr("A Simple Sailfish OTP Generator\n(RFC 6238/4226 compatible)")
-        color: "white"
+        color: Theme.primaryColor
       }
       TextArea {
         id: copyright
@@ -82,7 +82,7 @@ Page {
         horizontalAlignment: TextEdit.Center
         readOnly: true
         text: qsTr("Copyright: Stefan Brand\nLicense: BSD (3-clause)")
-        color: "white"
+        color: Theme.primaryColor
       }
       Button {
         id: manual
@@ -108,7 +108,7 @@ Page {
         horizontalAlignment: TextEdit.Center
         readOnly: true
         text: "\n"+qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://code.google.com/archive/p/crypto-js/\nhttp://sourceforge.net/projects/qzxing/\nhttp://fukuchi.org/works/qrencode/"
-        color: "white"
+        color: Theme.primaryColor
       }
 
       TextArea {
@@ -119,7 +119,7 @@ Page {
         horizontalAlignment: TextEdit.Center
         readOnly: true
         text: qsTr("Contributors:")+"\n\nRobin Appelman: SteamGuard "+qsTr("Support")
-        color: "white"
+        color: Theme.primaryColor
       }
 
       TextArea {
@@ -130,7 +130,7 @@ Page {
         horizontalAlignment: TextEdit.Center
         readOnly: true
         text: qsTr("Translators:")+"\n\nChinese: BirdZhang\nFinnish: Johan Heikkilä\nFrench: Romain Tartière\nItalian: Tichy\nRussian: moorchegue\nSpanish: p4moedo\nSwedish: Åke Engelbrektson\nEnglish: Stefan Brand\nGerman: Stefan Brand"
-        color: "white"
+        color: Theme.primaryColor
       }
     }
     VerticalScrollDecorator { }

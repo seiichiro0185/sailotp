@@ -101,28 +101,28 @@ Licencia: BSD (de 3 cláusulas)</translation>
         <translation>Llave secreta OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length</source>
         <translation>Longitud</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="132"/>
         <source>Length of the Token</source>
         <translation>Longitud del token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="146"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Derivación de tiempo (segundos)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Counter Value</source>
         <translation>Siguiente Contador</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="160"/>
         <source>Next Value of the Counter</source>
         <translation>Siguiente valor del contador</translation>
     </message>
@@ -250,67 +250,67 @@ Licencia: BSD (de 3 cláusulas)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="96"/>
+        <location filename="../qml/pages/MainView.qml" line="95"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="100"/>
+        <location filename="../qml/pages/MainView.qml" line="99"/>
         <source>Settings</source>
         <translation>Configuración</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="105"/>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>Exportar/Importar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="109"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>Añadir Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="139"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Nothing here</source>
         <translation>Nada aquí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="140"/>
+        <location filename="../qml/pages/MainView.qml" line="123"/>
         <source>Pull down to add a OTP</source>
         <translation>Tire hacia abajo para añadir tokens OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="151"/>
+        <location filename="../qml/pages/MainView.qml" line="158"/>
         <source>Deleting</source>
         <translation>Borrando</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source>Token for </source>
         <translation>Token para </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source> copied to clipboard</source>
         <translation> copiado al portapapeles</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="242"/>
         <source>Move up</source>
         <translation>Ascender</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="247"/>
         <source>Move down</source>
         <translation>Descender</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="245"/>
+        <location filename="../qml/pages/MainView.qml" line="252"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="251"/>
+        <location filename="../qml/pages/MainView.qml" line="258"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>

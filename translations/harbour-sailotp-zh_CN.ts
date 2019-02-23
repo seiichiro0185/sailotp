@@ -100,28 +100,28 @@ License: BSD (3-clause)</source>
         <translation>OTP密钥</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="130"/>
         <source>Length</source>
         <translation>长度</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="132"/>
         <source>Length of the Token</source>
         <translation>令牌的长度</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="146"/>
         <source>Time Derivation (Seconds)</source>
         <translation>时间推导（秒）</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Next Counter Value</source>
         <translation>下一个计数器的值</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="160"/>
         <source>Next Value of the Counter</source>
         <translation>下一个计数器的值</translation>
     </message>
@@ -249,67 +249,67 @@ License: BSD (3-clause)</source>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="96"/>
+        <location filename="../qml/pages/MainView.qml" line="95"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="100"/>
+        <location filename="../qml/pages/MainView.qml" line="99"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="105"/>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>导出/导入</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="109"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>添加令牌</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="139"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Nothing here</source>
         <translation>无内容</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="140"/>
+        <location filename="../qml/pages/MainView.qml" line="123"/>
         <source>Pull down to add a OTP</source>
         <translation>下拉添加一个OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="151"/>
+        <location filename="../qml/pages/MainView.qml" line="158"/>
         <source>Deleting</source>
         <translation>删除中</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source>Token for </source>
         <translation>令牌</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source> copied to clipboard</source>
         <translation> 已复制到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="242"/>
         <source>Move up</source>
         <translation>向上</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="247"/>
         <source>Move down</source>
         <translation>向下</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="245"/>
+        <location filename="../qml/pages/MainView.qml" line="252"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="251"/>
+        <location filename="../qml/pages/MainView.qml" line="258"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
