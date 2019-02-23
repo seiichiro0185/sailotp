@@ -250,67 +250,67 @@ Lizenz: BSD (3-Klausel)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="96"/>
+        <location filename="../qml/pages/MainView.qml" line="95"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="100"/>
+        <location filename="../qml/pages/MainView.qml" line="99"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="105"/>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>Export / Import</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="109"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>Token hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="139"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Nothing here</source>
         <translation>Hier ist nichts</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="140"/>
+        <location filename="../qml/pages/MainView.qml" line="123"/>
         <source>Pull down to add a OTP</source>
         <translation>Nach unten ziehen zum hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="151"/>
+        <location filename="../qml/pages/MainView.qml" line="158"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source>Token for </source>
         <translation>Token für </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source> copied to clipboard</source>
         <translation> kopiert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="242"/>
         <source>Move up</source>
         <translation>Nach oben</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="247"/>
         <source>Move down</source>
         <translation>Nach unten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="245"/>
+        <location filename="../qml/pages/MainView.qml" line="252"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="251"/>
+        <location filename="../qml/pages/MainView.qml" line="258"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>

@@ -250,68 +250,68 @@ Licence : BSD (3 clauses)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="96"/>
+        <location filename="../qml/pages/MainView.qml" line="95"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="100"/>
+        <location filename="../qml/pages/MainView.qml" line="99"/>
         <source>Settings</source>
         <translatorcomment>Translated using Google Translate</translatorcomment>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="105"/>
+        <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
         <translation>Exporter / Importer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="109"/>
+        <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
         <translation>Ajouter un OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="139"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Nothing here</source>
         <translation>Aucun mot de passe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="140"/>
+        <location filename="../qml/pages/MainView.qml" line="123"/>
         <source>Pull down to add a OTP</source>
         <translation>Glissez vers le bas pour ajouter un OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="151"/>
+        <location filename="../qml/pages/MainView.qml" line="158"/>
         <source>Deleting</source>
         <translation>Suppression</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source>Token for </source>
         <translation>OTP pour </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="174"/>
         <source> copied to clipboard</source>
         <translation> copié dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="242"/>
         <source>Move up</source>
         <translation>Déplacer vers le haut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="247"/>
         <source>Move down</source>
         <translation>Déplacer vers le bas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="245"/>
+        <location filename="../qml/pages/MainView.qml" line="252"/>
         <source>Edit</source>
         <translation>Modifier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="251"/>
+        <location filename="../qml/pages/MainView.qml" line="258"/>
         <source>Delete</source>
         <translation>Supprimer</translation>
     </message>
