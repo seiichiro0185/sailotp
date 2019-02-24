@@ -77,12 +77,7 @@ Page {
       flash.mode: Camera.FlashOff
       captureMode: Camera.CaptureStillImage
       focus.focusMode: Camera.FocusContinuous
-
-      imageCapture {
-        onImageSaved: {
-          decoder.decodeImageFromFile(XDG_CACHE_DIR + "/qrscan.jpg");
-        }
-      }
+      imageCapture.onImageSaved: { decoder.decodeImageFromFile(path); }
     }
 
     QZXing {
@@ -92,17 +87,17 @@ Page {
         var ret = URL.decode(tag);
         var len = 6
         scanning = false
-        if (ret && ret.type != "" && ret.title != "" && ret.secret != "" && (ret.counter != "" || ret.type == "TOTP")) {
-          if (ret.digits != "") {
+        if (ret && ret.type !== "" && ret.title !== "" && ret.secret !== "" && (ret.counter !== "" || ret.type === "TOTP")) {
+          if (ret.digits !== "") {
             len = ret.digits
           }
-          pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramLabel: ret.title, paramKey: ret.secret, paramType: ret.type, paramCounter: ret.counter, paramLen: len, paramNew: true})
+          pageStack.replace(Qt.resolvedUrl("AddOTP.qml"), {parentPage: parentPage, paramLabel: ret.title, paramKey: ret.secret.toUpperCase(), paramType: ret.type, paramCounter: ret.counter, paramLen: len, paramNew: true})
         } else {
           notify.show(qsTr("No valid Token data found."), 3000);
         }
       }
 
-      onDecodingFinished: if (succeeded==false && scanning) scanTimer.start();
+      onDecodingFinished: { if (succeeded==false && scanning) scanTimer.start(); }
     }
 
     FileIO {

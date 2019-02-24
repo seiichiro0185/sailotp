@@ -60,6 +60,7 @@ ApplicationWindow
       path: "/apps/harbour-sailotp"
 
       property bool showQrDefaultAction: false
+      property bool hideTokens: false
   }
 
   // Add an entry to the list

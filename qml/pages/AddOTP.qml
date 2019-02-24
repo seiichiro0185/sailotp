@@ -71,7 +71,19 @@ Dialog {
           if (((paramType == "TOTP" || paramType == "TOTP_STEAM") && (otpLabel.text == "" || otpSecret.text == "")) || (paramType == "HOTP" && (otpLabel.text == "" || otpSecret.text == "" || otpCounter.text <= 0))) {
             notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
           } else {
-            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramLabel: otpLabel.text, paramKey: otpSecret.text, paramType: paramType, paramCounter: otpCounter.text, paramLen: otpLen.text});
+            var otpurl = "";
+            if (paramType == "TOTP") {
+              if (otpLabel.text != "" && otpSecret.text != "")
+                otpurl = "otpauth://totp/"+otpLabel.text+"?secret="+otpSecret.text+"&digits="+otpLen.text;
+            } else if (paramType == "HOTP") {
+              if (paramLabel != "" && paramKey != "" && paramCounter > 0)
+                otpurl = "otpauth://hotp/"+otpLabel.text+"?secret="+otpSecret.text+"&counter="+otpCounter.text+"&digits="+otpLen.text;
+            }
+            if (otpurl != "") {
+              pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramQrsource: otpurl, paramLabel: otpLabel.text, paramQRId = -1});
+            } else {
+              notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
+            }
           }
         }
       }

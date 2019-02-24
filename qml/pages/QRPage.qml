@@ -35,11 +35,19 @@ Page {
 
   allowedOrientations: Orientation.All
 
-  property string paramType: ""
+  property int paramQRId: -1;
   property string paramLabel: ""
-  property string paramKey: ""
-  property int paramLen: 6
-  property int paramCounter: 0
+  property string paramQrsource: ""
+
+  Timer {
+    interval: 1000
+    // Timer only runs when app is acitive and we have entries
+    running: Qt.application.active && appWin.listModel.count && paramQRId >= 0
+    repeat: true
+    onTriggered: {
+      qrImage.source = "image://qqrencoder/"+appWin.listModel.get(paramQRId).otp;
+    }
+  }
 
   Label {
     id: qrLabel
@@ -54,24 +62,16 @@ Page {
     id: qrImage
     anchors.horizontalCenter: parent.horizontalCenter
     y: 200
+    width: Theme.buttonWidthLarge
+    height: Theme.buttonWidthLarge
     cache: false
   }
 
   Component.onCompleted: {
-
-    var otpurl = "";
-    if (paramType == "TOTP") {
-      if (paramLabel != "" && paramKey != "")
-        otpurl = "otpauth://totp/"+paramLabel+"?secret="+paramKey+"&digits="+paramLen;
-
-    } else if (paramType == "HOTP") {
-      if (paramLabel != "" && paramKey != "" && paramCounter > 0)
-        otpurl = "otpauth://hotp/"+paramLabel+"?secret="+paramKey+"&counter="+paramCounter+"&digits="+paramLen;
-    }
-    if (otpurl != "") {
-      qrImage.source = "image://qqrencoder/"+otpurl;
+    if (paramQrsource  !== "") {
+      qrImage.source = "image://qqrencoder/"+paramQrsource;
     } else {
-      notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
+      notify.show(qsTr("Can't create QR-Code from an empty String"), 4000);
     }
   }
 }
