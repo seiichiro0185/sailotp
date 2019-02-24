@@ -38,6 +38,96 @@ License: BSD (3-clause)</source>
     </message>
 </context>
 <context>
+    <name>AddOTP</name>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <source>Show QR-Code</source>
+        <translation>显示二维码</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
+        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <source>Can&apos;t create QR-Code from incomplete settings!</source>
+        <translation>不能从未完成的设置中创建二维码</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Add</source>
+        <translation>添加</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Save</source>
+        <translation>保存</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <source>Type</source>
+        <translation>类型</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <source>Time-based (TOTP)</source>
+        <translation>基于时间(TOTP)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <source>Counter-based (HOTP)</source>
+        <translation>基于计数器（HOTP）</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <source>Steam Guard</source>
+        <translation>时间流守卫</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <source>Title</source>
+        <translation>标题</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <source>Title for the OTP</source>
+        <translation>OTP的标题</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <source>Secret (at least 16 characters)</source>
+        <translation>密码（至少16个字符）</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <source>Secret OTP Key</source>
+        <translation>OTP密钥</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <source>Length</source>
+        <translation>长度</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <source>Length of the Token</source>
+        <translation>令牌的长度</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <source>Time Derivation (Seconds)</source>
+        <translation>时间推导（秒）</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <source>Next Counter Value</source>
+        <translation>下一个计数器的值</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <source>Next Value of the Counter</source>
+        <translation>下一个计数器的值</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="63"/>
@@ -160,81 +250,81 @@ License: BSD (3-clause)</source>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="95"/>
+        <location filename="../qml/pages/MainView.qml" line="102"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="99"/>
+        <location filename="../qml/pages/MainView.qml" line="106"/>
         <source>Settings</source>
-        <translation type="unfinished">设置</translation>
+        <translation>设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="111"/>
         <source>Export / Import</source>
-        <translation type="unfinished"></translation>
+        <translation>导出/导入</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="108"/>
+        <location filename="../qml/pages/MainView.qml" line="115"/>
         <source>Add Token</source>
-        <translation type="unfinished"></translation>
+        <translation>添加令牌</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="122"/>
+        <location filename="../qml/pages/MainView.qml" line="129"/>
         <source>Nothing here</source>
-        <translation type="unfinished"></translation>
+        <translation>无内容</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="123"/>
+        <location filename="../qml/pages/MainView.qml" line="130"/>
         <source>Pull down to add a OTP</source>
-        <translation type="unfinished"></translation>
+        <translation>下拉添加一个OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="158"/>
+        <location filename="../qml/pages/MainView.qml" line="165"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>删除中</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="179"/>
-        <location filename="../qml/pages/MainView.qml" line="253"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source>Token for </source>
-        <translation type="unfinished"></translation>
+        <translation>令牌</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="179"/>
-        <location filename="../qml/pages/MainView.qml" line="253"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source> copied to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation> 已复制到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="249"/>
+        <location filename="../qml/pages/MainView.qml" line="256"/>
         <source>Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>复制到剪贴板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="257"/>
+        <location filename="../qml/pages/MainView.qml" line="264"/>
         <source>Show Token as QR-Code</source>
-        <translation type="unfinished"></translation>
+        <translation>显示二维码</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="262"/>
+        <location filename="../qml/pages/MainView.qml" line="269"/>
         <source>Move up</source>
-        <translation type="unfinished"></translation>
+        <translation>向上</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="267"/>
+        <location filename="../qml/pages/MainView.qml" line="274"/>
         <source>Move down</source>
-        <translation type="unfinished"></translation>
+        <translation>向下</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="272"/>
+        <location filename="../qml/pages/MainView.qml" line="279"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="278"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
 </context>
 <context>
@@ -242,7 +332,8 @@ License: BSD (3-clause)</source>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
         <source>Can&apos;t create QR-Code from an empty String</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>无法从空字符串创建QR码</translation>
     </message>
 </context>
 <context>
@@ -283,22 +374,25 @@ License: BSD (3-clause)</source>
     <message>
         <location filename="../qml/pages/Settings.qml" line="50"/>
         <source>Settings</source>
-        <translation type="unfinished">设置</translation>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>行为</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
         <source>Show Token as QR on Tap</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>在点击时将令牌显示为QR</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="69"/>
+        <location filename="../qml/pages/Settings.qml" line="68"/>
         <source>Hide Tokens and Reveal on Tap</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>隐藏令牌并在点击时显示</translation>
     </message>
 </context>
 </TS>

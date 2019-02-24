@@ -39,6 +39,96 @@ License: BSD (3-clause)</source>
     </message>
 </context>
 <context>
+    <name>AddOTP</name>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <source>Show QR-Code</source>
+        <translation>Показать QR-код</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
+        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <source>Can&apos;t create QR-Code from incomplete settings!</source>
+        <translation>Невозможно создать QR-код из-за неполных настроек!</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Add</source>
+        <translation>Добавить</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Save</source>
+        <translation>Сохранить</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <source>Type</source>
+        <translation>Тип</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <source>Time-based (TOTP)</source>
+        <translation>На основе времени (TOTP)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <source>Counter-based (HOTP)</source>
+        <translation>На основе счетчика (HOTP)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <source>Steam Guard</source>
+        <translation>Steam Guard</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <source>Title</source>
+        <translation>Заголовок</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <source>Title for the OTP</source>
+        <translation>Заголовок для OTP</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <source>Secret (at least 16 characters)</source>
+        <translation>Секрет (минимум 16 символов)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <source>Secret OTP Key</source>
+        <translation>Секретный ключ OTP</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <source>Length</source>
+        <translation>Длина</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <source>Length of the Token</source>
+        <translation>Длина токена</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <source>Time Derivation (Seconds)</source>
+        <translation>Интервал расхождения (секунд)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <source>Next Counter Value</source>
+        <translation>Следующее значение счетчика</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <source>Next Value of the Counter</source>
+        <translation>Следующее значение счетчика</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="63"/>
@@ -162,81 +252,81 @@ License: BSD (3-clause)</source>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="95"/>
+        <location filename="../qml/pages/MainView.qml" line="102"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>О приложении</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="99"/>
+        <location filename="../qml/pages/MainView.qml" line="106"/>
         <source>Settings</source>
-        <translation type="unfinished">настройки</translation>
+        <translation>настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="111"/>
         <source>Export / Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспорт / импорт</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="108"/>
+        <location filename="../qml/pages/MainView.qml" line="115"/>
         <source>Add Token</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить токен</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="122"/>
+        <location filename="../qml/pages/MainView.qml" line="129"/>
         <source>Nothing here</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего нету</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="123"/>
+        <location filename="../qml/pages/MainView.qml" line="130"/>
         <source>Pull down to add a OTP</source>
-        <translation type="unfinished"></translation>
+        <translation>Потяните вниз чтобы добавить OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="158"/>
+        <location filename="../qml/pages/MainView.qml" line="165"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="179"/>
-        <location filename="../qml/pages/MainView.qml" line="253"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source>Token for </source>
-        <translation type="unfinished"></translation>
+        <translation>Токен для </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="179"/>
-        <location filename="../qml/pages/MainView.qml" line="253"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source> copied to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation> скопирован в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="249"/>
+        <location filename="../qml/pages/MainView.qml" line="256"/>
         <source>Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопировать в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="257"/>
+        <location filename="../qml/pages/MainView.qml" line="264"/>
         <source>Show Token as QR-Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать QR-код</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="262"/>
+        <location filename="../qml/pages/MainView.qml" line="269"/>
         <source>Move up</source>
-        <translation type="unfinished"></translation>
+        <translation>Передвинуть вниз</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="267"/>
+        <location filename="../qml/pages/MainView.qml" line="274"/>
         <source>Move down</source>
-        <translation type="unfinished"></translation>
+        <translation>Передвинуть вверх</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="272"/>
+        <location filename="../qml/pages/MainView.qml" line="279"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="278"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить</translation>
     </message>
 </context>
 <context>
@@ -244,7 +334,8 @@ License: BSD (3-clause)</source>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
         <source>Can&apos;t create QR-Code from an empty String</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Не удается создать QR-код из пустой строки</translation>
     </message>
 </context>
 <context>
@@ -285,22 +376,25 @@ License: BSD (3-clause)</source>
     <message>
         <location filename="../qml/pages/Settings.qml" line="50"/>
         <source>Settings</source>
-        <translation type="unfinished">настройки</translation>
+        <translation>настройки</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Поведение</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
         <source>Show Token as QR on Tap</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Показать токен как QR на кране</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="69"/>
+        <location filename="../qml/pages/Settings.qml" line="68"/>
         <source>Hide Tokens and Reveal on Tap</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Скрыть токены и показать на кране</translation>
     </message>
 </context>
 </TS>

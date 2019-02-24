@@ -79,6 +79,13 @@ Page {
     lastUpdated = curDate.getTime();
   }
 
+  // Reload OTP List on Return to the Page (to e.g. accomodate changed scd ettings)
+  onStatusChanged: {
+      if (status === PageStatus.Activating) {
+        refreshOTPList();
+      }
+  }
+
   Timer {
     interval: 500
     // Timer only runs when app is acitive and we have entries
