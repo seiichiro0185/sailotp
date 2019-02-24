@@ -251,79 +251,79 @@ Lizenz: BSD (3-Klausel)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="95"/>
+        <location filename="../qml/pages/MainView.qml" line="102"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="99"/>
+        <location filename="../qml/pages/MainView.qml" line="106"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="104"/>
+        <location filename="../qml/pages/MainView.qml" line="111"/>
         <source>Export / Import</source>
         <translation>Export / Import</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="108"/>
+        <location filename="../qml/pages/MainView.qml" line="115"/>
         <source>Add Token</source>
         <translation>Token hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="122"/>
+        <location filename="../qml/pages/MainView.qml" line="129"/>
         <source>Nothing here</source>
         <translation>Hier ist nichts</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="123"/>
+        <location filename="../qml/pages/MainView.qml" line="130"/>
         <source>Pull down to add a OTP</source>
         <translation>Nach unten ziehen zum Hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="158"/>
+        <location filename="../qml/pages/MainView.qml" line="165"/>
         <source>Deleting</source>
         <translation>Lösche </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="179"/>
-        <location filename="../qml/pages/MainView.qml" line="253"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source>Token for </source>
         <translation>Token für </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="179"/>
-        <location filename="../qml/pages/MainView.qml" line="253"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source> copied to clipboard</source>
         <translation> in die Zwischenablage kopiert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="249"/>
+        <location filename="../qml/pages/MainView.qml" line="256"/>
         <source>Copy to Clipboard</source>
         <translation>In die Zwischenablage</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="257"/>
+        <location filename="../qml/pages/MainView.qml" line="264"/>
         <source>Show Token as QR-Code</source>
         <translation>Als QR-Code Zeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="262"/>
+        <location filename="../qml/pages/MainView.qml" line="269"/>
         <source>Move up</source>
         <translation>Nach oben</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="267"/>
+        <location filename="../qml/pages/MainView.qml" line="274"/>
         <source>Move down</source>
         <translation>Nach unten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="272"/>
+        <location filename="../qml/pages/MainView.qml" line="279"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="278"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
@@ -387,7 +387,7 @@ Lizenz: BSD (3-Klausel)</translation>
         <translation>Zeige QR-Code beim Antippen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="69"/>
+        <location filename="../qml/pages/Settings.qml" line="68"/>
         <source>Hide Tokens and Reveal on Tap</source>
         <translation>Token erst durch Antippen zeigen</translation>
     </message>

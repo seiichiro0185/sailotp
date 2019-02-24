@@ -56,7 +56,6 @@ Page {
         text: qsTr("Show Token as QR on Tap")
         onClicked: {
           settings.showQrDefaultAction = !settings.showQrDefaultAction;
-          console.log(settings.showQrDefaultAction);
           if (settings.showQrDefaultAction) {
             settings.hideTokens = false;
             hideTokens.checked = settings.hideTokens
@@ -69,7 +68,6 @@ Page {
         text: qsTr("Hide Tokens and Reveal on Tap")
         onClicked: {
           settings.hideTokens = !settings.hideTokens;
-          console.log(settings.hideTokens);
           if (settings.hideTokens) {
             settings.showQrDefaultAction = false;
             showQrDefaultAction.checked = settings.showQrDefaultAction
