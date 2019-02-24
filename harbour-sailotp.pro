@@ -29,7 +29,7 @@ DISTFILES += qml/harbour-sailotp.qml \
     translations/*.ts \
     harbour-sailotp.desktop
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 CONFIG += sailfishapp_i18n
 
@@ -38,6 +38,7 @@ TRANSLATIONS = translations/harbour-sailotp-de.ts \
     translations/harbour-sailotp-fi.ts \
     translations/harbour-sailotp-fr.ts \
     translations/harbour-sailotp-it.ts \
+    translations/harbour-sailotp-pt_BR.ts \
     translations/harbour-sailotp-ru.ts \
     translations/harbour-sailotp-sv.ts \
     translations/harbour-sailotp-zh_CN.ts

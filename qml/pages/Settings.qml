@@ -51,12 +51,29 @@ Page {
 
       SectionHeader { text: qsTr("Behaviour") }
       TextSwitch {
-        id: showQrDefault
+        id: showQrDefaultAction
         checked: settings.showQrDefaultAction
-        text: qsTr("Show Token as QRCode on Tap")
-        onClicked: settings.showQrDefaultAction = !settings.showQrDefaultAction
+        text: qsTr("Show Token as QR on Tap")
+        onClicked: {
+          settings.showQrDefaultAction = !settings.showQrDefaultAction;
+          if (settings.showQrDefaultAction) {
+            settings.hideTokens = false;
+            hideTokens.checked = settings.hideTokens
+          }
+        }
       }
-
+      TextSwitch {
+        id: hideTokens
+        checked: settings.hideTokens
+        text: qsTr("Hide Tokens and Reveal on Tap")
+        onClicked: {
+          settings.hideTokens = !settings.hideTokens;
+          if (settings.hideTokens) {
+            settings.showQrDefaultAction = false;
+            showQrDefaultAction.checked = settings.showQrDefaultAction
+          }
+        }
+      }
     }
     VerticalScrollDecorator { }
   }

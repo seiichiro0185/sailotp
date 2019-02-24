@@ -1,6 +1,7 @@
 # User Specific Project Files
 *.pro.user
 *.pro.user.*
+*.autosave
 rpm/harbour-sailotp.spec
 rpm/harbour-sailotp.spec.*
 translations/*.qm

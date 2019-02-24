@@ -40,6 +40,7 @@ Page {
 
   // This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
   property double lastUpdated: 0
+  property double seconds_global: 0
 
   // Reload the List of OTPs from storage
   function refreshOTPList() {
@@ -56,28 +57,33 @@ Page {
   function refreshOTPValues() {
     // get seconds from current Date
     var curDate = new Date();
-    var seconds_global = curDate.getSeconds() % 30
+    seconds_global = curDate.getSeconds() % 30
 
     // Iterate over all List entries
     for (var i=0; i<appWin.listModel.count; i++) {
-      if (appWin.listModel.get(i).type == "TOTP" || appWin.listModel.get(i).type == "TOTP_STEAM" ) {
+      if (appWin.listModel.get(i).type === "TOTP" || appWin.listModel.get(i).type === "TOTP_STEAM" ) {
         // Take derivation into account if set
         var seconds = (curDate.getSeconds() + appWin.listModel.get(i).diff) % 30;
         // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
-        if (appWin.listModel.get(i).otp == "------" || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, appWin.listModel.get(i).type, appWin.listModel.get(i).len, appWin.listModel.get(i).diff, 0)
+        if (appWin.listModel.get(i).otp === "------" || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
+          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, appWin.listModel.get(i).type, appWin.listModel.get(i).len, appWin.listModel.get(i).diff, 0);
           appWin.listModel.setProperty(i, "otp", curOTP);
+        } else if (appWin.coverType === "HOTP" && (curDate.getTime() - lastUpdated > 2000) && appWin.listModel.get(i).fav === 1) {
+          // If we are coming back from the CoverPage update OTP value if current favourite is HOTP
+          appWin.listModel.setProperty(i, "otp", appWin.coverOTP);
         }
-      } else if (appWin.coverType == "HOTP" && (curDate.getTime() - lastUpdated > 2000) && appWin.listModel.get(i).fav == 1) {
-        // If we are coming back from the CoverPage update OTP value if current favourite is HOTP
-        appWin.listModel.setProperty(i, "otp", appWin.coverOTP);
       }
     }
 
-    // Update the Progressbar
-    updateProgress.value = 29 - seconds_global
     // Set lastUpdate property
     lastUpdated = curDate.getTime();
+  }
+
+  // Reload OTP List on Return to the Page (to e.g. accomodate changed scd ettings)
+  onStatusChanged: {
+      if (status === PageStatus.Activating) {
+        refreshOTPList();
+      }
   }
 
   Timer {
@@ -98,7 +104,7 @@ Page {
       }
       MenuItem {
         text: qsTr("Settings")
-        visible: false
+        visible: true
         onClicked: pageStack.push(Qt.resolvedUrl("Settings.qml"))
       }
       MenuItem {
@@ -111,25 +117,11 @@ Page {
       }
     }
 
-    ProgressBar {
-      id: updateProgress
-      width: parent.width
-      maximumValue: 29
-      anchors.top: parent.top
-      anchors.topMargin: Theme.itemSizeExtraSmall - Theme.paddingSmall
-      // Only show when there are enries
-      visible: appWin.listModel.count
-    }
 
 
 
     SilicaListView {
       id: otpList
-
-      header: PageHeader {
-        title: "SailOTP"
-      }
-
       anchors.fill: parent
       model: appWin.listModel
       width: parent.width
@@ -138,6 +130,30 @@ Page {
         enabled: otpList.count == 0
         text: qsTr("Nothing here")
         hintText: qsTr("Pull down to add a OTP")
+      }
+
+      header: Row {
+        height: Theme.itemSizeSmall
+        width: parent.width
+        ProgressBar {
+          id: updateProgress
+          anchors.top: parent.top
+          // Hack to get the Progress Bar in roughly the same spot on Light and Dark Ambiances
+          anchors.topMargin: Theme.colorScheme === 0 ? Theme.paddingLarge * 1.1 : Theme.paddingSmall * 0.6
+          height: Theme.itemSizeSmall
+          width: parent.width * 0.65
+          maximumValue: 29
+          value: 29 - seconds_global
+          // Only show when there are enries
+          visible: appWin.listModel.count
+        }
+        PageHeader {
+          id: header
+          anchors.top: parent.top
+          height: Theme.itemSizeSmall
+          width: parent.width * 0.35
+          title: "SailOTP"
+        }
       }
 
       delegate: ListItem {
@@ -163,8 +179,14 @@ Page {
         }
 
         onClicked: {
-          Clipboard.text = otp
-          notify.show(qsTr("Token for ") + title + qsTr(" copied to clipboard"), 3000);
+          if (settings.hideTokens) {
+            otpValue.visible = !otpValue.visible
+          } else if (settings.showQrDefaultAction) {
+            pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramQrsource: otp, paramLabel: title, paramQRId: index});
+          } else {
+              Clipboard.text = otp
+              notify.show(qsTr("Token for ") + title + qsTr(" copied to clipboard"), 3000);
+          }
         }
 
         ListView.onRemove: animateRemoval()
@@ -211,6 +233,7 @@ Page {
               text: model.otp
               color: Theme.highlightColor
               font.pixelSize: Theme.fontSizeLarge
+              visible: !settings.hideTokens
               anchors.horizontalCenter: parent.horizontalCenter
             }
           }
@@ -231,6 +254,19 @@ Page {
         Component {
           id: otpContextMenu
           ContextMenu {
+            MenuItem {
+              text: qsTr("Copy to Clipboard")
+              visible: settings.hideTokens || settings.showQrDefaultAction
+              onClicked: {
+                Clipboard.text = otp
+                notify.show(qsTr("Token for ") + title + qsTr(" copied to clipboard"), 3000);
+              }
+            }
+            MenuItem {
+              text: qsTr("Show Token as QR-Code")
+              visible: !settings.showQrDefaultAction
+              onClicked: pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramQrsource: otp, paramLabel: title, paramQRId: index});
+            }
             MenuItem {
               text: qsTr("Move up")
               visible: index > 0 ? true : false;

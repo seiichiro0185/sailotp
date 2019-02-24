@@ -47,82 +47,83 @@ Licens: BSD (3-clause)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="72"/>
+        <location filename="../qml/pages/AddOTP.qml" line="85"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Kan inte skapa QR-kod från ofullständiga inställningar!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="86"/>
-        <source>Save</source>
-        <translation>Spara</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddOTP.qml" line="86"/>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
         <source>Add</source>
         <translation>Lägg till</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="91"/>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Save</source>
+        <translation>Spara</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="103"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="93"/>
+        <location filename="../qml/pages/AddOTP.qml" line="105"/>
         <source>Time-based (TOTP)</source>
         <translation>Tidsbaserad (TOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="94"/>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
         <source>Counter-based (HOTP)</source>
         <translation>Räknarbaserad (HOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="95"/>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
         <source>Steam Guard</source>
         <translation>Steam Guard</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="101"/>
+        <location filename="../qml/pages/AddOTP.qml" line="113"/>
         <source>Title</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="102"/>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Title for the OTP</source>
         <translation>Namn på OTP:n</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <location filename="../qml/pages/AddOTP.qml" line="126"/>
         <source>Secret (at least 16 characters)</source>
         <translation>Hemlighet (Minst 16 tecken)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="116"/>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
         <source>Secret OTP Key</source>
         <translation>Hemlig OTP-nyckel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <source>Length</source>
         <translation>längd</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="130"/>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Length of the Token</source>
         <translation>Längden av token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
-        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Tidsavvikelsen (sekunder)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="170"/>
         <source>Next Counter Value</source>
         <translation>Nästa räknarvärde</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="172"/>
         <source>Next Value of the Counter</source>
         <translation>Nästa värde på räknaren</translation>
     </message>
@@ -251,68 +252,79 @@ Licens: BSD (3-clause)</translation>
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="96"/>
+        <location filename="../qml/pages/MainView.qml" line="102"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="100"/>
+        <location filename="../qml/pages/MainView.qml" line="106"/>
         <source>Settings</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="105"/>
+        <location filename="../qml/pages/MainView.qml" line="111"/>
         <source>Export / Import</source>
         <translation>Export / Import</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="109"/>
+        <location filename="../qml/pages/MainView.qml" line="115"/>
         <source>Add Token</source>
         <translation>Lägg till Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="139"/>
+        <location filename="../qml/pages/MainView.qml" line="129"/>
         <source>Nothing here</source>
         <translation>Inget här</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="140"/>
+        <location filename="../qml/pages/MainView.qml" line="130"/>
         <source>Pull down to add a OTP</source>
         <translation>Dra neråt för att lägga till en OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="151"/>
+        <location filename="../qml/pages/MainView.qml" line="165"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source>Token for </source>
         <translation>Token för </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="167"/>
+        <location filename="../qml/pages/MainView.qml" line="186"/>
+        <location filename="../qml/pages/MainView.qml" line="260"/>
         <source> copied to clipboard</source>
-        <translation>kopierad till urklipp</translation>
+        <translation> kopierad till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="235"/>
+        <location filename="../qml/pages/MainView.qml" line="256"/>
+        <source>Copy to Clipboard</source>
+        <translation>Kopiera till Urklipp</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="264"/>
+        <source>Show Token as QR-Code</source>
+        <translation>Visa QR-kod</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="269"/>
         <source>Move up</source>
         <translation>Flytta upp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="240"/>
+        <location filename="../qml/pages/MainView.qml" line="274"/>
         <source>Move down</source>
         <translation>Flytta ner</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="245"/>
+        <location filename="../qml/pages/MainView.qml" line="279"/>
         <source>Edit</source>
         <translation>Redigera</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="251"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Delete</source>
         <translation>Ta bort</translation>
     </message>
@@ -321,8 +333,9 @@ Licens: BSD (3-clause)</translation>
     <name>QRPage</name>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
-        <source>Can&apos;t create QR-Code from incomplete settings!</source>
-        <translation>Kan inte skapa QR-kod från ofullständiga inställningar!</translation>
+        <source>Can&apos;t create QR-Code from an empty String</source>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Kan inte skapa QR-kod från en tom sträng</translation>
     </message>
 </context>
 <context>
@@ -348,12 +361,12 @@ Licens: BSD (3-clause)</translation>
         <translation>Skannar...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="101"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="96"/>
         <source>No valid Token data found.</source>
         <translation>Ingen giltig Token-data hittades.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ScanOTP.qml" line="142"/>
+        <location filename="../qml/pages/ScanOTP.qml" line="137"/>
         <source>Tap the picture to start / stop scanning. Pull down to add Token manually.</source>
         <translation>Tryck på bilden för att starta / stoppa skanning. Dra neråt för att lägga till Token manuellt.</translation>
     </message>
@@ -368,14 +381,20 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
         <source>Behaviour</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
+        <translatorcomment>Google Translate</translatorcomment>
         <translation>Beteende</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
-        <source>Show Token as QRCode on Tap</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Peka token som en QR-kod</translation>
+        <source>Show Token as QR on Tap</source>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Visa Token som QR på kran</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="68"/>
+        <source>Hide Tokens and Reveal on Tap</source>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Dölj tokens och avslöja på kranen</translation>
     </message>
 </context>
 </TS>
