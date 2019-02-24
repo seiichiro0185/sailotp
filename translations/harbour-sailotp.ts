@@ -37,6 +37,96 @@ License: BSD (3-clause)</source>
     </message>
 </context>
 <context>
+    <name>AddOTP</name>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <source>Show QR-Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
+        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <source>Can&apos;t create QR-Code from incomplete settings!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <source>Time-based (TOTP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <source>Counter-based (HOTP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <source>Steam Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <source>Title for the OTP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <source>Secret (at least 16 characters)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <source>Secret OTP Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <source>Length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <source>Length of the Token</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <source>Time Derivation (Seconds)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <source>Next Counter Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <source>Next Value of the Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="63"/>

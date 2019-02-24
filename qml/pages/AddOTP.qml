@@ -80,7 +80,7 @@ Dialog {
                 otpurl = "otpauth://hotp/"+otpLabel.text+"?secret="+otpSecret.text+"&counter="+otpCounter.text+"&digits="+otpLen.text;
             }
             if (otpurl != "") {
-              pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramQrsource: otpurl, paramLabel: otpLabel.text, paramQRId = -1});
+              pageStack.push(Qt.resolvedUrl("QRPage.qml"), {paramQrsource: otpurl, paramLabel: otpLabel.text, paramQRId: -1});
             } else {
               notify.show(qsTr("Can't create QR-Code from incomplete settings!"), 4000);
             }

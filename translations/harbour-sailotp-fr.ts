@@ -38,6 +38,96 @@ Licence : BSD (3 clauses)</translation>
     </message>
 </context>
 <context>
+    <name>AddOTP</name>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <source>Show QR-Code</source>
+        <translation>Afficher le code QR</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="72"/>
+        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <source>Can&apos;t create QR-Code from incomplete settings!</source>
+        <translation>Impossible de créer un code QR avec des paramètres incomplets !</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Add</source>
+        <translation>Ajouter</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <source>Time-based (TOTP)</source>
+        <translation>Basé sur le temps (TOTP)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <source>Counter-based (HOTP)</source>
+        <translation>Basé sur un compteur (HOTP)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <source>Steam Guard</source>
+        <translation>Steam Guard</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <source>Title</source>
+        <translation>Titre</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <source>Title for the OTP</source>
+        <translation>Titre de l&amp;apos;OTP</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <source>Secret (at least 16 characters)</source>
+        <translation>Secret (au moins 16 caractètres)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <source>Secret OTP Key</source>
+        <translation>Clé secrète OTP</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <source>Length</source>
+        <translation>Longueur</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <source>Length of the Token</source>
+        <translation>Longueur du jeton</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="156"/>
+        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <source>Time Derivation (Seconds)</source>
+        <translation>Dérivation de temps (secondes)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <source>Next Counter Value</source>
+        <translation>Prochaine valeur du compteur</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <source>Next Value of the Counter</source>
+        <translation>Prochaine valeur du compteur</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="63"/>
@@ -163,79 +253,79 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/MainView.qml" line="95"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="99"/>
         <source>Settings</source>
-        <translation type="unfinished">Paramètres</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="104"/>
         <source>Export / Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter / Importer</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="108"/>
         <source>Add Token</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Nothing here</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun mot de passe</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="123"/>
         <source>Pull down to add a OTP</source>
-        <translation type="unfinished"></translation>
+        <translation>Glissez vers le bas pour ajouter un OTP</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="158"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="179"/>
         <location filename="../qml/pages/MainView.qml" line="253"/>
         <source>Token for </source>
-        <translation type="unfinished"></translation>
+        <translation>OTP pour </translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="179"/>
         <location filename="../qml/pages/MainView.qml" line="253"/>
         <source> copied to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation> copié dans le presse-papier</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="249"/>
         <source>Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="257"/>
         <source>Show Token as QR-Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le code QR</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="262"/>
         <source>Move up</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers le haut</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="267"/>
         <source>Move down</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers le bas</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="272"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="278"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer</translation>
     </message>
 </context>
 <context>
@@ -243,7 +333,8 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
         <source>Can&apos;t create QR-Code from an empty String</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Impossible de créer un code QR à partir d&apos;une chaîne vide</translation>
     </message>
 </context>
 <context>
@@ -284,22 +375,25 @@ Licence : BSD (3 clauses)</translation>
     <message>
         <location filename="../qml/pages/Settings.qml" line="50"/>
         <source>Settings</source>
-        <translation type="unfinished">Paramètres</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Comportement</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
         <source>Show Token as QR on Tap</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Afficher le jeton sous forme de QR au toucher</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="69"/>
         <source>Hide Tokens and Reveal on Tap</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Google Translate</translatorcomment>
+        <translation>Masquer les jetons et révéler au robinet</translation>
     </message>
 </context>
 </TS>
