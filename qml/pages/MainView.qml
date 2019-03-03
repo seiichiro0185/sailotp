@@ -118,8 +118,6 @@ Page {
     }
 
 
-
-
     SilicaListView {
       id: otpList
       anchors.fill: parent

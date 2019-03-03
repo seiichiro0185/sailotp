@@ -30,7 +30,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
         <source>Support</source>
-        <translation>försörjning</translation>
+        <translation>Support</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="132"/>
@@ -104,18 +104,18 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="142"/>
         <source>Length</source>
-        <translation>längd</translation>
+        <translation>Längd</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="144"/>
         <source>Length of the Token</source>
-        <translation>Längden av token</translation>
+        <translation>Längd på token</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="156"/>
         <location filename="../qml/pages/AddOTP.qml" line="158"/>
         <source>Time Derivation (Seconds)</source>
-        <translation>Tidsavvikelsen (sekunder)</translation>
+        <translation>Tidsavvikelse (sekunder)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="170"/>
@@ -195,7 +195,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="149"/>
         <source>Repeated Password for the file</source>
-        <translation>Upprepat lösenord för filen</translation>
+        <translation>Upprepat lösenordet för filen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="173"/>
@@ -210,8 +210,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="189"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
-        <translatorcomment>Translated using Google Translate</translatorcomment>
-        <translation>Om du vill visa innehållet i exportfilen utanför SailOTP använder du följande openssl-kommando:</translation>
+        <translation>För att visa innehållet i exportfilen utanför SailOTP, använder du följande openssl-kommando:</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="211"/>
@@ -231,12 +230,12 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="219"/>
         <source>Could not read tokens from Database</source>
-        <translation>Kunde inte läsa in token från databasen</translation>
+        <translation>Kunde inte läsa token från databasen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="230"/>
         <source>Tokens imported from </source>
-        <translation>Token importerad från </translation>
+        <translation>Token importerade från </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="235"/>
@@ -306,7 +305,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/MainView.qml" line="264"/>
         <source>Show Token as QR-Code</source>
-        <translation>Visa QR-kod</translation>
+        <translation>Visa token som QR-kod</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="269"/>
@@ -334,7 +333,6 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/QRPage.qml" line="74"/>
         <source>Can&apos;t create QR-Code from an empty String</source>
-        <translatorcomment>Google Translate</translatorcomment>
         <translation>Kan inte skapa QR-kod från en tom sträng</translation>
     </message>
 </context>
@@ -343,7 +341,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="54"/>
         <source>Can&apos;t access temporary directory</source>
-        <translation>Kan inte komma åt temp-mapp</translation>
+        <translation>Kan inte komma åt temp-mappen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ScanOTP.qml" line="64"/>
@@ -381,20 +379,17 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/Settings.qml" line="52"/>
         <source>Behaviour</source>
-        <translatorcomment>Google Translate</translatorcomment>
         <translation>Beteende</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="56"/>
         <source>Show Token as QR on Tap</source>
-        <translatorcomment>Google Translate</translatorcomment>
-        <translation>Visa Token som QR på kran</translation>
+        <translation>Visa token som QR-kod, vid tryck</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="68"/>
         <source>Hide Tokens and Reveal on Tap</source>
-        <translatorcomment>Google Translate</translatorcomment>
-        <translation>Dölj tokens och avslöja på kranen</translation>
+        <translation>Dölj token och visa vid tryck</translation>
     </message>
 </context>
 </TS>
