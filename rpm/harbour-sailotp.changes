@@ -1,3 +1,6 @@
+* Sun Mar 03 2019 Stefan Brand <sailfish@seiichiro0185.org> 1.8.1-1
+- Translation Updates
+
 * Sun Feb 24 2019 Stefan Brand <sailfish@seiichiro0185.org> 1.8.0-1
 - Added possibility to show a Token as QR-Code
 - Added possibility to hide Tokens by default and reveal on tap
