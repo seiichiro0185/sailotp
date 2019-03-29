@@ -41,6 +41,7 @@ TRANSLATIONS = translations/harbour-sailotp-de.ts \
     translations/harbour-sailotp-pt_BR.ts \
     translations/harbour-sailotp-ru.ts \
     translations/harbour-sailotp-sv.ts \
+    translations/harbour-sailotp-nl.ts \
     translations/harbour-sailotp-zh_CN.ts
 
 include(src/qzxing/QZXing.pri)
