@@ -127,10 +127,9 @@ Dialog {
         text: paramKey != "" ? paramKey : ""
         placeholderText: qsTr("Secret OTP Key")
         focus: true
-        validator: RegExpValidator { regExp: /^(?:[A-Za-z2-7]{8})*(?:[A-Za-z2-7]{2}={6}|[A-Za-z2-7]{4}={4}|[A-Za-z2-7]{5}={3}|[A-Za-z2-7]{7}=)?$/ }
+        validator: RegExpValidator { regExp: /^(?:[A-Za-z2-7]{8})*(?:[A-Za-z2-7]{2}|[A-Za-z2-7]{4}|[A-Za-z2-7]{5}|[A-Za-z2-7]{7})?$/ }
         inputMethodHints: Qt.ImhNoPredictiveText
         horizontalAlignment: TextInput.AlignLeft
-
         EnterKey.enabled: text.length > 15
         EnterKey.iconSource: "image://theme/icon-m-enter-next"
         EnterKey.onClicked: otpLen.focus = true
