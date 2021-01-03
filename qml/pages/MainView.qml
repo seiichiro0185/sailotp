@@ -130,35 +130,63 @@ Page {
         hintText: qsTr("Pull down to add a OTP")
       }
 
-      header: Row {
-        height: Theme.itemSizeSmall
+      header: Column {
         width: parent.width
-        ProgressBar {
-          id: updateProgress
-          anchors.top: parent.top
-          // Hack to get the Progress Bar in roughly the same spot on Light and Dark Ambiances
-          anchors.topMargin: Theme.colorScheme === 0 ? Theme.paddingLarge * 1.1 : Theme.paddingSmall * 0.6
+        height: headerRow.height + searchRow.height
+        Row {
+          id: headerRow
           height: Theme.itemSizeSmall
-          width: parent.width * 0.65
-          maximumValue: 29
-          value: 29 - seconds_global
-          // Only show when there are enries
-          visible: appWin.listModel.count
+          width: parent.width
+          ProgressBar {
+            id: updateProgress
+            // Hack to get the Progress Bar in roughly the same spot on Light and Dark Ambiances
+            anchors.topMargin: Theme.colorScheme === 0 ? Theme.paddingLarge * 1.1 : Theme.paddingSmall * 0.6
+            height: Theme.itemSizeSmall
+            width: parent.width * 0.65
+            maximumValue: 29
+            value: 29 - seconds_global
+            // Only show when there are enries
+            visible: appWin.listModel.count
+          }
+          PageHeader {
+            id: header
+            anchors.top: parent.top
+            height: Theme.itemSizeSmall
+            width: parent.width * 0.35
+            title: "SailOTP"
+          }
         }
-        PageHeader {
-          id: header
-          anchors.top: parent.top
-          height: Theme.itemSizeSmall
-          width: parent.width * 0.35
-          title: "SailOTP"
+        Row {
+          id: searchRow
+          width: parent.width
+          TextField {
+            id: searchField
+            font.pixelSize: Theme.fontSizeMedium
+            width: parent.width - clearIcon.width
+            EnterKey.enabled: false
+            inputMethodHints: Qt.ImhNoPredictiveText // Qt.ImhPreferUppercase | Qt.ImhNoAutoUppercase
+            placeholderText: qsTr("Search")
+            onTextChanged: {
+              for (var i = 0; i < appWin.listModel.count; i++) {
+                appWin.listModel.get(i).itemVisible = appWin.listModel.get(i).title.toString().indexOf(searchField.text) > -1
+              }
+            }
+          }
+          IconButton {
+            id: clearIcon
+            icon.source: "image://theme/icon-m-backspace"
+            onClicked: searchField.text = ""
+            enabled: searchField.text.length > 0
+          }
         }
       }
 
       delegate: ListItem {
         id: otpListItem
         menu: otpContextMenu
-        contentHeight: Theme.itemSizeMedium
+        contentHeight: visible ? Theme.itemSizeMedium : 0
         width: parent.width
+        visible: itemVisible
 
         function remove() {
           // Show 5s countdown, then delete from DB and List
@@ -237,7 +265,7 @@ Page {
           }
         }
 
-        // Show an update button on HTOP-Type Tokens
+        // Show an update button on HOTP type tokens
         IconButton {
           icon.source: "image://theme/icon-m-refresh"
           anchors.right: parent.right
