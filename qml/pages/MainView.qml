@@ -168,7 +168,7 @@ Page {
             placeholderText: qsTr("Search")
             onTextChanged: {
               for (var i = 0; i < appWin.listModel.count; i++) {
-                appWin.listModel.get(i).itemVisible = appWin.listModel.get(i).title.toString().indexOf(searchField.text) > -1
+                appWin.listModel.get(i).itemVisible = appWin.listModel.get(i).title.toString().toLowerCase().indexOf(searchField.text.toLowerCase()) > -1
               }
             }
           }
