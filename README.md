@@ -33,7 +33,7 @@ or write an email to sailfish _AT_ seiichiro0185.org
 
 SailOTP is licensed under a 3-Clause BSD-License. See COPYING for details.
 
-## Accnowledgements
+## Acknowledgements
 
 SailOTP uses the SHA-1 and HMAC-Implementation from 
 
@@ -58,7 +58,7 @@ The qrencode library is used for QRCode-encoding existing tokens for export to o
 The following people have contributed to translating SailOTP:
 
   * Chinese: BirdZhang
-  * Finnish: Johan Heikkilä (hevanaa)
+  * Finnish: Johan Heikkilä (hevanaa), Jyri-Petteri Paloposki (ZeiP)
   * French: Romain Tartière (smortex)
   * Italian: Tichy
   * Russian: moorchegue
