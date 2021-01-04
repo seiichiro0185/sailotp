@@ -65,7 +65,7 @@ ApplicationWindow
 
   // Add an entry to the list
   function appendOTP(title, secret, type, counter, fav, len, diff) {
-    listModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "len": len, "diff": diff, "otp": "------"});
+    listModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "len": len, "diff": diff, "otp": "------", "itemVisible": true});
   }
 
   // Set the OTP shown on the Cover

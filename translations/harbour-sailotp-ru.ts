@@ -282,49 +282,54 @@ License: BSD (3-clause)</source>
         <translation>Потяните вниз чтобы добавить OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="165"/>
+        <location filename="../qml/pages/MainView.qml" line="168"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="193"/>
         <source>Deleting</source>
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="186"/>
-        <location filename="../qml/pages/MainView.qml" line="260"/>
+        <location filename="../qml/pages/MainView.qml" line="214"/>
+        <location filename="../qml/pages/MainView.qml" line="288"/>
         <source>Token for </source>
         <translation>Токен для </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="186"/>
-        <location filename="../qml/pages/MainView.qml" line="260"/>
+        <location filename="../qml/pages/MainView.qml" line="214"/>
+        <location filename="../qml/pages/MainView.qml" line="288"/>
         <source> copied to clipboard</source>
         <translation> скопирован в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="256"/>
+        <location filename="../qml/pages/MainView.qml" line="284"/>
         <source>Copy to Clipboard</source>
         <translation>Скопировать в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="264"/>
+        <location filename="../qml/pages/MainView.qml" line="292"/>
         <source>Show Token as QR-Code</source>
         <translation>Показать QR-код</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="269"/>
+        <location filename="../qml/pages/MainView.qml" line="297"/>
         <source>Move up</source>
         <translation>Передвинуть вниз</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="274"/>
+        <location filename="../qml/pages/MainView.qml" line="302"/>
         <source>Move down</source>
         <translation>Передвинуть вверх</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="279"/>
+        <location filename="../qml/pages/MainView.qml" line="307"/>
         <source>Edit</source>
         <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="313"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
