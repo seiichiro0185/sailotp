@@ -159,10 +159,12 @@ Page {
         Row {
           id: searchRow
           width: parent.width
-          TextField {
+          SearchField {
             id: searchField
             font.pixelSize: Theme.fontSizeMedium
-            width: parent.width - clearIcon.width
+            width: parent.width
+// This would be useful, but seems to break the button altogether. Perhaps it'll work later?
+//            canHide: true
             EnterKey.enabled: false
             inputMethodHints: Qt.ImhNoPredictiveText // Qt.ImhPreferUppercase | Qt.ImhNoAutoUppercase
             placeholderText: qsTr("Search")
@@ -171,12 +173,6 @@ Page {
                 appWin.listModel.get(i).itemVisible = appWin.listModel.get(i).title.toString().toLowerCase().indexOf(searchField.text.toLowerCase()) > -1
               }
             }
-          }
-          IconButton {
-            id: clearIcon
-            icon.source: "image://theme/icon-m-backspace"
-            onClicked: searchField.text = ""
-            enabled: searchField.text.length > 0
           }
         }
       }
