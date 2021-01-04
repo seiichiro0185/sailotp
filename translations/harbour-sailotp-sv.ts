@@ -281,49 +281,54 @@ Licens: BSD (3-clause)</translation>
         <translation>Dra neråt för att lägga till en OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="165"/>
+        <location filename="../qml/pages/MainView.qml" line="168"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainView.qml" line="193"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="186"/>
-        <location filename="../qml/pages/MainView.qml" line="260"/>
+        <location filename="../qml/pages/MainView.qml" line="214"/>
+        <location filename="../qml/pages/MainView.qml" line="288"/>
         <source>Token for </source>
         <translation>Token för </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="186"/>
-        <location filename="../qml/pages/MainView.qml" line="260"/>
+        <location filename="../qml/pages/MainView.qml" line="214"/>
+        <location filename="../qml/pages/MainView.qml" line="288"/>
         <source> copied to clipboard</source>
         <translation> kopierad till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="256"/>
+        <location filename="../qml/pages/MainView.qml" line="284"/>
         <source>Copy to Clipboard</source>
         <translation>Kopiera till Urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="264"/>
+        <location filename="../qml/pages/MainView.qml" line="292"/>
         <source>Show Token as QR-Code</source>
         <translation>Visa token som QR-kod</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="269"/>
+        <location filename="../qml/pages/MainView.qml" line="297"/>
         <source>Move up</source>
         <translation>Flytta upp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="274"/>
+        <location filename="../qml/pages/MainView.qml" line="302"/>
         <source>Move down</source>
         <translation>Flytta ner</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="279"/>
+        <location filename="../qml/pages/MainView.qml" line="307"/>
         <source>Edit</source>
         <translation>Redigera</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="313"/>
         <source>Delete</source>
         <translation>Ta bort</translation>
     </message>
