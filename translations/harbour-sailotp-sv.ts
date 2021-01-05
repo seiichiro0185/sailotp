@@ -283,7 +283,7 @@ Licens: BSD (3-clause)</translation>
     <message>
         <location filename="../qml/pages/MainView.qml" line="168"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="193"/>
