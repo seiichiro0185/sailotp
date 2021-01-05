@@ -47,13 +47,10 @@ Page {
       width: parent.width
       spacing: Theme.paddingSmall
 
-      TextArea {
-          id: spacer
-          anchors.horizontalCenter: parent.horizontalCenter
-          width: parent.width
-          readOnly: true
-          text: ""
-          height: Theme.paddingLarge*2
+      // Spacer
+      Item {
+        width: parent.width
+        height: Theme.paddingLarge
       }
       Image {
         id: logo
@@ -81,6 +78,11 @@ Page {
         text:  qsTr("(RFC 6238/4226 compatible)")
         color: Theme.primaryColor
       }
+      // Spacer
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
+      }
       Button {
         text: qsTr("Online Manual")
         anchors.horizontalCenter: parent.horizontalCenter
@@ -95,15 +97,20 @@ Page {
           Qt.openUrlExternally("https://github.com/seiichiro0185/sailotp/")
         }
       }
-      DetailItem {
-          width: parent.width
-          label: qsTr("Copyright")
-          value: "Stefan Brand"
+      // Spacer
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
       }
       DetailItem {
-          width: parent.width
-          label: qsTr("License")
-          value: qsTr("BSD (3-clause)")
+        width: parent.width
+        label: qsTr("Copyright")
+        value: "Stefan Brand"
+      }
+      DetailItem {
+        width: parent.width
+        label: qsTr("License")
+        value: qsTr("BSD (3-clause)")
       }
       Label {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -115,8 +122,8 @@ Page {
         color: Theme.secondaryHighlightColor
       }
       DetailItem {
-          label: qsTr("SteamGuard support")
-          value: "Robin Appelman"
+        label: qsTr("SteamGuard support")
+        value: "Robin Appelman"
       }
       Label {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -141,10 +148,10 @@ Page {
         font.pixelSize: Theme.fontSizeSmall
         horizontalAlignment: TextEdit.Center
         plainText: "\n"+qsTr("SailOTP uses the following third party libs:")+'
-            http://caligatio.github.io/jsSHA/
-            https://code.google.com/archive/p/crypto-js/
-            http://sourceforge.net/projects/qzxing/
-            http://fukuchi.org/works/qrencode/'
+          http://caligatio.github.io/jsSHA/
+          https://code.google.com/archive/p/crypto-js/
+          http://sourceforge.net/projects/qzxing/
+          http://fukuchi.org/works/qrencode/'
         color: Theme.secondaryHighlightColor
       }
     }
