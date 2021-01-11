@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="94"/>
         <source>Source Code &amp; Issue Tracker</source>
-        <translation>Sourcecode</translation>
+        <translation>Sourcecode &amp; Bugtracker</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="111"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>BSD (3-clause)</source>
-        <translation type=>BSD 3-Clause</translation>
+        <translation>BSD 3-Clause</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="139"/>
