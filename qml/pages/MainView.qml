@@ -139,9 +139,10 @@ Page {
           width: parent.width
           ProgressBar {
             id: updateProgress
-            // Hack to get the Progress Bar in roughly the same spot on Light and Dark Ambiances
-            anchors.topMargin: Theme.colorScheme === 0 ? Theme.paddingLarge * 1.1 : Theme.paddingSmall * 0.6
-            height: Theme.itemSizeSmall
+            anchors.topMargin: Theme.paddingLarge * 1.15
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            height: parent.height
             width: parent.width * 0.65
             maximumValue: 29
             value: 29 - seconds_global
