@@ -102,28 +102,14 @@ Page {
         width: parent.width
         height: Theme.paddingMedium
       }
-      DetailItem {
-        width: parent.width
-        label: qsTr("Copyright")
-        value: "Stefan Brand"
-      }
-      DetailItem {
-        width: parent.width
-        label: qsTr("License")
-        value: qsTr("BSD (3-clause)")
-      }
       Label {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
         font.pixelSize: Theme.fontSizeSmall
-        horizontalAlignment: TextEdit.Center
+        horizontalAlignment: Text.Center
         wrapMode: Text.WordWrap
-        text: qsTr("Contributors:")
+        text: qsTr("Copyright") + " Stefan Brand"
         color: Theme.secondaryHighlightColor
-      }
-      DetailItem {
-        label: qsTr("SteamGuard support")
-        value: "Robin Appelman"
       }
       Label {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -131,22 +117,126 @@ Page {
         font.pixelSize: Theme.fontSizeSmall
         horizontalAlignment: Text.Center
         wrapMode: Text.WordWrap
-        text: qsTr("Translators:")
+        text: qsTr("License") + " " + qsTr("BSD (3-clause)")
         color: Theme.secondaryHighlightColor
+      }
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
       }
       Label {
         anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width * 0.8
-        font.pixelSize: Theme.fontSizeSmall
+        width: parent.width
+        font.pixelSize: Theme.fontSizeMedium
+        horizontalAlignment: TextEdit.Center
         wrapMode: Text.WordWrap
-        text: "Chinese: BirdZhang\nFinnish: Johan Heikkilä\nFrench: Romain Tartière\nItalian: Tichy\nDutch: JSEHV\nRussian: moorchegue\nSpanish: p4moedo\nSwedish: Åke Engelbrektson\nEnglish: Stefan Brand\nGerman: Stefan Brand"
-        color: Theme.highlightColor
+        text: qsTr("Contributors:")
+        color: Theme.secondaryHighlightColor
+      }
+      DetailItem {
+        width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+        label: qsTr("SteamGuard support")
+        value: "Robin Appelman"
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+
+      }
+      DetailItem {
+        label: qsTr("Search")
+        value: "Jyri-Petteri Paloposki"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
+      }
+      Label {
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        font.pixelSize: Theme.fontSizeMedium
+        horizontalAlignment: Text.Center
+        wrapMode: Text.WordWrap
+        text: qsTr("Translators:")
+        color: Theme.secondaryHighlightColor
+      }
+      DetailItem {
+        label: "Chinese"
+        value: "BirdZhang"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Finnish"
+        value: "Johan Heikkilä, Jyri-Petteri Paloposki"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "French"
+        value: "Romain Tartière"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Italian"
+        value: "Tichy"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Dutch"
+        value: "JSEHV"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Russian"
+        value: "moorchegue"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Spanish"
+        value: "p4moedo"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Swedish"
+        value: "Åke Engelbrektson"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "English"
+        value: "Stefan Brand"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "German"
+        value: "Stefan Brand"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
       }
       LinkedLabel {
         anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width
+        width: parent.width - Theme.paddingLarge*4
         font.pixelSize: Theme.fontSizeSmall
-        horizontalAlignment: TextEdit.Center
+        horizontalAlignment: TextEdit.left
         plainText: "\n"+qsTr("SailOTP uses the following third party libs:")+'
           http://caligatio.github.io/jsSHA/
           https://code.google.com/archive/p/crypto-js/

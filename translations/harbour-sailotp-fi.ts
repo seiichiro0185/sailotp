@@ -14,32 +14,37 @@
         <translation>Lähdekoodi ja virheilmoitukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="107"/>
+        <location filename="../qml/pages/About.qml" line="111"/>
         <source>Copyright</source>
         <translation>Tekijänoikeus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="112"/>
+        <location filename="../qml/pages/About.qml" line="120"/>
         <source>License</source>
         <translation>Lisenssi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="113"/>
+        <location filename="../qml/pages/About.qml" line="120"/>
         <source>BSD (3-clause)</source>
         <translation>BSD (3 lauseen)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
+        <location filename="../qml/pages/About.qml" line="133"/>
         <source>Contributors:</source>
         <translation>Projektiin osallistuneet:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="125"/>
+        <location filename="../qml/pages/About.qml" line="139"/>
         <source>SteamGuard support</source>
         <translation>SteamGuard-tuki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="150"/>
+        <location filename="../qml/pages/About.qml" line="146"/>
+        <source>Search</source>
+        <translation type="unfinished">Etsi</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="240"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP käyttää seuraavia kolmannen osapuolen kirjastoja:</translation>
     </message>
@@ -54,7 +59,7 @@
         <translation>(RFC 6238/4226 -yhteensopiva)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="134"/>
+        <location filename="../qml/pages/About.qml" line="162"/>
         <source>Translators:</source>
         <translation>Kääntäjät:</translation>
     </message>
