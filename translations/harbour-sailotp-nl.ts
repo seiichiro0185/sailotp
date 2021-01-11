@@ -4,36 +4,62 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="75"/>
-        <source>A Simple Sailfish OTP Generator
-(RFC 6238/4226 compatible)</source>
-        <translation>Een simple Sailfish OTP generator
-(RFC 6238/4226 compatible)</translation>
+        <location filename="../qml/pages/About.qml" line="70"/>
+        <source>A simple Sailfish OTP generator</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="84"/>
-        <source>Copyright: Stefan Brand
-License: BSD (3-clause)</source>
-        <translation>Auteursrechten: Stefan Brand
-Licentie: BSD (3-clause)</translation>
+        <location filename="../qml/pages/About.qml" line="78"/>
+        <source>(RFC 6238/4226 compatible)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="110"/>
+        <location filename="../qml/pages/About.qml" line="87"/>
+        <source>Online Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="94"/>
+        <source>Source Code &amp; Issue Tracker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="111"/>
+        <source>Copyright</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="120"/>
+        <source>License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="120"/>
+        <source>BSD (3-clause)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="139"/>
+        <source>SteamGuard support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="146"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="240"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP gebruikt de volgende bibliotheken van derden:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
+        <location filename="../qml/pages/About.qml" line="133"/>
         <source>Contributors:</source>
         <translation>Bijdragers:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
-        <source>Support</source>
-        <translation>Ondersteuning</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/About.qml" line="132"/>
+        <location filename="../qml/pages/About.qml" line="162"/>
         <source>Translators:</source>
         <translation>Vertalers:</translation>
     </message>
@@ -281,54 +307,54 @@ Licentie: BSD (3-clause)</translation>
         <translation>Veeg naar beneden om een OTP toe te voegen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="168"/>
+        <location filename="../qml/pages/MainView.qml" line="171"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="193"/>
+        <location filename="../qml/pages/MainView.qml" line="190"/>
         <source>Deleting</source>
         <translation>Wissen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="214"/>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="211"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Token for </source>
         <translation>Token voor </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="214"/>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="211"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source> copied to clipboard</source>
         <translation> gekopieerd naar het klembord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="284"/>
+        <location filename="../qml/pages/MainView.qml" line="281"/>
         <source>Copy to Clipboard</source>
         <translation>Kopieer naar klembord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="292"/>
+        <location filename="../qml/pages/MainView.qml" line="289"/>
         <source>Show Token as QR-Code</source>
         <translation>Geeft token als QR-code weer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="297"/>
+        <location filename="../qml/pages/MainView.qml" line="294"/>
         <source>Move up</source>
         <translation>Verplaats naar boven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="302"/>
+        <location filename="../qml/pages/MainView.qml" line="299"/>
         <source>Move down</source>
         <translation>Verplaats naar beneden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="307"/>
+        <location filename="../qml/pages/MainView.qml" line="304"/>
         <source>Edit</source>
         <translation>Wijzig</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="313"/>
+        <location filename="../qml/pages/MainView.qml" line="310"/>
         <source>Delete</source>
         <translation>Verwijder</translation>
     </message>

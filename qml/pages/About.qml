@@ -47,13 +47,10 @@ Page {
       width: parent.width
       spacing: Theme.paddingSmall
 
-      TextArea {
-          id: spacer
-          anchors.horizontalCenter: parent.horizontalCenter
-          width: parent.width
-          readOnly: true
-          text: ""
-          height: Theme.paddingLarge*2
+      // Spacer
+      Item {
+        width: parent.width
+        height: Theme.paddingLarge
       }
       Image {
         id: logo
@@ -66,71 +63,186 @@ Page {
         font.bold: true
         text: "SailOTP " + Qt.application.version
       }
-      TextArea {
-        id: desc
+      Label {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
         horizontalAlignment: TextEdit.Center
-        readOnly: true
-        text:  qsTr("A Simple Sailfish OTP Generator\n(RFC 6238/4226 compatible)")
+        text:  qsTr("A simple Sailfish OTP generator")
         color: Theme.primaryColor
       }
-      TextArea {
-        id: copyright
+      Label {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
         horizontalAlignment: TextEdit.Center
-        readOnly: true
-        text: qsTr("Copyright: Stefan Brand\nLicense: BSD (3-clause)")
+        font.pixelSize: Theme.fontSizeSmall
+        text:  qsTr("(RFC 6238/4226 compatible)")
         color: Theme.primaryColor
+      }
+      // Spacer
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
       }
       Button {
-        id: manual
+        text: qsTr("Online Manual")
         anchors.horizontalCenter: parent.horizontalCenter
-        text: "<a href=\"https://www.seiichiro0185.org/sailfish:apps:sailotp:manual\">Online Manual</a>"
         onClicked: {
           Qt.openUrlExternally("https://www.seiichiro0185.org/sailfish:apps:sailotp:manual")
         }
       }
       Button {
-        id: homepage
+        text: qsTr("Source Code & Issue Tracker")
         anchors.horizontalCenter: parent.horizontalCenter
-        text: "<a href=\"https://github.com/seiichiro0185/sailotp/\">Source Code & Issue Tracker</a>"
         onClicked: {
           Qt.openUrlExternally("https://github.com/seiichiro0185/sailotp/")
         }
       }
-      TextArea {
-        id: acknowledgement
-        anchors.horizontalCenter: parent.horizontalCenter
+      // Spacer
+      Item {
         width: parent.width
-        font.pixelSize: Theme.fontSizeSmall
-        horizontalAlignment: TextEdit.Center
-        readOnly: true
-        text: "\n"+qsTr("SailOTP uses the following third party libs:")+"\n\nhttp://caligatio.github.io/jsSHA/\nhttps://code.google.com/archive/p/crypto-js/\nhttp://sourceforge.net/projects/qzxing/\nhttp://fukuchi.org/works/qrencode/"
-        color: Theme.primaryColor
+        height: Theme.paddingMedium
       }
-
-      TextArea {
-        id: contributors
+      Label {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
         font.pixelSize: Theme.fontSizeSmall
-        horizontalAlignment: TextEdit.Center
-        readOnly: true
-        text: qsTr("Contributors:")+"\n\nRobin Appelman: SteamGuard "+qsTr("Support")
-        color: Theme.primaryColor
+        horizontalAlignment: Text.Center
+        wrapMode: Text.WordWrap
+        text: qsTr("Copyright") + " Stefan Brand"
+        color: Theme.secondaryHighlightColor
       }
-
-      TextArea {
-        id: translators
+      Label {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
         font.pixelSize: Theme.fontSizeSmall
+        horizontalAlignment: Text.Center
+        wrapMode: Text.WordWrap
+        text: qsTr("License") + " " + qsTr("BSD (3-clause)")
+        color: Theme.secondaryHighlightColor
+      }
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
+      }
+      Label {
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        font.pixelSize: Theme.fontSizeMedium
         horizontalAlignment: TextEdit.Center
-        readOnly: true
-        text: qsTr("Translators:")+"\n\nChinese: BirdZhang\nFinnish: Johan Heikkilä\nFrench: Romain Tartière\nItalian: Tichy\nDutch: JSEHV\nRussian: moorchegue\nSpanish: p4moedo\nSwedish: Åke Engelbrektson\nEnglish: Stefan Brand\nGerman: Stefan Brand"
-        color: Theme.primaryColor
+        wrapMode: Text.WordWrap
+        text: qsTr("Contributors:")
+        color: Theme.secondaryHighlightColor
+      }
+      DetailItem {
+        width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+        label: qsTr("SteamGuard support")
+        value: "Robin Appelman"
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+
+      }
+      DetailItem {
+        label: qsTr("Search")
+        value: "Jyri-Petteri Paloposki"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      Item {
+        width: parent.width
+        height: Theme.paddingMedium
+      }
+      Label {
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        font.pixelSize: Theme.fontSizeMedium
+        horizontalAlignment: Text.Center
+        wrapMode: Text.WordWrap
+        text: qsTr("Translators:")
+        color: Theme.secondaryHighlightColor
+      }
+      DetailItem {
+        label: "Chinese"
+        value: "BirdZhang"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Finnish"
+        value: "Johan Heikkilä, Jyri-Petteri Paloposki"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "French"
+        value: "Romain Tartière"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Italian"
+        value: "Tichy"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Dutch"
+        value: "JSEHV"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Russian"
+        value: "moorchegue"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Spanish"
+        value: "p4moedo"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "Swedish"
+        value: "Åke Engelbrektson"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "English"
+        value: "Stefan Brand"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: "German"
+        value: "Stefan Brand"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      LinkedLabel {
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width - Theme.paddingLarge*4
+        font.pixelSize: Theme.fontSizeSmall
+        horizontalAlignment: TextEdit.left
+        plainText: "\n"+qsTr("SailOTP uses the following third party libs:")+'
+          http://caligatio.github.io/jsSHA/
+          https://code.google.com/archive/p/crypto-js/
+          http://sourceforge.net/projects/qzxing/
+          http://fukuchi.org/works/qrencode/'
+        color: Theme.secondaryHighlightColor
       }
     }
     VerticalScrollDecorator { }
