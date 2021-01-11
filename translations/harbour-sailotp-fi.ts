@@ -4,23 +4,29 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="75"/>
-        <source>A Simple Sailfish OTP Generator
-(RFC 6238/4226 compatible)</source>
-        <translation>Yksinkertainen OTP- eli kertasalasanasovellus Sailfishille
-(RFC 6238-/4226-yhteensopiva)</translation>
+        <location filename="../qml/pages/About.qml" line="87"/>
+        <source>Online Manual</source>
+        <translation>Ohje verkossa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="84"/>
-        <source>Copyright: Stefan Brand
-License: BSD (3-clause)</source>
-        <translation>Copyright: Stefan Brand
-Lisenssi: BSD (3 lausekkeen)</translation>
+        <location filename="../qml/pages/About.qml" line="94"/>
+        <source>Source Code &amp; Issue Tracker</source>
+        <translation>Lähdekoodi ja virheilmoitukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="110"/>
-        <source>SailOTP uses the following third party libs:</source>
-        <translation>SailOTP käyttää seuraavia kolmannen osapuolen kirjastoja:</translation>
+        <location filename="../qml/pages/About.qml" line="107"/>
+        <source>Copyright</source>
+        <translation>Tekijänoikeus</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="112"/>
+        <source>License</source>
+        <translation>Lisenssi</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="113"/>
+        <source>BSD (3-clause)</source>
+        <translation>BSD (3 lauseen)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="121"/>
@@ -28,12 +34,27 @@ Lisenssi: BSD (3 lausekkeen)</translation>
         <translation>Projektiin osallistuneet:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
-        <source>Support</source>
-        <translation>Tuki</translation>
+        <location filename="../qml/pages/About.qml" line="125"/>
+        <source>SteamGuard support</source>
+        <translation>SteamGuard-tuki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="132"/>
+        <location filename="../qml/pages/About.qml" line="150"/>
+        <source>SailOTP uses the following third party libs:</source>
+        <translation>SailOTP käyttää seuraavia kolmannen osapuolen kirjastoja:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="70"/>
+        <source>A simple Sailfish OTP generator</source>
+        <translation>Yksinkertainen OTP- eli kertasalasanasovellus Sailfishille</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="78"/>
+        <source>(RFC 6238/4226 compatible)</source>
+        <translation>(RFC 6238/4226 -yhteensopiva)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="134"/>
         <source>Translators:</source>
         <translation>Kääntäjät:</translation>
     </message>
@@ -281,54 +302,54 @@ Lisenssi: BSD (3 lausekkeen)</translation>
         <translation>Vedä alaspäin lisätäksesi kertasalasanatunnuksen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="168"/>
+        <location filename="../qml/pages/MainView.qml" line="170"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="193"/>
+        <location filename="../qml/pages/MainView.qml" line="189"/>
         <source>Deleting</source>
         <translation>Poistetaan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="214"/>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="210"/>
+        <location filename="../qml/pages/MainView.qml" line="284"/>
         <source>Token for </source>
         <translation>Kertasalasana palveluun </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="214"/>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="210"/>
+        <location filename="../qml/pages/MainView.qml" line="284"/>
         <source> copied to clipboard</source>
         <translation> on kopioitu leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="284"/>
+        <location filename="../qml/pages/MainView.qml" line="280"/>
         <source>Copy to Clipboard</source>
         <translation>Kopioi leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="292"/>
+        <location filename="../qml/pages/MainView.qml" line="288"/>
         <source>Show Token as QR-Code</source>
         <translation>Näytä kertasalasana QR-koodina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="297"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source>Move up</source>
         <translation>Siirrä ylöspäin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="302"/>
+        <location filename="../qml/pages/MainView.qml" line="298"/>
         <source>Move down</source>
         <translation>Siirrä alaspäin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="307"/>
+        <location filename="../qml/pages/MainView.qml" line="303"/>
         <source>Edit</source>
         <translation>Muokkaa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="313"/>
+        <location filename="../qml/pages/MainView.qml" line="309"/>
         <source>Delete</source>
         <translation>Poista</translation>
     </message>
