@@ -4,35 +4,62 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="75"/>
-        <source>A Simple Sailfish OTP Generator
-(RFC 6238/4226 compatible)</source>
-        <translation>一个简单的旗鱼OTP生成器&lt;br/&gt;(RFC 6238/4226 兼容)</translation>
+        <location filename="../qml/pages/About.qml" line="70"/>
+        <source>A simple Sailfish OTP generator</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="84"/>
-        <source>Copyright: Stefan Brand
-License: BSD (3-clause)</source>
-        <translation>版权所有：Stefan Brand
-许可证: BSD (3-clause)</translation>
+        <location filename="../qml/pages/About.qml" line="78"/>
+        <source>(RFC 6238/4226 compatible)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="110"/>
+        <location filename="../qml/pages/About.qml" line="87"/>
+        <source>Online Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="94"/>
+        <source>Source Code &amp; Issue Tracker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="111"/>
+        <source>Copyright</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="120"/>
+        <source>License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="120"/>
+        <source>BSD (3-clause)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="139"/>
+        <source>SteamGuard support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="146"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="240"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP使用下面的第三方库：</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
+        <location filename="../qml/pages/About.qml" line="133"/>
         <source>Contributors:</source>
         <translation>贡献者:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
-        <source>Support</source>
-        <translation>支持</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/About.qml" line="132"/>
+        <location filename="../qml/pages/About.qml" line="162"/>
         <source>Translators:</source>
         <translation>翻译:</translation>
     </message>
@@ -280,54 +307,54 @@ License: BSD (3-clause)</source>
         <translation>下拉添加一个OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="168"/>
+        <location filename="../qml/pages/MainView.qml" line="171"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="193"/>
+        <location filename="../qml/pages/MainView.qml" line="190"/>
         <source>Deleting</source>
         <translation>删除中</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="214"/>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="211"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Token for </source>
         <translation>令牌</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="214"/>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="211"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source> copied to clipboard</source>
         <translation> 已复制到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="284"/>
+        <location filename="../qml/pages/MainView.qml" line="281"/>
         <source>Copy to Clipboard</source>
         <translation>复制到剪贴板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="292"/>
+        <location filename="../qml/pages/MainView.qml" line="289"/>
         <source>Show Token as QR-Code</source>
         <translation>显示二维码</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="297"/>
+        <location filename="../qml/pages/MainView.qml" line="294"/>
         <source>Move up</source>
         <translation>向上</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="302"/>
+        <location filename="../qml/pages/MainView.qml" line="299"/>
         <source>Move down</source>
         <translation>向下</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="307"/>
+        <location filename="../qml/pages/MainView.qml" line="304"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="313"/>
+        <location filename="../qml/pages/MainView.qml" line="310"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>

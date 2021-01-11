@@ -14,32 +14,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="107"/>
+        <location filename="../qml/pages/About.qml" line="111"/>
         <source>Copyright</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="112"/>
+        <location filename="../qml/pages/About.qml" line="120"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="113"/>
+        <location filename="../qml/pages/About.qml" line="120"/>
         <source>BSD (3-clause)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="121"/>
+        <location filename="../qml/pages/About.qml" line="133"/>
         <source>Contributors:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="125"/>
+        <location filename="../qml/pages/About.qml" line="139"/>
         <source>SteamGuard support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="150"/>
+        <location filename="../qml/pages/About.qml" line="146"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="240"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation></translation>
     </message>
@@ -54,7 +59,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="134"/>
+        <location filename="../qml/pages/About.qml" line="162"/>
         <source>Translators:</source>
         <translation>Translators:</translation>
     </message>
@@ -302,54 +307,54 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="170"/>
+        <location filename="../qml/pages/MainView.qml" line="171"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="189"/>
+        <location filename="../qml/pages/MainView.qml" line="190"/>
         <source>Deleting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="210"/>
-        <location filename="../qml/pages/MainView.qml" line="284"/>
+        <location filename="../qml/pages/MainView.qml" line="211"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source>Token for </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="210"/>
-        <location filename="../qml/pages/MainView.qml" line="284"/>
+        <location filename="../qml/pages/MainView.qml" line="211"/>
+        <location filename="../qml/pages/MainView.qml" line="285"/>
         <source> copied to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="280"/>
+        <location filename="../qml/pages/MainView.qml" line="281"/>
         <source>Copy to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="288"/>
+        <location filename="../qml/pages/MainView.qml" line="289"/>
         <source>Show Token as QR-Code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="293"/>
+        <location filename="../qml/pages/MainView.qml" line="294"/>
         <source>Move up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="298"/>
+        <location filename="../qml/pages/MainView.qml" line="299"/>
         <source>Move down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="303"/>
+        <location filename="../qml/pages/MainView.qml" line="304"/>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="309"/>
+        <location filename="../qml/pages/MainView.qml" line="310"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
