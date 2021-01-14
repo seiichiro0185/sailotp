@@ -41,6 +41,7 @@ Page {
   // This holds the time of the last update of the page as Unix Timestamp (in Milliseconds)
   property double lastUpdated: 0
   property double seconds_global: 0
+  property string searchTerm: ""
 
   // Reload the List of OTPs from storage
   function refreshOTPList() {
@@ -79,11 +80,17 @@ Page {
     lastUpdated = curDate.getTime();
   }
 
-  // Reload OTP List on Return to the Page (to e.g. accomodate changed scd ettings)
+  // Reload OTP List on Return to the Page (to e.g. accomodate changed settings)
   onStatusChanged: {
-      if (status === PageStatus.Activating) {
-        refreshOTPList();
+    if (status === PageStatus.Activating) {
+      refreshOTPList();
+
+      if (searchTerm != "") {
+        for (var i = 0; i < appWin.listModel.count; i++) {
+          appWin.listModel.get(i).itemVisible = appWin.listModel.get(i).title.toString().toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        }
       }
+    }
   }
 
   Timer {
@@ -167,6 +174,7 @@ Page {
             inputMethodHints: Qt.ImhNoPredictiveText // Qt.ImhPreferUppercase | Qt.ImhNoAutoUppercase
             placeholderText: qsTr("Search")
             onTextChanged: {
+              searchTerm = searchField.text
               for (var i = 0; i < appWin.listModel.count; i++) {
                 appWin.listModel.get(i).itemVisible = appWin.listModel.get(i).title.toString().toLowerCase().indexOf(searchField.text.toLowerCase()) > -1
               }
