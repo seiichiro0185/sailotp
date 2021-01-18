@@ -277,84 +277,84 @@
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="102"/>
+        <location filename="../qml/pages/MainView.qml" line="109"/>
         <source>About</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="106"/>
+        <location filename="../qml/pages/MainView.qml" line="113"/>
         <source>Settings</source>
         <translation>Imopstazioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="111"/>
+        <location filename="../qml/pages/MainView.qml" line="118"/>
         <source>Export / Import</source>
         <translation>Esporta / Importa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="115"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Add Token</source>
         <translation>Aggiungi Token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="129"/>
+        <location filename="../qml/pages/MainView.qml" line="136"/>
         <source>Nothing here</source>
         <translation>Qua non c&amp;apos;è nulla</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="130"/>
+        <location filename="../qml/pages/MainView.qml" line="137"/>
         <source>Pull down to add a OTP</source>
         <translation>Trascina giù per aggiungere una OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="171"/>
+        <location filename="../qml/pages/MainView.qml" line="178"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="190"/>
+        <location filename="../qml/pages/MainView.qml" line="198"/>
         <source>Deleting</source>
         <translation>Cancellazione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="211"/>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="219"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source>Token for </source>
         <translation>Token per </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="211"/>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="219"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source> copied to clipboard</source>
         <translation> copiato negli appunti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="281"/>
+        <location filename="../qml/pages/MainView.qml" line="289"/>
         <source>Copy to Clipboard</source>
         <translation>Copia negli appunti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="289"/>
+        <location filename="../qml/pages/MainView.qml" line="297"/>
         <source>Show Token as QR-Code</source>
         <translation>Mostra Codice QR</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="294"/>
+        <location filename="../qml/pages/MainView.qml" line="302"/>
         <source>Move up</source>
         <translation>&gt;Sposta su</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="299"/>
+        <location filename="../qml/pages/MainView.qml" line="307"/>
         <source>Move down</source>
         <translation>Sposta giù</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="304"/>
+        <location filename="../qml/pages/MainView.qml" line="312"/>
         <source>Edit</source>
         <translation>Modifica</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="310"/>
+        <location filename="../qml/pages/MainView.qml" line="318"/>
         <source>Delete</source>
         <translation>Cancella</translation>
     </message>

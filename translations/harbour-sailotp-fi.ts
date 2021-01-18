@@ -277,84 +277,84 @@
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="102"/>
+        <location filename="../qml/pages/MainView.qml" line="109"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="106"/>
+        <location filename="../qml/pages/MainView.qml" line="113"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="111"/>
+        <location filename="../qml/pages/MainView.qml" line="118"/>
         <source>Export / Import</source>
         <translation>Vie / Tuo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="115"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Add Token</source>
         <translation>Lisää tunnus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="129"/>
+        <location filename="../qml/pages/MainView.qml" line="136"/>
         <source>Nothing here</source>
         <translation>Tyhjää täynnä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="130"/>
+        <location filename="../qml/pages/MainView.qml" line="137"/>
         <source>Pull down to add a OTP</source>
         <translation>Vedä alaspäin lisätäksesi kertasalasanatunnuksen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="171"/>
+        <location filename="../qml/pages/MainView.qml" line="178"/>
         <source>Search</source>
         <translation>Etsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="190"/>
+        <location filename="../qml/pages/MainView.qml" line="198"/>
         <source>Deleting</source>
         <translation>Poistetaan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="211"/>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="219"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source>Token for </source>
         <translation>Kertasalasana palveluun </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="211"/>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="219"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source> copied to clipboard</source>
         <translation> on kopioitu leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="281"/>
+        <location filename="../qml/pages/MainView.qml" line="289"/>
         <source>Copy to Clipboard</source>
         <translation>Kopioi leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="289"/>
+        <location filename="../qml/pages/MainView.qml" line="297"/>
         <source>Show Token as QR-Code</source>
         <translation>Näytä kertasalasana QR-koodina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="294"/>
+        <location filename="../qml/pages/MainView.qml" line="302"/>
         <source>Move up</source>
         <translation>Siirrä ylöspäin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="299"/>
+        <location filename="../qml/pages/MainView.qml" line="307"/>
         <source>Move down</source>
         <translation>Siirrä alaspäin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="304"/>
+        <location filename="../qml/pages/MainView.qml" line="312"/>
         <source>Edit</source>
         <translation>Muokkaa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="310"/>
+        <location filename="../qml/pages/MainView.qml" line="318"/>
         <source>Delete</source>
         <translation>Poista</translation>
     </message>
