@@ -277,84 +277,84 @@
 <context>
     <name>MainView</name>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="102"/>
+        <location filename="../qml/pages/MainView.qml" line="109"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="106"/>
+        <location filename="../qml/pages/MainView.qml" line="113"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="111"/>
+        <location filename="../qml/pages/MainView.qml" line="118"/>
         <source>Export / Import</source>
         <translation>Exporteer / Importeer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="115"/>
+        <location filename="../qml/pages/MainView.qml" line="122"/>
         <source>Add Token</source>
         <translation>Voeg token toe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="129"/>
+        <location filename="../qml/pages/MainView.qml" line="136"/>
         <source>Nothing here</source>
         <translation>Niets weer te geven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="130"/>
+        <location filename="../qml/pages/MainView.qml" line="137"/>
         <source>Pull down to add a OTP</source>
         <translation>Veeg naar beneden om een OTP toe te voegen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="171"/>
+        <location filename="../qml/pages/MainView.qml" line="178"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="190"/>
+        <location filename="../qml/pages/MainView.qml" line="198"/>
         <source>Deleting</source>
         <translation>Wissen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="211"/>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="219"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source>Token for </source>
         <translation>Token voor </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="211"/>
-        <location filename="../qml/pages/MainView.qml" line="285"/>
+        <location filename="../qml/pages/MainView.qml" line="219"/>
+        <location filename="../qml/pages/MainView.qml" line="293"/>
         <source> copied to clipboard</source>
         <translation> gekopieerd naar het klembord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="281"/>
+        <location filename="../qml/pages/MainView.qml" line="289"/>
         <source>Copy to Clipboard</source>
         <translation>Kopieer naar klembord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="289"/>
+        <location filename="../qml/pages/MainView.qml" line="297"/>
         <source>Show Token as QR-Code</source>
         <translation>Geeft token als QR-code weer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="294"/>
+        <location filename="../qml/pages/MainView.qml" line="302"/>
         <source>Move up</source>
         <translation>Verplaats naar boven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="299"/>
+        <location filename="../qml/pages/MainView.qml" line="307"/>
         <source>Move down</source>
         <translation>Verplaats naar beneden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="304"/>
+        <location filename="../qml/pages/MainView.qml" line="312"/>
         <source>Edit</source>
         <translation>Wijzig</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainView.qml" line="310"/>
+        <location filename="../qml/pages/MainView.qml" line="318"/>
         <source>Delete</source>
         <translation>Verwijder</translation>
     </message>
