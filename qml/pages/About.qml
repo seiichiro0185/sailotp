@@ -170,6 +170,13 @@ Page {
         leftMargin: Theme.paddingLarge*2
       }
       DetailItem {
+        label: "Dutch"
+        value: "JSEHV"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
         label: "Finnish"
         value: "Johan Heikkilä, Jyri-Petteri Paloposki"
         width: parent.width
@@ -191,8 +198,8 @@ Page {
         leftMargin: Theme.paddingLarge*2
       }
       DetailItem {
-        label: "Dutch"
-        value: "JSEHV"
+        label: "Hungarian"
+        value: "1Zgp"
         width: parent.width
         alignment: Qt.AlignLeft
         leftMargin: Theme.paddingLarge*2
