@@ -44,7 +44,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="240"/>
+        <location filename="../qml/pages/About.qml" line="247"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation></translation>
     </message>

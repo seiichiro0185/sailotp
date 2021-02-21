@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_GB">
+<TS version="2.1" language="hu_HU">
 <context>
     <name>About</name>
     <message>
@@ -44,7 +44,7 @@
         <translation>Keresés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="240"/>
+        <location filename="../qml/pages/About.qml" line="247"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>A SailOTP a következő harmadik féltől származó könyvtárakat használja:</translation>
     </message>
