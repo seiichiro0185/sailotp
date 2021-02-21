@@ -61,6 +61,7 @@ The following people have contributed to translating SailOTP:
   * Finnish: Johan Heikkilä (hevanaa), Jyri-Petteri Paloposki (ZeiP)
   * French: Romain Tartière (smortex)
   * Italian: Tichy
+  * Hungarian: 1Zgp
   * Russian: moorchegue
   * Spanish: p4moedo
   * Swedish: Åke Engelbrektson (eson57)

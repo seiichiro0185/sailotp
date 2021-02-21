@@ -49,7 +49,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="240"/>
+        <location filename="../qml/pages/About.qml" line="247"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP使用下面的第三方库：</translation>
     </message>
