@@ -163,6 +163,13 @@ Page {
         color: Theme.secondaryHighlightColor
       }
       DetailItem {
+        label: "Brazilian Portuguese"
+        value: "caio2k"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
         label: "Chinese"
         value: "BirdZhang"
         width: parent.width

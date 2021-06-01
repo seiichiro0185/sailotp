@@ -57,6 +57,7 @@ The qrencode library is used for QRCode-encoding existing tokens for export to o
 
 The following people have contributed to translating SailOTP:
 
+  * Brazilian Portuguese: caio2k
   * Chinese: BirdZhang
   * Finnish: Johan Heikkilä (hevanaa), Jyri-Petteri Paloposki (ZeiP)
   * French: Romain Tartière (smortex)
