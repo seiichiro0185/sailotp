@@ -49,7 +49,12 @@
         <translation>Suche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="247"/>
+        <location filename="../qml/pages/About.qml" line="153"/>
+        <source>Icon</source>
+        <translation>Icon</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="261"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP verwendet folgende externe Bibliotheken:</translation>
     </message>
@@ -59,7 +64,7 @@
         <translation>Mitwirkende:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="162"/>
+        <location filename="../qml/pages/About.qml" line="169"/>
         <source>Translators:</source>
         <translation>Übersetzer:</translation>
     </message>

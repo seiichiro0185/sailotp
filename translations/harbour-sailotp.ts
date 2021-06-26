@@ -44,14 +44,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="247"/>
+        <location filename="../qml/pages/About.qml" line="153"/>
+        <source>Icon</source>
+        <translation>Icon</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="261"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="70"/>
         <source>A simple Sailfish OTP generator</source>
-        <translation type="unfinished"></translation>
+        <translation>Icon</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="78"/>
@@ -59,7 +64,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="162"/>
+        <location filename="../qml/pages/About.qml" line="169"/>
         <source>Translators:</source>
         <translation>Translators:</translation>
     </message>

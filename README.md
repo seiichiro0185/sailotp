@@ -33,6 +33,30 @@ or write an email to sailfish _AT_ seiichiro0185.org
 
 SailOTP is licensed under a 3-Clause BSD-License. See COPYING for details.
 
+## Contributors
+
+The Following people have contributed code or other improvements to SailOTP:
+
+  * SteamGuard support: Robin Appelman
+  * Search function: Jyri-Petteri Paloposki
+  * Improved App Icon: JSEHV
+
+## Translations
+
+The following people have contributed to translating SailOTP:
+
+  * Brazilian Portuguese: caio2k
+  * Chinese: BirdZhang
+  * Finnish: Johan Heikkilä (hevanaa), Jyri-Petteri Paloposki (ZeiP)
+  * French: Romain Tartière (smortex)
+  * Italian: Tichy
+  * Hungarian: 1Zgp
+  * Russian: moorchegue
+  * Spanish: p4moedo
+  * Swedish: Åke Engelbrektson (eson57)
+  * English: Stefan Brand (seiichiro0185)
+  * German: Stefan Brand (seiichiro0185)
+
 ## Acknowledgements
 
 SailOTP uses the SHA-1 and HMAC-Implementation from 
@@ -52,18 +76,3 @@ An adapted version of the QZXing-library is used for QRCode-decoding
 
 The qrencode library is used for QRCode-encoding existing tokens for export to other devices.
 <a href="http://fukuchi.org/works/qrencode/">http://fukuchi.org/works/qrencode/</a>
-
-## Translations
-
-The following people have contributed to translating SailOTP:
-
-  * Chinese: BirdZhang
-  * Finnish: Johan Heikkilä (hevanaa), Jyri-Petteri Paloposki (ZeiP)
-  * French: Romain Tartière (smortex)
-  * Italian: Tichy
-  * Hungarian: 1Zgp
-  * Russian: moorchegue
-  * Spanish: p4moedo
-  * Swedish: Åke Engelbrektson (eson57)
-  * English: Stefan Brand (seiichiro0185)
-  * German: Stefan Brand (seiichiro0185)

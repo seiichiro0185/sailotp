@@ -149,6 +149,13 @@ Page {
         alignment: Qt.AlignLeft
         leftMargin: Theme.paddingLarge*2
       }
+      DetailItem {
+        label: qsTr("Icon")
+        value: "JSEHV"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
       Item {
         width: parent.width
         height: Theme.paddingMedium
@@ -161,6 +168,13 @@ Page {
         wrapMode: Text.WordWrap
         text: qsTr("Translators:")
         color: Theme.secondaryHighlightColor
+      }
+      DetailItem {
+        label: "Brazilian Portuguese"
+        value: "caio2k"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
       }
       DetailItem {
         label: "Chinese"
