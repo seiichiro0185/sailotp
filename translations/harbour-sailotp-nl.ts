@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="70"/>
         <source>A simple Sailfish OTP generator</source>
-        <translation>Een simple Sailfish OTP generator</translation>
+        <translation>Een simpele Sailfish OTP generator</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="78"/>
