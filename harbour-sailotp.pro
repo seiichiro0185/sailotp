@@ -8,6 +8,7 @@ CONFIG += sailfishapp
 SOURCES += src/harbour-sailotp.cpp
 
 DISTFILES += qml/harbour-sailotp.qml \
+    icons/86x86/sailotp.png \
     qml/cover/CoverPage.qml \
     qml/pages/MainView.qml \
     qml/pages/AddOTP.qml \

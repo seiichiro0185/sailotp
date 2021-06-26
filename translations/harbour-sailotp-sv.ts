@@ -49,7 +49,12 @@
         <translation type="unfinished">Sök</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="247"/>
+        <location filename="../qml/pages/About.qml" line="153"/>
+        <source>Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="261"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP använder följande tredjeparts bibliotek:</translation>
     </message>
@@ -59,7 +64,7 @@
         <translation>Medarbetare:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="162"/>
+        <location filename="../qml/pages/About.qml" line="169"/>
         <source>Translators:</source>
         <translation>Översättare:</translation>
     </message>

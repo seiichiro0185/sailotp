@@ -149,6 +149,13 @@ Page {
         alignment: Qt.AlignLeft
         leftMargin: Theme.paddingLarge*2
       }
+      DetailItem {
+        label: qsTr("Icon")
+        value: "JSEHV"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
       Item {
         width: parent.width
         height: Theme.paddingMedium
