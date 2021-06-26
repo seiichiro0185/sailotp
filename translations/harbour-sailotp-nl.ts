@@ -6,50 +6,55 @@
     <message>
         <location filename="../qml/pages/About.qml" line="70"/>
         <source>A simple Sailfish OTP generator</source>
-        <translation type="unfinished"></translation>
+        <translation>Een simple Sailfish OTP generator</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="78"/>
         <source>(RFC 6238/4226 compatible)</source>
-        <translation type="unfinished"></translation>
+        <translation>(RFC 6238/4226 compatible)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="87"/>
         <source>Online Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Online Handleiding</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="94"/>
         <source>Source Code &amp; Issue Tracker</source>
-        <translation type="unfinished"></translation>
+        <translation>Broncode &amp; Foutentracker</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="111"/>
-        <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <source>Auteursrechten</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licentie</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>BSD (3-clause)</source>
-        <translation type="unfinished"></translation>
+        <translation>BSD (3-voudig)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="139"/>
         <source>SteamGuard support</source>
-        <translation type="unfinished"></translation>
+        <translation>SteamGuard ondersteuning</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="146"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoeken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="247"/>
+        <location filename="../qml/pages/About.qml" line="153"/>
+        <source>Icon</source>
+        <translation>Icoon</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="261"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP gebruikt de volgende bibliotheken van derden:</translation>
     </message>
@@ -59,7 +64,7 @@
         <translation>Bijdragers:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="162"/>
+        <location filename="../qml/pages/About.qml" line="169"/>
         <source>Translators:</source>
         <translation>Vertalers:</translation>
     </message>
@@ -309,7 +314,7 @@
     <message>
         <location filename="../qml/pages/MainView.qml" line="178"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoeken</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainView.qml" line="198"/>
