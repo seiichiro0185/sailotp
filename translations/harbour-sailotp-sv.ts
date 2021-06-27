@@ -6,52 +6,52 @@
     <message>
         <location filename="../qml/pages/About.qml" line="70"/>
         <source>A simple Sailfish OTP generator</source>
-        <translation type="unfinished"></translation>
+        <translation>En enkel OTP-generator för Sailfish</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="78"/>
         <source>(RFC 6238/4226 compatible)</source>
-        <translation type="unfinished"></translation>
+        <translation>(RFC 6238-/4226-kompatibel)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="87"/>
         <source>Online Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Online-manual</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="94"/>
         <source>Source Code &amp; Issue Tracker</source>
-        <translation type="unfinished"></translation>
+        <translation>Källkod och ärendehanterare</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="111"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licens</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>BSD (3-clause)</source>
-        <translation type="unfinished"></translation>
+        <translation>BSD (3-clause)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="139"/>
         <source>SteamGuard support</source>
-        <translation type="unfinished"></translation>
+        <translation>SteamGuard-stöd</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="146"/>
         <source>Search</source>
-        <translation type="unfinished">Sök</translation>
+        <translation>Sök</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="153"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikon</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="261"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="133"/>
         <source>Contributors:</source>
-        <translation>Medarbetare:</translation>
+        <translation>Bidragsgivare:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="169"/>
