@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="153"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikon</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="261"/>
