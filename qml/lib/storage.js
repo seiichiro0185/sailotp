@@ -36,7 +36,7 @@ function getDB() {
 
     if (db.version == "") {
       // Initialize an empty DB, Create the Table
-      db.changeVersion("", "3",
+      db.changeVersion("", "4",
         function(tx) {
           tx.executeSql("CREATE TABLE IF NOT EXISTS OTPStorage(title TEXT, secret TEXT, type TEXT DEFAULT 'TOPT', counter INTEGER DEFAULT 0, fav INTEGER DEFAULT 0, sort INTEGER DEFAULT 0, len INTEGER default 6, diff INTEGER default 0);");
       });
