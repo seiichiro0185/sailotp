@@ -2,6 +2,12 @@
 *.pro.user
 *.pro.user.*
 *.autosave
+*.o
+moc_*
+documentation.list
+harbour-sailotp
+RPMS
+Makefile
 rpm/harbour-sailotp.spec
 rpm/harbour-sailotp.spec.*
 translations/*.qm
