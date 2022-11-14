@@ -45,6 +45,7 @@ ApplicationWindow
   property string coverOTP: "------"
   property int coverLen: 6
   property int coverDiff: 0
+  property int coverPeriod: 30
   property int coverIndex: 0
 
   // Global Listmodel for Tokens
@@ -64,8 +65,8 @@ ApplicationWindow
   }
 
   // Add an entry to the list
-  function appendOTP(title, secret, type, counter, fav, len, diff) {
-    listModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "len": len, "diff": diff, "otp": "------", "itemVisible": true});
+  function appendOTP(title, secret, type, counter, fav, len, diff, period) {
+    listModel.append({"secret": secret, "title": title, "fav": fav, "type": type, "counter": counter, "len": len, "diff": diff, "period": period, "otp": "------", "itemVisible": true});
   }
 
   // Set the OTP shown on the Cover
@@ -76,6 +77,7 @@ ApplicationWindow
       coverType = listModel.get(index).type;
       coverLen = listModel.get(index).len;
       coverDiff = listModel.get(index).diff;
+      coverPeriod = listModel.get(index).period;
       coverIndex = index;
       if (coverType == "TOTP") { coverOTP = "------"; } else { coverOTP = listModel.get(index).otp; }
       for (var i=0; i<listModel.count; i++) {

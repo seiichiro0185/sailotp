@@ -77,7 +77,7 @@ var steamChars = ['2', '3', '4', '5', '6', '7', '8', '9', 'B', 'C',
 //   counter: counter value for HOTP
 //   length: length of the returned token
 //   diff: derivation of time between phone and server
-function calcOTP(secret, type, len, diff, counter) {
+function calcOTP(secret, type, len, diff, counter, period) {
   // Convert the key to HEX
   var key = base32tohex(secret);
   var factor = "";
@@ -85,8 +85,8 @@ function calcOTP(secret, type, len, diff, counter) {
   if (type.substr(0, 4) == "TOTP") {
     // Get current Time in UNIX Timestamp format (Seconds since 01.01.1970 00:00 UTC), and add derivation value
     var epoch = Math.round(new Date().getTime() / 1000.0) + diff;
-    // Get last full 30 / 60 Seconds and convert to HEX
-    factor = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
+    // Get last full period Seconds and convert to HEX
+    factor = leftpad(dec2hex(Math.floor(epoch / period)), 16, '0');
   } else {
     factor = leftpad(dec2hex(counter), 16, '0');
   }

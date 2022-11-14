@@ -48,6 +48,7 @@ Dialog {
   property int paramLen: 6
   property int paramDiff: 0
   property int paramCounter: 1 // New Counters start at 1
+  property int paramPeriod: 30
   property bool paramNew: false
 
   function checkQR() {
@@ -164,6 +165,20 @@ Dialog {
         EnterKey.onClicked: addOTP.accept()
       }
       TextField {
+        id: otpPeriod
+        width: parent.width
+        visible: paramType == "TOTP" ? true : false
+        label: qsTr("Period (Seconds)")
+        text: paramPeriod
+        placeholderText: qsTr("Period (Seconds)")
+        focus: true
+        horizontalAlignment: TextInput.AlignLeft
+        validator: IntValidator {}
+
+        EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+        EnterKey.onClicked: addOTP.accept()
+      }
+      TextField {
         id: otpCounter
         width: parent.width
         visible: paramType == "HOTP" ? true : false
@@ -182,7 +197,7 @@ Dialog {
   }
 
   // Check if we can Save
-  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && otpSecret.acceptableInput && otpLen.text >= 1 && ((paramType == "TOTP" && otpDiff.text != "") || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
+  canAccept: otpLabel.text.length > 0 && otpSecret.text.length >= 16 && otpSecret.acceptableInput && otpLen.text >= 1 && ((paramType == "TOTP" && otpDiff.text != "" && otpPeriod.text > 0) || paramType == "TOTP_STEAM" || otpCounter.text.length > 0) ? true : false
 
   // Save if page is Left with Add
   onDone: {
@@ -190,10 +205,10 @@ Dialog {
       // Save the entry to the Config DB
       if (paramLabel != "" && paramKey != "" && !paramNew) {
         // Parameters where filled -> Change existing entry
-        DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, otpLen.text, otpDiff.text, paramLabel, paramKey)
+        DB.changeOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, otpLen.text, otpDiff.text, otpPeriod.text, paramLabel, paramKey)
       } else {
         // There were no parameters -> Add new entry
-        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count, otpLen.text, otpDiff.text);
+        DB.addOTP(otpLabel.text, otpSecret.text, paramType, otpCounter.text, appWin.listModel.count, otpLen.text, otpDiff.text, otpPeriod.text);
       }
 
       // Refresh the main Page
