@@ -64,10 +64,10 @@ Page {
     for (var i=0; i<appWin.listModel.count; i++) {
       if (appWin.listModel.get(i).type === "TOTP" || appWin.listModel.get(i).type === "TOTP_STEAM" ) {
         // Take derivation into account if set
-        var seconds = (curDate.getSeconds() + appWin.listModel.get(i).diff) % 30;
-        // Only update on full 30 / 60 Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
+        var seconds = (curDate.getSeconds() + appWin.listModel.get(i).diff) % appWin.listModel.get(i).period;
+        // Only update on full period Seconds or if last run of the Functions is more than 2s in the past (e.g. app was in background)
         if (appWin.listModel.get(i).otp === "------" || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, appWin.listModel.get(i).type, appWin.listModel.get(i).len, appWin.listModel.get(i).diff, 0);
+          var curOTP = OTP.calcOTP(appWin.listModel.get(i).secret, appWin.listModel.get(i).type, appWin.listModel.get(i).len, appWin.listModel.get(i).diff, 0, appWin.listModel.get(i).period);
           appWin.listModel.setProperty(i, "otp", curOTP);
         } else if (appWin.coverType === "HOTP" && (curDate.getTime() - lastUpdated > 2000) && appWin.listModel.get(i).fav === 1) {
           // If we are coming back from the CoverPage update OTP value if current favourite is HOTP
@@ -311,7 +311,7 @@ Page {
             MenuItem {
               text: qsTr("Edit")
               onClicked: {
-                pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret, paramType: type, paramLen: len, paramDiff: diff, paramCounter: DB.getCounter(title, secret, false)})
+                pageStack.push(Qt.resolvedUrl("AddOTP.qml"), {parentPage: mainPage, paramLabel: title, paramKey: secret, paramType: type, paramLen: len, paramDiff: diff, paramCounter: DB.getCounter(title, secret, false), paramPeriod: period})
               }
             }
             MenuItem {

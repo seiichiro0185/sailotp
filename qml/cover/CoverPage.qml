@@ -45,7 +45,7 @@ CoverBackground {
     var seconds = (curDate.getSeconds() + appWin.coverDiff) % 30
 
     if (lOTP.text == "------" || seconds == 0 || (curDate.getTime() - lastUpdated > 2000)) {
-      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, appWin.coverType, appWin.coverLen, appWin.coverDiff, 0);
+      appWin.coverOTP = OTP.calcOTP(appWin.coverSecret, appWin.coverType, appWin.coverLen, appWin.coverDiff, 0, appWin.coverPeriod);
     }
 
     // Change color of the OTP to red if less than 5 seconds left
