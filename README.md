@@ -40,6 +40,8 @@ The Following people have contributed code or other improvements to SailOTP:
   * SteamGuard support: Robin Appelman
   * Search function: Jyri-Petteri Paloposki
   * Improved App Icon: JSEHV
+  * Custom Time Period support: Andrey Skvortsov
+  * SailJail Permissions: DrYak
 
 ## Translations
 

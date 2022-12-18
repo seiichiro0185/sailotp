@@ -49,7 +49,17 @@
         <translation>Ikon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="261"/>
+        <location filename="../qml/pages/About.qml" line="160"/>
+        <source>Customizable Time Period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="167"/>
+        <source>SailJail Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="275"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>A SailOTP a következő harmadik féltől származó könyvtárakat használja:</translation>
     </message>
@@ -64,7 +74,7 @@
         <translation>(RFC 6238/4226 kompatibilis)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="169"/>
+        <location filename="../qml/pages/About.qml" line="183"/>
         <source>Translators:</source>
         <translation>Fordítók:</translation>
     </message>
@@ -72,89 +82,95 @@
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <location filename="../qml/pages/AddOTP.qml" line="70"/>
         <source>Show QR-Code</source>
         <translation>QR-kód megjelenítése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="72"/>
-        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Nem hozható létre QR-kód hiányos beállításokból!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Add</source>
         <translation>Hozzáadás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Save</source>
         <translation>Mentés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <location filename="../qml/pages/AddOTP.qml" line="104"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
         <source>Time-based (TOTP)</source>
         <translation>Idő-alapú (TOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
         <source>Counter-based (HOTP)</source>
         <translation>Számláló-alapú (HOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <location filename="../qml/pages/AddOTP.qml" line="108"/>
         <source>Steam Guard</source>
         <translation>Steam Guard</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Title</source>
         <translation>Cím</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <location filename="../qml/pages/AddOTP.qml" line="115"/>
         <source>Title for the OTP</source>
         <translation>Az OTP címe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <location filename="../qml/pages/AddOTP.qml" line="127"/>
         <source>Secret (at least 16 characters)</source>
         <translation>Jelszó (legalább 16 karakter)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="129"/>
         <source>Secret OTP Key</source>
         <translation>Titkos OTP-kulcs</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="143"/>
         <source>Length</source>
         <translation>Hosszúság</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="145"/>
         <source>Length of the Token</source>
         <translation>A token hosszúsága</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="159"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Időlevezetés (Másodperc)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <location filename="../qml/pages/AddOTP.qml" line="171"/>
+        <location filename="../qml/pages/AddOTP.qml" line="173"/>
+        <source>Period (Seconds)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="185"/>
         <source>Next Counter Value</source>
         <translation>Következő számlálóérték</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <location filename="../qml/pages/AddOTP.qml" line="187"/>
         <source>Next Value of the Counter</source>
         <translation>A számláló következő értéke</translation>
     </message>
