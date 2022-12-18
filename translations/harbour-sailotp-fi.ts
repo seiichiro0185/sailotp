@@ -49,7 +49,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="261"/>
+        <location filename="../qml/pages/About.qml" line="160"/>
+        <source>Customizable Time Period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="167"/>
+        <source>SailJail Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="275"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP käyttää seuraavia kolmannen osapuolen kirjastoja:</translation>
     </message>
@@ -64,7 +74,7 @@
         <translation>(RFC 6238/4226 -yhteensopiva)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="169"/>
+        <location filename="../qml/pages/About.qml" line="183"/>
         <source>Translators:</source>
         <translation>Kääntäjät:</translation>
     </message>
@@ -72,89 +82,95 @@
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <location filename="../qml/pages/AddOTP.qml" line="70"/>
         <source>Show QR-Code</source>
         <translation>Näytä QR-koodi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="72"/>
-        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>QR-koodia ei voida luoda puutteellisten asetuksien takia!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Add</source>
         <translation>Lisää</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <location filename="../qml/pages/AddOTP.qml" line="104"/>
         <source>Type</source>
         <translation>Tyyppi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
         <source>Time-based (TOTP)</source>
         <translation>Aikapohjainen (TOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
         <source>Counter-based (HOTP)</source>
         <translation>Laskuripohjainen (HOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <location filename="../qml/pages/AddOTP.qml" line="108"/>
         <source>Steam Guard</source>
         <translation>Steam Guard</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Title</source>
         <translation>Nimi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <location filename="../qml/pages/AddOTP.qml" line="115"/>
         <source>Title for the OTP</source>
         <translation>Kertasalasanan nimi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <location filename="../qml/pages/AddOTP.qml" line="127"/>
         <source>Secret (at least 16 characters)</source>
         <translation>Salaisuus (vähintään 16 merkkiä)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="129"/>
         <source>Secret OTP Key</source>
         <translation>Salainen OTP-avain</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="143"/>
         <source>Length</source>
         <translation>Pituus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="145"/>
         <source>Length of the Token</source>
         <translation>Kertasalasanan pituus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="159"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Aikapoikkeama (sekunneissa)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <location filename="../qml/pages/AddOTP.qml" line="171"/>
+        <location filename="../qml/pages/AddOTP.qml" line="173"/>
+        <source>Period (Seconds)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="185"/>
         <source>Next Counter Value</source>
         <translation>Laskurin seuraava arvo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <location filename="../qml/pages/AddOTP.qml" line="187"/>
         <source>Next Value of the Counter</source>
         <translation>Laskurin seuraava arvo</translation>
     </message>
