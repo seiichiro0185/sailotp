@@ -1,6 +1,6 @@
 Name: harbour-sailotp
 Summary: SailOTP
-Version: 1.9.4
+Version: 1.10.0
 Release: 1
 Group: Security
 URL: https://github.com/seiichiro0185/sailotp/
@@ -14,7 +14,7 @@ Description: |
 
 Configure: none
 
-Builder: qtc5
+Builder: qmake5
 
 QMakeOptions:
   - VERSION=%{version}

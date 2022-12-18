@@ -54,7 +54,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="261"/>
+        <location filename="../qml/pages/About.qml" line="160"/>
+        <source>Customizable Time Period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="167"/>
+        <source>SailJail Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="275"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP utilise les bibliothèques tierces suivantes :</translation>
     </message>
@@ -64,7 +74,7 @@
         <translation>Contributeurs :</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="169"/>
+        <location filename="../qml/pages/About.qml" line="183"/>
         <source>Translators:</source>
         <translation>Traducteurs :</translation>
     </message>
@@ -72,89 +82,95 @@
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <location filename="../qml/pages/AddOTP.qml" line="70"/>
         <source>Show QR-Code</source>
         <translation>Afficher le code QR</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="72"/>
-        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Impossible de créer un code QR avec des paramètres incomplets !</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Save</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <location filename="../qml/pages/AddOTP.qml" line="104"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
         <source>Time-based (TOTP)</source>
         <translation>Basé sur le temps (TOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
         <source>Counter-based (HOTP)</source>
         <translation>Basé sur un compteur (HOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <location filename="../qml/pages/AddOTP.qml" line="108"/>
         <source>Steam Guard</source>
         <translation>Steam Guard</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Title</source>
         <translation>Titre</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <location filename="../qml/pages/AddOTP.qml" line="115"/>
         <source>Title for the OTP</source>
         <translation>Titre de l&amp;apos;OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <location filename="../qml/pages/AddOTP.qml" line="127"/>
         <source>Secret (at least 16 characters)</source>
         <translation>Secret (au moins 16 caractètres)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="129"/>
         <source>Secret OTP Key</source>
         <translation>Clé secrète OTP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="143"/>
         <source>Length</source>
         <translation>Longueur</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="145"/>
         <source>Length of the Token</source>
         <translation>Longueur du jeton</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="159"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Dérivation de temps (secondes)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <location filename="../qml/pages/AddOTP.qml" line="171"/>
+        <location filename="../qml/pages/AddOTP.qml" line="173"/>
+        <source>Period (Seconds)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="185"/>
         <source>Next Counter Value</source>
         <translation>Prochaine valeur du compteur</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <location filename="../qml/pages/AddOTP.qml" line="187"/>
         <source>Next Value of the Counter</source>
         <translation>Prochaine valeur du compteur</translation>
     </message>

@@ -1,3 +1,7 @@
+* Sun Dec 18 2022 Stefan Brand <sailfish@seiichiro0185.org> 1.10.0-1
+- Added Customizable Time Period (contributed by Andrey Skvortsov)
+- Added SailJail Permissions (contributed by DrYak)
+
 * Sat Jun 26 2021 Stefan Brand <sailfish@seiichiro0185.org> 1.9.4-1
 - Update pt_br Translation (contributed by caio2k)
 - Refreshed App Icon (contributed by JSEHV)

@@ -6,65 +6,75 @@
     <message>
         <location filename="../qml/pages/About.qml" line="70"/>
         <source>A simple Sailfish OTP generator</source>
-        <translation type="unfinished"></translation>
+        <translation>En enkel OTP-generator för Sailfish</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="78"/>
         <source>(RFC 6238/4226 compatible)</source>
-        <translation type="unfinished"></translation>
+        <translation>(RFC 6238-/4226-kompatibel)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="87"/>
         <source>Online Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Online-manual</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="94"/>
         <source>Source Code &amp; Issue Tracker</source>
-        <translation type="unfinished"></translation>
+        <translation>Källkod och ärendehanterare</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="111"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licens</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="120"/>
         <source>BSD (3-clause)</source>
-        <translation type="unfinished"></translation>
+        <translation>BSD (3-clause)</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="139"/>
         <source>SteamGuard support</source>
-        <translation type="unfinished"></translation>
+        <translation>SteamGuard-stöd</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="146"/>
         <source>Search</source>
-        <translation type="unfinished">Sök</translation>
+        <translation>Sök</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="153"/>
         <source>Icon</source>
+        <translation>Ikon</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="160"/>
+        <source>Customizable Time Period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="261"/>
+        <location filename="../qml/pages/About.qml" line="167"/>
+        <source>SailJail Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="275"/>
         <source>SailOTP uses the following third party libs:</source>
         <translation>SailOTP använder följande tredjeparts bibliotek:</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="133"/>
         <source>Contributors:</source>
-        <translation>Medarbetare:</translation>
+        <translation>Bidragsgivare:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="169"/>
+        <location filename="../qml/pages/About.qml" line="183"/>
         <source>Translators:</source>
         <translation>Översättare:</translation>
     </message>
@@ -72,89 +82,95 @@
 <context>
     <name>AddOTP</name>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="69"/>
+        <location filename="../qml/pages/AddOTP.qml" line="70"/>
         <source>Show QR-Code</source>
         <translation>Visa QR-kod</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="72"/>
-        <location filename="../qml/pages/AddOTP.qml" line="85"/>
+        <location filename="../qml/pages/AddOTP.qml" line="73"/>
+        <location filename="../qml/pages/AddOTP.qml" line="86"/>
         <source>Can&apos;t create QR-Code from incomplete settings!</source>
         <translation>Kan inte skapa QR-kod från ofullständiga inställningar!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Add</source>
         <translation>Lägg till</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="98"/>
+        <location filename="../qml/pages/AddOTP.qml" line="99"/>
         <source>Save</source>
         <translation>Spara</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="103"/>
+        <location filename="../qml/pages/AddOTP.qml" line="104"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="105"/>
+        <location filename="../qml/pages/AddOTP.qml" line="106"/>
         <source>Time-based (TOTP)</source>
         <translation>Tidsbaserad (TOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="106"/>
+        <location filename="../qml/pages/AddOTP.qml" line="107"/>
         <source>Counter-based (HOTP)</source>
         <translation>Räknarbaserad (HOTP)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="107"/>
+        <location filename="../qml/pages/AddOTP.qml" line="108"/>
         <source>Steam Guard</source>
         <translation>Steam Guard</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="113"/>
+        <location filename="../qml/pages/AddOTP.qml" line="114"/>
         <source>Title</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="114"/>
+        <location filename="../qml/pages/AddOTP.qml" line="115"/>
         <source>Title for the OTP</source>
         <translation>Namn på OTP:n</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="126"/>
+        <location filename="../qml/pages/AddOTP.qml" line="127"/>
         <source>Secret (at least 16 characters)</source>
         <translation>Hemlighet (Minst 16 tecken)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="128"/>
+        <location filename="../qml/pages/AddOTP.qml" line="129"/>
         <source>Secret OTP Key</source>
         <translation>Hemlig OTP-nyckel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="142"/>
+        <location filename="../qml/pages/AddOTP.qml" line="143"/>
         <source>Length</source>
         <translation>Längd</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="144"/>
+        <location filename="../qml/pages/AddOTP.qml" line="145"/>
         <source>Length of the Token</source>
         <translation>Längd på token</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="156"/>
-        <location filename="../qml/pages/AddOTP.qml" line="158"/>
+        <location filename="../qml/pages/AddOTP.qml" line="157"/>
+        <location filename="../qml/pages/AddOTP.qml" line="159"/>
         <source>Time Derivation (Seconds)</source>
         <translation>Tidsavvikelse (sekunder)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="170"/>
+        <location filename="../qml/pages/AddOTP.qml" line="171"/>
+        <location filename="../qml/pages/AddOTP.qml" line="173"/>
+        <source>Period (Seconds)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddOTP.qml" line="185"/>
         <source>Next Counter Value</source>
         <translation>Nästa räknarvärde</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddOTP.qml" line="172"/>
+        <location filename="../qml/pages/AddOTP.qml" line="187"/>
         <source>Next Value of the Counter</source>
         <translation>Nästa värde på räknaren</translation>
     </message>

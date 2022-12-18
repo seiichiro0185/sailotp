@@ -5,3 +5,7 @@ Name=SailOTP
 Icon=harbour-sailotp
 Exec=harbour-sailotp
 
+[X-Sailjail]
+Permissions=UserDirs;RemovableMedia
+OrganizationName=org.seiichiro0185
+ApplicationName=harbour-sailotp

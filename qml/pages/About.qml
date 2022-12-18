@@ -156,6 +156,20 @@ Page {
         alignment: Qt.AlignLeft
         leftMargin: Theme.paddingLarge*2
       }
+      DetailItem {
+        label: qsTr("Customizable Time Period")
+        value: "Andrey Skvortsov"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
+      DetailItem {
+        label: qsTr("SailJail Permissions")
+        value: "DrYak"
+        width: parent.width
+        alignment: Qt.AlignLeft
+        leftMargin: Theme.paddingLarge*2
+      }
       Item {
         width: parent.width
         height: Theme.paddingMedium
