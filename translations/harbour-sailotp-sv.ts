@@ -56,12 +56,12 @@
     <message>
         <location filename="../qml/pages/About.qml" line="160"/>
         <source>Customizable Time Period</source>
-        <translation type="unfinished"></translation>
+        <translation>Anpassningsbar tidsperiod</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="167"/>
         <source>SailJail Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>SailJail-rättigheter</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="275"/>
@@ -162,7 +162,7 @@
         <location filename="../qml/pages/AddOTP.qml" line="171"/>
         <location filename="../qml/pages/AddOTP.qml" line="173"/>
         <source>Period (Seconds)</source>
-        <translation type="unfinished"></translation>
+        <translation>Period (Sekunder)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddOTP.qml" line="185"/>
