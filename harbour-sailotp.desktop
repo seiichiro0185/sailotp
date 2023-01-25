@@ -6,6 +6,6 @@ Icon=harbour-sailotp
 Exec=harbour-sailotp
 
 [X-Sailjail]
-Permissions=UserDirs;RemovableMedia
+Permissions=UserDirs;RemovableMedia;Camera
 OrganizationName=org.seiichiro0185
 ApplicationName=harbour-sailotp
