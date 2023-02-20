@@ -28,11 +28,12 @@
  */
 
 
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Sailfish.Pickers 1.0
 import harbour.sailotp.FileIO 1.0 // Import FileIO Class
+import harbour.sailotp.QCipher 1.0 // Import FileIO Class
 import "../lib/storage.js" as DB // Import the storage library for Config-Access
-import "../lib/cryptojs-aes.js" as CryptoJS //Import AES encryption library
 
 // Define Layout of the Export / Import Page
 Dialog {
@@ -82,6 +83,11 @@ Dialog {
     onError: { console.log(msg); }
   }
 
+  // QCipher Object for Encryption
+  QCipher {
+    id: cipher
+  }
+
   SilicaFlickable {
     id: exportFlickable
     anchors.fill: parent
@@ -101,7 +107,7 @@ Dialog {
 
     VerticalScrollDecorator {}
 
-    Column {
+     Column {
       anchors.fill: parent
       DialogHeader {
         acceptText: mode == "export" ? qsTr("Export") : qsTr("Import")
@@ -186,7 +192,7 @@ Dialog {
         color: Theme.secondaryColor
 
         visible: mode == "export"
-        text: qsTr("Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.")+"\n\n"+qsTr("To view the content of the export file outside of SailOTP use the following openssl command:") + "\n\nopenssl enc -d -a -A -md md5 -aes-256-cbc -in <file>"
+        text: qsTr("Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.")+"\n\n"+qsTr("To view the content of the export file outside of SailOTP use the following openssl command:") + "\n\nopenssl enc -d -a -aes-256-cbc -in <file>"
       }
     }
   }
@@ -206,7 +212,7 @@ Dialog {
 
         if (plainText != "") {
           try {
-            chipherText = CryptoJS.CryptoJS.AES.encrypt(plainText, filePassword.text);
+            chipherText = cipher.encrypt(plainText, filePassword.text);
             if (!exportFile.write(chipherText)) {
               notify.show(qsTr("Error writing to file ")+ fileName.text, 4000);
             } else {
@@ -225,7 +231,7 @@ Dialog {
         if (chipherText != "") {
           try {
             var errormsg = ""
-            plainText = CryptoJS.CryptoJS.AES.decrypt(chipherText, filePassword.text).toString(CryptoJS.CryptoJS.enc.Utf8);
+            plainText = cipher.decrypt(chipherText, filePassword.text)
             if (DB.json2db(plainText, errormsg)) {
               notify.show(qsTr("Tokens imported from ")+ fileName.text, 4000);
             } else {

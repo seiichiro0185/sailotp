@@ -31,6 +31,7 @@
 #include <sailfishapp.h>
 #include <QGuiApplication>
 #include "fileio.h"
+#include "qcipher.h"
 #include "qzxing.h"
 #include "qqrencode.h"
 
@@ -58,6 +59,8 @@ int main(int argc, char *argv[])
 
     // Register FileIO Class
     qmlRegisterType<FileIO, 1>("harbour.sailotp.FileIO", 1, 0, "FileIO");
+    // Register QCipher Class
+    qmlRegisterType<QCipher, 1>("harbour.sailotp.QCipher", 1, 0, "QCipher");
 
     // Prepare the QML and set Homedir
     view->setSource(SailfishApp::pathTo("qml/harbour-sailotp.qml"));

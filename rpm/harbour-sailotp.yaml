@@ -26,6 +26,7 @@ PkgConfigBR:
   - Qt5Core
   - Qt5Multimedia
   - sailfishapp >= 1.0.2
+  - libcrypto
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
