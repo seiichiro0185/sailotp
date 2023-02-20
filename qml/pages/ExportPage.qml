@@ -98,9 +98,21 @@ Dialog {
         onClicked: {
           if (mode == "export") {
             mode = "import"
+            fileName.text = ""
           } else {
             mode = "export"
+            fileName.text = creFileName()
           }
+        }
+      }
+    }
+
+    Component {
+      id: filePickerPage
+      FilePickerPage {
+        nameFilters: [ '*' ]
+        onSelectedContentPropertiesChanged: {
+          fileName.text = selectedContentProperties.filePath
         }
       }
     }
@@ -116,15 +128,24 @@ Dialog {
       TextField {
         id: fileName
         width: parent.width
-        text: mode == "export" ? creFileName() : XDG_HOME_DIR + "/";
+        text: mode == "export" ? creFileName() : "";
         label: qsTr("Filename")
-        placeholderText: mode == "import" ? qsTr("File to import") : qsTr("File to export")
+        placeholderText: qsTr("File to export")
+        visible: mode == "export"
         focus: true
         horizontalAlignment: TextInput.AlignLeft
 
         EnterKey.enabled: text.length > 0
         EnterKey.iconSource: "image://theme/icon-m-enter-next"
         EnterKey.onClicked: filePassword.focus = true
+      }
+
+      ValueButton {
+        width: parent.width
+        label: qsTr("File to import")
+        value: fileName.text ? fileName.text : "None"
+        visible: mode == "import"
+        onClicked: pageStack.push(filePickerPage)
       }
 
       TextSwitch {

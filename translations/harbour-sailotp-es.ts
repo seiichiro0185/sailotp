@@ -178,119 +178,119 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="63"/>
+        <location filename="../qml/pages/ExportPage.qml" line="64"/>
         <source>File already exists, choose &quot;Overwrite existing&quot; to overwrite it.</source>
         <translation>El fichero ya existe, escoja la opción &quot;Sobreescribir existente&quot; para sobreescribirlo.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="72"/>
+        <location filename="../qml/pages/ExportPage.qml" line="73"/>
         <source>Given file does not exist!</source>
         <translation>¡El fichero proporcionado no exsiste!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="96"/>
-        <location filename="../qml/pages/ExportPage.qml" line="112"/>
+        <location filename="../qml/pages/ExportPage.qml" line="97"/>
+        <location filename="../qml/pages/ExportPage.qml" line="125"/>
         <source>Export</source>
         <translation>Exportar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="96"/>
-        <location filename="../qml/pages/ExportPage.qml" line="112"/>
+        <location filename="../qml/pages/ExportPage.qml" line="97"/>
+        <location filename="../qml/pages/ExportPage.qml" line="125"/>
         <source>Import</source>
         <translation>Importar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="119"/>
+        <location filename="../qml/pages/ExportPage.qml" line="132"/>
         <source>Filename</source>
         <translation>Nombre del fichero</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="120"/>
+        <location filename="../qml/pages/ExportPage.qml" line="145"/>
         <source>File to import</source>
         <translation>Fichero a importar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="120"/>
+        <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>File to export</source>
         <translation>Fichero a exportar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="133"/>
+        <location filename="../qml/pages/ExportPage.qml" line="155"/>
         <source>Overwrite existing</source>
         <translation>Sobreescribir existente</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="139"/>
+        <location filename="../qml/pages/ExportPage.qml" line="161"/>
         <source>Password</source>
         <translation>Contraseña</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="140"/>
+        <location filename="../qml/pages/ExportPage.qml" line="162"/>
         <source>Password for the file</source>
         <translation>Contraseña para el fichero</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="153"/>
+        <location filename="../qml/pages/ExportPage.qml" line="175"/>
         <source>Passwords don&apos;t match!</source>
         <translation>¡Las contraseñas no coinciden!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="153"/>
+        <location filename="../qml/pages/ExportPage.qml" line="175"/>
         <source>Passwords match!</source>
         <translation>¡Las contraseñas coinciden!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="154"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Repeated Password for the file</source>
         <translation>Contraseña repetida para el archivo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="178"/>
+        <location filename="../qml/pages/ExportPage.qml" line="200"/>
         <source>Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.</source>
         <translation>Aquí puede Importar Tokens desde un fichero. Ponga la localización del fichero y la contraseña utilizada en la exportación. Tire hacia la izquierda para comenzar la importación.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="194"/>
+        <location filename="../qml/pages/ExportPage.qml" line="216"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
         <translation>Aquí puede exportar Tokens a un fichero. El fichero exportado será encriptado con AES-256-CBC y codificado en Base64. Escoja una contraseña segura, el fichero contendrá las cadenas secretas utilizadas para la generación de los Tokens. Tire hacia la izquierda para comenzar la exportación.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="194"/>
+        <location filename="../qml/pages/ExportPage.qml" line="216"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
         <translation>Para ver los contenidos del fichero de exportación fuera de SailOTP utilize el siguiente comando openssl:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="238"/>
         <source>Error writing to file </source>
         <translation>Error escribiendo el fichero</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="218"/>
+        <location filename="../qml/pages/ExportPage.qml" line="240"/>
         <source>Token Database exported to </source>
         <translation>Base de datos de Tokens exportada en</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="221"/>
+        <location filename="../qml/pages/ExportPage.qml" line="243"/>
         <source>Could not encrypt tokens. Error: </source>
         <translation>No se ha podido encriptar los tokens. Error: </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="224"/>
+        <location filename="../qml/pages/ExportPage.qml" line="246"/>
         <source>Could not read tokens from Database</source>
         <translation>No se ha podido leer los tokens desde la Base de datos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="235"/>
+        <location filename="../qml/pages/ExportPage.qml" line="257"/>
         <source>Tokens imported from </source>
         <translation>Tokens importados desde</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="240"/>
+        <location filename="../qml/pages/ExportPage.qml" line="262"/>
         <source>Unable to decrypt file, did you use the right password?</source>
         <translation>No se ha podido desencriptar el fichero, ¿ha utilizado el password correcto?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="243"/>
+        <location filename="../qml/pages/ExportPage.qml" line="265"/>
         <source>Could not read from file </source>
         <translation>No se ha podido leer desde el fichero</translation>
     </message>
