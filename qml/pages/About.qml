@@ -274,7 +274,7 @@ Page {
         horizontalAlignment: TextEdit.left
         plainText: "\n"+qsTr("SailOTP uses the following third party libs:")+'
           http://caligatio.github.io/jsSHA/
-          https://code.google.com/archive/p/crypto-js/
+          https://github.com/jlinoff/openssl-aes-cipher/
           http://sourceforge.net/projects/qzxing/
           http://fukuchi.org/works/qrencode/'
         color: Theme.secondaryHighlightColor
