@@ -107,6 +107,7 @@ Dialog {
       }
     }
 
+    // FilePicker for the Input File
     Component {
       id: filePickerPage
       FilePickerPage {
@@ -234,13 +235,17 @@ Dialog {
         if (plainText != "") {
           try {
             chipherText = cipher.encrypt(plainText, filePassword.text);
-            if (!exportFile.write(chipherText)) {
-              notify.show(qsTr("Error writing to file ")+ fileName.text, 4000);
+            if (chipherText != "") {
+              if (!exportFile.write(chipherText)) {
+                notify.show(qsTr("Error writing to file ")+ fileName.text, 4000);
+              } else {
+                notify.show(qsTr("Token Database exported to ")+ fileName.text, 4000);
+              }
             } else {
-              notify.show(qsTr("Token Database exported to ")+ fileName.text, 4000);
+              notify.show(qsTr("Could not encrypt tokens. Error: "), 4000);
             }
           } catch(e) {
-            notify.show(qsTr("Could not encrypt tokens. Error: "), 4000);
+            notify.show(qsTr("Could not encrypt tokens. Error: ") + e, 4000);
           }
         } else {
           notify.show(qsTr("Could not read tokens from Database"), 4000);

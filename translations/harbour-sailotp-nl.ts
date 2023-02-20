@@ -189,108 +189,109 @@
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="97"/>
-        <location filename="../qml/pages/ExportPage.qml" line="125"/>
+        <location filename="../qml/pages/ExportPage.qml" line="126"/>
         <source>Export</source>
         <translation>Exporteer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="97"/>
-        <location filename="../qml/pages/ExportPage.qml" line="125"/>
+        <location filename="../qml/pages/ExportPage.qml" line="126"/>
         <source>Import</source>
         <translation>Importeer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="132"/>
+        <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Filename</source>
         <translation>Bestandsnaam</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="145"/>
+        <location filename="../qml/pages/ExportPage.qml" line="146"/>
         <source>File to import</source>
         <translation>Bestand om te importeren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="133"/>
+        <location filename="../qml/pages/ExportPage.qml" line="134"/>
         <source>File to export</source>
         <translation>Bestand om te exporteren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="155"/>
+        <location filename="../qml/pages/ExportPage.qml" line="156"/>
         <source>Overwrite existing</source>
         <translation>Bestaand bestand overschrijven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="161"/>
+        <location filename="../qml/pages/ExportPage.qml" line="162"/>
         <source>Password</source>
         <translation>Wachtwoord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="162"/>
+        <location filename="../qml/pages/ExportPage.qml" line="163"/>
         <source>Password for the file</source>
         <translation>Wachtwoord voor het bestand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="175"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Passwords don&apos;t match!</source>
         <translation>Wachtwoorden komen niet overeen!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="175"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Passwords match!</source>
         <translation>Wachtwoorden komen overeen!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="176"/>
+        <location filename="../qml/pages/ExportPage.qml" line="177"/>
         <source>Repeated Password for the file</source>
         <translation>Herhaal wachtwoord voor het bestand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="200"/>
+        <location filename="../qml/pages/ExportPage.qml" line="201"/>
         <source>Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.</source>
         <translation>Hier kunt u tokens uit een bestand importeren. Geef de bestandslocatie en het wachtwoord dat u bij export hebt gebruikt op. Veeg naar links om het importeren te starten.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="217"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
         <translation>Hier kun je tokens naar een bestand exporteren. Het geexporteerde bestand wordt versleuteld met AES-256-CBC en is Base64-gecodeerd. Kies een sterk wachtwoord, het bestand bevat de geheimen die worden gebruikt om de tokens voor uw accounts te genereren. Veeg naar links om de export te starten.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="217"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
         <translation>Als u de inhoud van het exportbestand buiten SailOTP wilt bekijken, gebruikt u de volgende OpenSSL-opdracht:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="238"/>
+        <location filename="../qml/pages/ExportPage.qml" line="240"/>
         <source>Error writing to file </source>
         <translation>Fout bij schrijven naar bestand </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="240"/>
+        <location filename="../qml/pages/ExportPage.qml" line="242"/>
         <source>Token Database exported to </source>
         <translation>Token Database geexporteerd naar </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="243"/>
+        <location filename="../qml/pages/ExportPage.qml" line="245"/>
+        <location filename="../qml/pages/ExportPage.qml" line="248"/>
         <source>Could not encrypt tokens. Error: </source>
         <translation>Kan tokens niet coderen. Fout: </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="246"/>
+        <location filename="../qml/pages/ExportPage.qml" line="251"/>
         <source>Could not read tokens from Database</source>
         <translation>Kan geen tokens uit database lezen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="257"/>
+        <location filename="../qml/pages/ExportPage.qml" line="262"/>
         <source>Tokens imported from </source>
         <translation>Tokens geimporteerd uit </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="262"/>
+        <location filename="../qml/pages/ExportPage.qml" line="267"/>
         <source>Unable to decrypt file, did you use the right password?</source>
         <translation>Kan het bestand niet ontsleutelen, heeft u het juiste wachtwoord gebruikt?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="265"/>
+        <location filename="../qml/pages/ExportPage.qml" line="270"/>
         <source>Could not read from file </source>
         <translation>Kan niet lezen uit bestand </translation>
     </message>

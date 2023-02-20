@@ -189,108 +189,109 @@
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="97"/>
-        <location filename="../qml/pages/ExportPage.qml" line="125"/>
+        <location filename="../qml/pages/ExportPage.qml" line="126"/>
         <source>Export</source>
         <translation>Exportálás</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="97"/>
-        <location filename="../qml/pages/ExportPage.qml" line="125"/>
+        <location filename="../qml/pages/ExportPage.qml" line="126"/>
         <source>Import</source>
         <translation>Importálás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="132"/>
+        <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Filename</source>
         <translation>Fájlnév</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="145"/>
+        <location filename="../qml/pages/ExportPage.qml" line="146"/>
         <source>File to import</source>
         <translation>Importálandó fájl</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="133"/>
+        <location filename="../qml/pages/ExportPage.qml" line="134"/>
         <source>File to export</source>
         <translation>Exportálandó fájl</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="155"/>
+        <location filename="../qml/pages/ExportPage.qml" line="156"/>
         <source>Overwrite existing</source>
         <translation>Meglévő felülírása</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="161"/>
+        <location filename="../qml/pages/ExportPage.qml" line="162"/>
         <source>Password</source>
         <translation>Jelszó</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="162"/>
+        <location filename="../qml/pages/ExportPage.qml" line="163"/>
         <source>Password for the file</source>
         <translation>Jelszó a fájlhoz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="175"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Passwords don&apos;t match!</source>
         <translation>A jelszavak nem egyeznek!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="175"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Passwords match!</source>
         <translation>A jelszavak egyeznek!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="176"/>
+        <location filename="../qml/pages/ExportPage.qml" line="177"/>
         <source>Repeated Password for the file</source>
         <translation>Megismételt jelszó a fájlhoz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="200"/>
+        <location filename="../qml/pages/ExportPage.qml" line="201"/>
         <source>Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.</source>
         <translation>Itt tudsz tokeneket importálni egy fájlból. Írd be a fájl helyét, és az exportáláskor használt jelszót. Húzd balra az importálás indításához.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="217"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
         <translation>Itt tudsz tokeneket exportálni egy fájlba. Az exportált fájl AES-256-CBC és Base64 kódolással lesz ellátva. Válassz egy erős jelszót, a fájl a fiókjaidoz létrehozandó tokenehez tartozó jelszavakat fogja tartalmazni. Húzd balra az exportálás indításához.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="217"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
         <translation>Az exportfájl tartalmának a SailOTP-n kívüli megtekintéséhez használd a következő openssl parancsokat:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="238"/>
+        <location filename="../qml/pages/ExportPage.qml" line="240"/>
         <source>Error writing to file </source>
         <translation>Hiba a fájlba íráskor </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="240"/>
+        <location filename="../qml/pages/ExportPage.qml" line="242"/>
         <source>Token Database exported to </source>
         <translation>Tokenadatbázis exportálva ide: </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="243"/>
+        <location filename="../qml/pages/ExportPage.qml" line="245"/>
+        <location filename="../qml/pages/ExportPage.qml" line="248"/>
         <source>Could not encrypt tokens. Error: </source>
         <translation>A tokenek nem titkosíthatók. Hiba: </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="246"/>
+        <location filename="../qml/pages/ExportPage.qml" line="251"/>
         <source>Could not read tokens from Database</source>
         <translation>A tokenek nem olvashatók az adatbázisból</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="257"/>
+        <location filename="../qml/pages/ExportPage.qml" line="262"/>
         <source>Tokens imported from </source>
         <translation>Tokenek importálva innen: </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="262"/>
+        <location filename="../qml/pages/ExportPage.qml" line="267"/>
         <source>Unable to decrypt file, did you use the right password?</source>
         <translation>Nem lehet dekódolni a fájlt, a helyes jelszót használtad?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="265"/>
+        <location filename="../qml/pages/ExportPage.qml" line="270"/>
         <source>Could not read from file </source>
         <translation>Nem olvasható a fájlból </translation>
     </message>

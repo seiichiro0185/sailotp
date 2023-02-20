@@ -189,108 +189,109 @@
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="97"/>
-        <location filename="../qml/pages/ExportPage.qml" line="125"/>
+        <location filename="../qml/pages/ExportPage.qml" line="126"/>
         <source>Export</source>
         <translation>Vie</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="97"/>
-        <location filename="../qml/pages/ExportPage.qml" line="125"/>
+        <location filename="../qml/pages/ExportPage.qml" line="126"/>
         <source>Import</source>
         <translation>Tuo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="132"/>
+        <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Filename</source>
         <translation>Tiedoston nimi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="145"/>
+        <location filename="../qml/pages/ExportPage.qml" line="146"/>
         <source>File to import</source>
         <translation>Tuotava tiedosto</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="133"/>
+        <location filename="../qml/pages/ExportPage.qml" line="134"/>
         <source>File to export</source>
         <translation>Vietävä tiedosto</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="155"/>
+        <location filename="../qml/pages/ExportPage.qml" line="156"/>
         <source>Overwrite existing</source>
         <translation>Ylikirjoita tiedosto</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="161"/>
+        <location filename="../qml/pages/ExportPage.qml" line="162"/>
         <source>Password</source>
         <translation>Salasana</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="162"/>
+        <location filename="../qml/pages/ExportPage.qml" line="163"/>
         <source>Password for the file</source>
         <translation>Tiedoston salasana</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="175"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Passwords don&apos;t match!</source>
         <translation>Salasanat eivät täsmää!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="175"/>
+        <location filename="../qml/pages/ExportPage.qml" line="176"/>
         <source>Passwords match!</source>
         <translation>Salasanat täsmäävät!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="176"/>
+        <location filename="../qml/pages/ExportPage.qml" line="177"/>
         <source>Repeated Password for the file</source>
         <translation>Tiedoston salasanan vahvistus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="200"/>
+        <location filename="../qml/pages/ExportPage.qml" line="201"/>
         <source>Here you can Import Tokens from a file. Put in the file location and the password you used on export. Pull left to start the import.</source>
         <translation>Voit tuoda tunnuksia tiedostosta. Anna tiedoston polku sekä salasana, jonka annoit vientiä tehdessäsi. Pyyhkäise vasemmalle aloittaaksesi tuonnin.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="217"/>
         <source>Here you can export Tokens to a file. The exported file will be encrypted with AES-256-CBC and Base64 encoded. Choose a strong password, the file will contain the secrets used to generate the Tokens for your accounts. Pull left to start the export.</source>
         <translation>Voit viedä tunnukset tiedostoon. Vientitiedosto salataan AES-256-CBC-salauksella ja koodataan Base64-koodauksella. Valitse vahva salasana, koska tiedosto sisältää käyttäjätiliesi tunnukset. Pyyhkäise vasemmalle aloittaaksesi viennin.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="216"/>
+        <location filename="../qml/pages/ExportPage.qml" line="217"/>
         <source>To view the content of the export file outside of SailOTP use the following openssl command:</source>
         <translation>Jos haluat tarkastella vientitiedoston sisältöä SailOTP:n ulkopuolella, käytä seuraavaa OpenSSL-komentoa:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="238"/>
+        <location filename="../qml/pages/ExportPage.qml" line="240"/>
         <source>Error writing to file </source>
         <translation>Virhe kirjoitettaessa tiedostoa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="240"/>
+        <location filename="../qml/pages/ExportPage.qml" line="242"/>
         <source>Token Database exported to </source>
         <translation>Tunnustietokanta viety tiedostoon </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="243"/>
+        <location filename="../qml/pages/ExportPage.qml" line="245"/>
+        <location filename="../qml/pages/ExportPage.qml" line="248"/>
         <source>Could not encrypt tokens. Error: </source>
         <translation>Tunnusten salaaminen epäonnistui. Virhe: </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="246"/>
+        <location filename="../qml/pages/ExportPage.qml" line="251"/>
         <source>Could not read tokens from Database</source>
         <translation>Tunnusten lukeminen tietokannasta epäonnistui</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="257"/>
+        <location filename="../qml/pages/ExportPage.qml" line="262"/>
         <source>Tokens imported from </source>
         <translation>Tunnukset tuotu tiedostosta </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="262"/>
+        <location filename="../qml/pages/ExportPage.qml" line="267"/>
         <source>Unable to decrypt file, did you use the right password?</source>
         <translation>Tiedoston salauksen purkaminen epäonnistui. Tarkista salasana.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ExportPage.qml" line="265"/>
+        <location filename="../qml/pages/ExportPage.qml" line="270"/>
         <source>Could not read from file </source>
         <translation>Tiedoston lukeminen epäonnistui </translation>
     </message>
