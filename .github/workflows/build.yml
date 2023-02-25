@@ -6,7 +6,7 @@ on:
       - '*'
   pull_request:
     branches:
-    
+      - develop
       - master
 env:
   RELEASE: 4.4.0.68
