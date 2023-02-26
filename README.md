@@ -15,7 +15,7 @@ From the main view a token can be copied to the clipboard by tapping on it.
 From the pulley menu the token database can be exported to a file for backup purposes. The backup is a AES-256-CBC encrypted and
 Base64 encoded file containing a JSON-representation of the database. It can be decrypted with openssl using the following command:
 
-openssl enc -d -a -A -md md5 -aes-256-cbc -in <file>
+openssl enc -d -a -aes-256-cbc -in <file>
 
 if you need the information outside of SailOTP.
 

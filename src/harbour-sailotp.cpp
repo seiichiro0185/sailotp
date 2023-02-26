@@ -35,6 +35,31 @@
 #include "qzxing.h"
 #include "qqrencode.h"
 
+void migrateLocalStorage()
+{
+    // The new location of the LocalStorage database
+    QDir newDbDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + "/QML/OfflineStorage/Databases/");
+
+    if(newDbDir.exists())
+        return;
+
+    newDbDir.mkpath(newDbDir.path());
+
+    QString dbname = QString(QCryptographicHash::hash(("harbour-sailotp"), QCryptographicHash::Md5).toHex());
+
+
+
+    // The old LocalStorage database
+    QFile oldDb(QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/.local/share/harbour-sailotp/harbour-sailotp/QML/OfflineStorage/Databases/" + dbname + ".sqlite");
+    QFile oldIni(QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/.local/share/harbour-sailotp/harbour-sailotp/QML/OfflineStorage/Databases/" + dbname + ".ini");
+
+    qDebug() << "Migrating " + oldDb.fileName() + " to " + newDbDir.absolutePath() + "/" + dbname + ".sqlite";
+
+    // Copy to new Database Location
+    oldDb.copy(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + "/QML/OfflineStorage/Databases/" + dbname + ".sqlite");
+    oldIni.copy(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + "/QML/OfflineStorage/Databases/" + dbname + ".ini");
+}
+
 int main(int argc, char *argv[])
 {
     // Get App and QML-View objects
@@ -51,9 +76,12 @@ int main(int argc, char *argv[])
     translator.load(locale,SailfishApp::pathTo(QString("i18n")).toLocalFile());
     app->installTranslator(&translator);
 
+    // Migrate to new Storage Directory
+    migrateLocalStorage();
+
     // Set some global values
-    app->setOrganizationName("harbour-sailotp");
-    app->setOrganizationDomain("harbour-sailotp");
+    app->setOrganizationName("org.seiichiro0185");
+    app->setOrganizationDomain("org.seiichiro0185");
     app->setApplicationName("harbour-sailotp");
     app->setApplicationVersion(APP_VERSION);
 
