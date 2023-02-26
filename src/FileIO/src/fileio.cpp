@@ -52,7 +52,7 @@ QString FileIO::read()
     QTextStream t( &file );
     do {
       line = t.readLine();
-      fileContent += line;
+      fileContent += line + "\n";
     } while (!line.isNull());
 
     file.close();

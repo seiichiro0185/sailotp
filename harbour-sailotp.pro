@@ -4,6 +4,7 @@ DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_BUILDNUM=\\\"$$RELEASE\\\"
 
 CONFIG += sailfishapp
+PKGCONFIG += libcrypto
 
 SOURCES += src/harbour-sailotp.cpp
 
@@ -48,4 +49,5 @@ TRANSLATIONS = translations/harbour-sailotp-de.ts \
 
 include(src/qzxing/QZXing.pri)
 include(src/FileIO/FileIO.pri)
+include(src/QCipher/QCipher.pri)
 include(src/qqrencode/qqrencode.pri)   
