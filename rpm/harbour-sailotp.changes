@@ -1,3 +1,8 @@
+* Mon Feb 20 2023 Stefan Brand <sailfish@seiichiro0185.org> 1.11.0-1
+- Rework Export/Import File Encryption to use C++
+- Switch to SHA256 for Export/Import Encryption instead of MD5
+- Add FilePicker to select Import-File
+
 * Wed Jan 25 2023 Stefan Brand <sailfish@seiichiro0185.org> 1.10.2-1
 - Add Sailjail Permission for Camera Use (contributed by Keeper-of-the-Keys)
 
